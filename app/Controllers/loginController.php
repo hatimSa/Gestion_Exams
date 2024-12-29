@@ -2,37 +2,53 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
 class LoginController extends BaseController
 {
     public function index()
     {
-        return view('login'); // Charge la vue login.php
+        // Afficher le formulaire de connexion
+        return view('login');
     }
 
-    public function attemptLogin()
+    public function login()
     {
-        // Logique de traitement du login
-        $session = session();
+        // Récupérer les données du formulaire
+        $email = $this->request->getPost('Email');
+        $password = $this->request->getPost('password');
 
-        $model = model('UserModel');
-        $email = $this->request->getVar('Email');
-        $password = $this->request->getVar('password');
+        // Charger le modèle pour interagir avec la base de données
+        $userModel = new UserModel();
 
-        $user = $model->where('email', $email)->first();
+        // Vérifier si l'utilisateur existe
+        $user = $userModel->where('email', $email)->first();
 
-        if (!$user) {
-            $session->setFlashdata('msg', 'Email ou mot de passe incorrect');
+        if ($user) {
+            // Vérifier si le mot de passe est correct
+            if (password_verify($password, $user['password'])) {
+                // Authentification réussie, stocker l'ID de l'utilisateur dans la session
+                session()->set('user_id', $user['user_id']);
+                session()->set('email', $user['email']);
+
+                // Rediriger vers le tableau de bord
+                return redirect()->to('/dashboard');
+            } else {
+                // Mot de passe incorrect
+                session()->setFlashdata('error', 'Invalid password.');
+                return redirect()->to('/login');
+            }
+        } else {
+            // Utilisateur non trouvé
+            session()->setFlashdata('error', 'No user found with that email.');
             return redirect()->to('/login');
         }
+    }
 
-        $passHash = $user['password'];
-
-        if (password_verify($password, $passHash)) {
-            $session->set('loggedUser', $user);
-            return redirect()->to('/home');
-        }
-
-        $session->setFlashdata('msg', 'Email ou mot de passe incorrect');
+    public function logout()
+    {
+        // Déconnecter l'utilisateur
+        session()->destroy();
         return redirect()->to('/login');
     }
 }

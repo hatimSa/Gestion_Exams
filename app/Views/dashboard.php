@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
             margin: 0;
             padding: 0;
         }
+
         .sidebar {
             width: 250px;
             background-color: #333;
@@ -20,25 +22,30 @@
             height: 100%;
             padding-top: 20px;
         }
+
         .sidebar a {
             display: block;
             color: #fff;
             padding: 15px;
             text-decoration: none;
         }
+
         .sidebar a:hover {
             background-color: #575757;
         }
+
         .main-content {
             margin-left: 250px;
             padding: 20px;
         }
+
         .header {
             background-color: #333;
             color: #fff;
             padding: 10px 0;
             text-align: center;
         }
+
         .card {
             background-color: #fff;
             padding: 20px;
@@ -47,31 +54,33 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="sidebar">
-    <h2>Dashboard</h2>
-    <a href="#"><i class="fas fa-home"></i> Home</a>
-    <a href="#"><i class="fas fa-user"></i> Profile</a>
-    <a href="#"><i class="fas fa-cog"></i> Settings</a>
-    <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
-</div>
-
-<div class="main-content">
-    <div class="header">
-        <h1>Application Dashboard</h1>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-user"></i> Profile</a>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        <a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
 
-    <div class="card">
-        <h3>Welcome to the Dashboard</h3>
-        <p>This is your application dashboard. Here you can find various stats and quick links to your profile and settings.</p>
-    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Application Dashboard</h1>
+        </div>
 
-    <div class="card">
-        <h3>Statistics</h3>
-        <p>Display some useful statistics here.</p>
+        <div class="card">
+            <h3>Welcome, <?= isset($user) ? $user['first_name'] . ' ' . $user['last_name'] : 'Guest' ?></h3>
+            <p>This is your application dashboard. Here you can find various stats and quick links to your profile and settings.</p>
+        </div>
+
+        <div class="card">
+            <h3>Statistics</h3>
+            <p>Display some useful statistics here.</p>
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>
