@@ -3,19 +3,19 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use CodeIgniter\Database\Exceptions\DatabaseException;
+use Config\Database;
 
 class TestDBController extends Controller
 {
-    public function testConnection()
+    public function index()
     {
         try {
-            $db = \Config\Database::connect();
-            if ($db->connID) {
-                echo "Connexion réussie à la base de données.";
-            }
-        } catch (DatabaseException $e) {
-            echo "Erreur de connexion : " . $e->getMessage();
+            // Essayer de se connecter à la base de données
+            $db = Database::connect();
+            echo 'Connexion réussie à la base de données !';
+        } catch (\Exception $e) {
+            // Si une erreur se produit, afficher l'erreur
+            echo 'Erreur de connexion à la base de données : ' . $e->getMessage();
         }
     }
 }
