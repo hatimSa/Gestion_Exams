@@ -472,3 +472,101 @@ INFO - 2024-12-30 16:15:43 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-12-30 16:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-30 16:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-12-30 16:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-30 16:32:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "profile.php"
+[Method: GET, Route: profil]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('profile.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('profile', [], true)
+ 3 APPPATH\Controllers\profilController.php(29): view('profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfilController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-30 16:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-30 16:38:17 --> BadMethodCallException: Call to undefined method App\Models\CompteModel::getAllComptesWithRoles
+[Method: GET, Route: usersList]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\usersListController.php(14): CodeIgniter\Model->__call('getAllComptesWithRoles', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-30 16:39:29 --> ErrorException: Attempt to read property "last_name" on array
+[Method: GET, Route: usersList]
+in APPPATH\Views\usersList.php on line 184.
+ 1 APPPATH\Views\usersList.php(184): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "last_name" on array', 'C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersList.php', 184)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersList.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('usersList', [], true)
+ 5 APPPATH\Controllers\usersListController.php(17): view('usersList', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-30 16:41:18 --> ErrorException: Attempt to read property "compte_id" on array
+[Method: GET, Route: usersList]
+in APPPATH\Views\usersList.php on line 189.
+ 1 APPPATH\Views\usersList.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "compte_id" on array', 'C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersList.php', 189)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersList.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('usersList', [], true)
+ 5 APPPATH\Controllers\usersListController.php(17): view('usersList', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-30 16:43:27 --> ErrorException: Attempt to read property "compte_id" on array
+[Method: GET, Route: usersList]
+in APPPATH\Views\usersList.php on line 190.
+ 1 APPPATH\Views\usersList.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "compte_id" on array', 'C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersList.php', 190)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersList.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('usersList', [], true)
+ 5 APPPATH\Controllers\usersListController.php(17): view('usersList', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-30 16:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-30 16:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -181,14 +181,14 @@
                 <tbody>
                     <?php foreach ($comptes as $compte) : ?>
                         <tr>
-                            <td><?= esc($compte->last_name) ?></td>
-                            <td><?= esc($compte->first_name) ?></td>
-                            <td><?= esc($compte->email) ?></td>
-                            <td><?= esc($compte->role_type) ?></td>
+                            <td><?= esc($compte['last_name']) ?></td>
+                            <td><?= esc($compte['first_name']) ?></td>
+                            <td><?= esc($compte['email']) ?></td>
+                            <td><?= esc($compte['role_type']) ?></td>
                             <td>
-                                <a href="<?= site_url('profile/' . $compte->compte_id) ?>" class="btn btn-primary btn-sm">Voir</a>
-                                <a href="<?= site_url('comptes/edit/' . $compte->compte_id) ?>" class="btn btn-warning btn-sm">Modifier</a>
-                                <a href="<?= site_url('comptes/delete/' . $compte->compte_id) ?>" class="btn btn-danger btn-sm">Supprimer</a>
+                                <a href="<?= site_url('profile/' . $compte['compte_id']) ?>" class="btn btn-primary btn-sm">Voir</a>
+                                <a href="<?= site_url('comptes/edit/' . $compte['compte_id']) ?>" class="btn btn-warning btn-sm">Modifier</a>
+                                <a href="<?= site_url('comptes/delete/' . $compte['compte_id']) ?>" class="btn btn-danger btn-sm">Supprimer</a>
                             </td>
                         </tr>
                     <?php endforeach ?>
