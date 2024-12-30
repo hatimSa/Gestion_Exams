@@ -69,15 +69,20 @@
             margin-bottom: 15px;
         }
 
-        a {
-            display: block;
-            text-align: right;
+        .flex-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-top: 10px;
-            color: #007bff;
-            text-decoration: none;
         }
 
-        a:hover {
+        .flex-links a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .flex-links a:hover {
             text-decoration: underline;
         }
     </style>
@@ -105,7 +110,10 @@
         <button type="submit">
             <span>🔒</span> Login
         </button>
-        <a href="<?= base_url('forgot-password') ?>">Forgot Password?</a>
+        <div class="flex-links">
+            <a href="<?= base_url('forgot-password') ?>">Forgot Password?</a>
+            <span>Pas de compte? <a href="<?= base_url('register') ?>">S'inscrire</a></span>
+        </div>
     </form>
 </body>
 
