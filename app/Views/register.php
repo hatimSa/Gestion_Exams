@@ -61,7 +61,11 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <?php if (isset($validation)): ?>
+=======
+<?php if (isset($validation)): ?>
+>>>>>>> 363dca957c628133bcac990c7a19dd1ac0e9475a
         <div style="color: red;">
             <?= $validation->listErrors() ?>
         </div>
