@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Profile Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f4f4f9;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,10 +21,22 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
         }
 
         div {
             margin-bottom: 15px;
+            text-align: left;
         }
 
         label {
@@ -34,8 +46,7 @@
         }
 
         input[type="text"],
-        input[type="email"],
-        input[type="password"] {
+        input[type="email"] {
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
@@ -46,49 +57,35 @@
         button {
             width: 100%;
             padding: 10px;
-            background-color: #28a745;
+            background-color: #007bff;
             color: #fff;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 16px;
         }
 
         button:hover {
-            background-color: #218838;
+            background-color: #0056b3;
         }
     </style>
 </head>
 
 <body>
-    <?php if (isset($validation)): ?>
-        <div style="color: red;">
-            <?= $validation->listErrors() ?>
+    <form>
+        <img src="profile.jpg" alt="Profile Picture">
+        <div>
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" required>
         </div>
-    <?php endif; ?>
-
-    <form action="<?= base_url('register/store') ?>" method="post">
-        <label for="first_name">Prénom :</label>
-        <input type="text" name="first_name" id="first_name" required>
-        <br>
-
-        <label for="last_name">Nom :</label>
-        <input type="text" name="last_name" id="last_name" required>
-        <br>
-
-        <label for="email">Email :</label>
-        <input type="email" name="email" id="email" required>
-        <br>
-
-        <label for="phone_number">Numéro de téléphone :</label>
-        <input type="text" name="phone_number" id="phone_number" required>
-        <br>
-
-        <label for="password">Mot de passe :</label>
-        <input type="password" name="password" id="password" required>
-        <br>
-
-        <button type="submit">S'inscrire</button>
+        <div>
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit">Save</button>
     </form>
 </body>
 

@@ -45,6 +45,11 @@ class LoginController extends BaseController
         }
     }
 
+    public function forgotPassword()
+    {
+        return view('forgot-password');
+    }
+
     public function logout()
     {
         // Déconnecter l'utilisateur
