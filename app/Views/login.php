@@ -70,8 +70,8 @@
             <?php if (session()->getFlashdata('error')): ?>
                 <div class="error"><?= session()->getFlashdata('error') ?></div>
             <?php endif; ?>
-            <label for="Email">Email</label>
-            <input type="text" id="Email" name="Email" placeholder="Email" required>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email" required>
         </div>
         <div>
             <label for="password">Password</label>

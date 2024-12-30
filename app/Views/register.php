@@ -61,24 +61,34 @@
 </head>
 
 <body>
-    <form action="<?= base_url('register') ?>" method="post">
-        <div>
-            <label for="first_name">First Name</label>
-            <input type="text" id="first_name" name="first_name" required placeholder="First Name">
+<?php if (isset($validation)): ?>
+        <div style="color: red;">
+            <?= $validation->listErrors() ?>
         </div>
-        <div>
-            <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" name="last_name" required placeholder="Last Name">
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="Email">
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required placeholder="Password">
-        </div>
-        <button type="submit">Register</button>
+    <?php endif; ?>
+
+    <form action="<?= base_url('register/store') ?>" method="post">
+        <label for="first_name">Prénom :</label>
+        <input type="text" name="first_name" id="first_name" required>
+        <br>
+
+        <label for="last_name">Nom :</label>
+        <input type="text" name="last_name" id="last_name" required>
+        <br>
+
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+
+        <label for="phone_number">Numéro de téléphone :</label>
+        <input type="text" name="phone_number" id="phone_number" required>
+        <br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+
+        <button type="submit">S'inscrire</button>
     </form>
 </body>
 
