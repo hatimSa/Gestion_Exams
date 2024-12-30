@@ -13,7 +13,6 @@ class DatabaseConfig
         'pConnect' => false,
         'DBDebug' => (ENVIRONMENT !== 'production'),
         'cacheOn' => false,
-        'cacheOn'  => false,
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
         'swapPre'  => '',
