@@ -40,7 +40,6 @@ class RegisterController extends Controller
         $phoneNumber = $this->request->getPost('phone_number');
         $password = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
 
-<<<<<<< HEAD
         // Check if the email already exists in both tables
         $compteModel = new CompteModel();
         $existingCompte = $compteModel->where('email', $email)->first();
@@ -75,31 +74,8 @@ class RegisterController extends Controller
         ];
         $userModel->insert($userData);
 
-=======
-        // Insert data into `comptes` table
-        $compteModel = new CompteModel();
-        $compteData = [
-            'first_name'   => $firstName,
-            'last_name'    => $lastName,
-            'email'        => $email,
-            'password'     => $password,
-            'phone_number' => $phoneNumber,
-            'etat'         => 1, // Default value for `etat`
-        ];
-        $compteModel->insert($compteData);
-        $compteId = $compteModel->getInsertID();
-
-        // Insert data into `users` table
-        $userModel = new UserModel();
-        $userData = [
-            'email'     => $email,
-            'password'  => $password,
-            'compte_id' => $compteId,
-        ];
-        $userModel->insert($userData);
-
->>>>>>> 363dca957c628133bcac990c7a19dd1ac0e9475a
         // Redirect to login page
         return redirect()->to('/login')->with('success', 'Inscription réussie. Vous pouvez vous connecter.');
     }
+
 }

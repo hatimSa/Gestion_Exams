@@ -91,17 +91,12 @@
             <?php if (session()->getFlashdata('error')): ?>
                 <div class="error"><?= session()->getFlashdata('error') ?></div>
             <?php endif; ?>
-<<<<<<< HEAD
             <!-- Message de succès -->
             <?php if (session()->getFlashdata('success')): ?>
                 <div class="success"><?= session()->getFlashdata('success') ?></div>
             <?php endif; ?>
             <label for="Email">Email</label>
             <input type="text" id="Email" name="Email" placeholder="Email" value="<?= old('Email') ?>" aria-label="Email" required>
-=======
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Email" required>
->>>>>>> 363dca957c628133bcac990c7a19dd1ac0e9475a
         </div>
         <div>
             <label for="password">Password</label>
