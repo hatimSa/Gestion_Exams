@@ -10,72 +10,86 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('register'); // Display the registration form
+        // Afficher le formulaire d'inscription avec la page active
+        return view('register', ['currentPage' => 'register']);
     }
 
     public function store()
-    {
-        $validation = \Config\Services::validation();
+{
+    $validation = \Config\Services::validation();
 
-        // Validation rules
-        $validation->setRules([
-            'first_name'  => 'required|min_length[3]',
-            'last_name'   => 'required|min_length[3]',
-            'email'       => 'required|valid_email|is_unique[users.email]|is_unique[comptes.email]',
-            'phone_number' => 'required|numeric|min_length[8]',
-            'password'    => 'required|min_length[8]'
+    // Règles de validation
+    $validation->setRules([
+        'first_name'   => 'required|min_length[3]',
+        'last_name'    => 'required|min_length[3]',
+        'email'        => 'required|valid_email|is_unique[users.email]|is_unique[comptes.email]',
+        'phone_number' => 'required|numeric|min_length[8]',
+        'password'     => 'required|min_length[8]',
+        'status'       => 'required|in_list[pending,accepted,rejected]' // Validation de 'status'
+    ]);
+
+    if (!$validation->withRequest($this->request)->run()) {
+        // Si des erreurs de validation existent, afficher le formulaire avec les erreurs
+        return view('register', [
+            'validation' => $validation,
+            'currentPage' => 'register'
         ]);
-
-        if (!$validation->withRequest($this->request)->run()) {
-            // If validation fails, display errors
-            return view('register', [
-                'validation' => $validation
-            ]);
-        }
-
-        // Retrieve form data
-        $firstName = $this->request->getPost('first_name');
-        $lastName = $this->request->getPost('last_name');
-        $email = $this->request->getPost('email');
-        $phoneNumber = $this->request->getPost('phone_number');
-        $password = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
-
-        // Check if the email already exists in both tables
-        $compteModel = new CompteModel();
-        $existingCompte = $compteModel->where('email', $email)->first();
-
-        $userModel = new UserModel();
-        $existingUser = $userModel->where('email', $email)->first();
-
-        if ($existingCompte || $existingUser) {
-            return view('register', [
-                'validation' => $validation,
-                'error' => 'Cet email est déjà utilisé.'
-            ]);
-        }
-
-        // Insert data into comptes table
-        $compteData = [
-            'first_name'   => $firstName,
-            'last_name'    => $lastName,
-            'email'        => $email,
-            'password'     => $password,
-            'phone_number' => $phoneNumber,
-            'etat'         => 1, // Default value for etat
-        ];
-        $compteModel->insert($compteData);
-        $compteId = $compteModel->getInsertID();
-
-        // Insert data into users table
-        $userData = [
-            'email'     => $email,
-            'password'  => $password,
-            'compte_id' => $compteId,
-        ];
-        $userModel->insert($userData);
-
-        // Redirect to login page
-        return redirect()->to('/login')->with('success', 'Inscription réussie. Vous pouvez vous connecter.');
     }
+
+    // Récupérer les données du formulaire
+    $firstName = $this->request->getPost('first_name');
+    $lastName = $this->request->getPost('last_name');
+    $email = $this->request->getPost('email');
+    $phoneNumber = $this->request->getPost('phone_number');
+    $password = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
+    $status = $this->request->getPost('status'); // "status" du formulaire
+
+    // Convertir le status en valeur correspondante pour "etat"
+    $etat = $status; // Utilise directement la valeur de 'status' (qui doit être 'pending', 'accepted', ou 'rejected')
+
+    $compteModel = new CompteModel();
+    $userModel = new UserModel();
+
+    // Vérifier si l'email existe déjà
+    if ($compteModel->where('email', $email)->first() || $userModel->where('email', $email)->first()) {
+        return view('register', [
+            'validation' => $validation,
+            'error' => 'Cet email est déjà utilisé.',
+            'currentPage' => 'register'
+        ]);
+    }
+
+    // Insérer les données dans la table "comptes"
+    $compteData = [
+        'first_name'   => $firstName,
+        'last_name'    => $lastName,
+        'email'        => $email,
+        'password'     => $password,
+        'phone_number' => $phoneNumber,
+        'etat'         => $etat, // Utilisation de la valeur du statut
+    ];
+
+    // Vérifie si l'insertion se fait correctement
+    if (!$compteModel->insert($compteData)) {
+        return view('register', [
+            'validation' => $validation,
+            'error' => 'Une erreur est survenue lors de l\'insertion des données.',
+            'currentPage' => 'register'
+        ]);
+    }
+
+    $compteId = $compteModel->getInsertID();
+
+    // Insérer les données dans la table "users"
+    $userData = [
+        'email'     => $email,
+        'password'  => $password,
+        'compte_id' => $compteId,
+    ];
+    $userModel->insert($userData);
+
+    // Rediriger avec un message de succès
+    return redirect()->to('/login')->with('success', 'Inscription réussie. Vous pouvez vous connecter.');
+}
 
 }

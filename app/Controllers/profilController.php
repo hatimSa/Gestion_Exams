@@ -2,6 +2,20 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
+class ProfilController extends BaseController
+{
+    public function index()
+    {
+        return view('profil');
+    }
+}
+
+<?php
+
+namespace App\Controllers;
+
 use App\Models\CompteModel;
 
 class ProfilController extends BaseController

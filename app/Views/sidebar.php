@@ -33,7 +33,7 @@
     <div class="sidebar">
         <h2>Dashboard</h2>
         <a href="/gestion_Exams/public/dashboard"><i class="fas fa-home"></i> Home</a>
-        <a href="/gestion_Exams/public/profil"><i class="fas fa-user"></i> Profile</a>
+        <a href="/gestion_Exams/public/profile"><i class="fas fa-user"></i> Profile</a>
         <a href="/gestion_Exams/public/usersList"><i class="fas fa-list"></i> Users List</a>
         <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>

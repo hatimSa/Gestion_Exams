@@ -16,9 +16,9 @@ class CompteModel extends Model
         'phone_number',
         'etat',
         'user_id',
-        'role_id'
+        'role_id',
+        'etat'
     ]; // Columns in the comptes table
-
     public function getAllComptesWithRoles()
     {
         // Effectuer une jointure avec la table `roles` pour récupérer les rôles
