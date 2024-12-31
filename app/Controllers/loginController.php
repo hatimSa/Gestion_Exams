@@ -3,51 +3,53 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
-
 class LoginController extends BaseController
 {
     public function index()
     {
-        // Afficher le formulaire de connexion
+        if (session()->get('user_id')) {
+            return redirect()->to('/dashboard');
+        }
         return view('login');
     }
 
     public function login()
     {
+        // Validation des champs
+        $validation = $this->validate([
+            'Email' => 'required|valid_email',
+            'password' => 'required|min_length[6]',
+        ]);
+
+        if (!$validation) {
+            return redirect()->back()->withInput()->with('error', 'Invalid form data.');
+        }
+
         // Récupérer les données du formulaire
         $email = $this->request->getPost('Email');
         $password = $this->request->getPost('password');
 
-        // Charger le modèle pour interagir avec la base de données
+        // Charger le modèle
         $userModel = new UserModel();
 
-        // Vérifier si l'utilisateur existe
+        // Rechercher l'utilisateur
         $user = $userModel->where('email', $email)->first();
 
-        if ($user) {
-            // Vérifier si le mot de passe est correct
-            if (password_verify($password, $user['password'])) {
-                // Authentification réussie, stocker l'ID de l'utilisateur dans la session
-                session()->set('user_id', $user['user_id']);
-                session()->set('email', $user['email']);
-
-                // Rediriger vers le tableau de bord
-                return redirect()->to('/dashboard');
-            } else {
-                // Mot de passe incorrect
-                session()->setFlashdata('error', 'Invalid password.');
-                return redirect()->to('/login');
-            }
-        } else {
-            // Utilisateur non trouvé
-            session()->setFlashdata('error', 'No user found with that email.');
-            return redirect()->to('/login');
+        if ($user && password_verify($password, $user['password'])) {
+            // Authentification réussie
+            session()->set([
+                'user_id' => $user['user_id'],
+                'email' => $user['email'],
+            ]);
+            return redirect()->to('/dashboard');
         }
+
+        // Authentification échouée
+        return redirect()->back()->with('error', 'Invalid email or password.');
     }
 
     public function logout()
     {
-        // Déconnecter l'utilisateur
         session()->destroy();
         return redirect()->to('/login');
     }

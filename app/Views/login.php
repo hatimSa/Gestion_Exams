@@ -110,7 +110,7 @@
             font-weight:600;
         }
         .container p{
-            font-size:14,5px;
+            font-size:14.5px;
             margin: 15px 0;
 
         }
@@ -163,6 +163,14 @@
             border:2px solid #fff;
             box-shadow:none;
         }
+        .error {
+        color: red;
+        margin-bottom: 10px;
+    }
+    .success {
+        color: green;
+        margin-bottom: 10px;
+    }
     </style>
 </head>
 
@@ -170,10 +178,18 @@
     <div class="container">
         <div class="form-box login">
             <form action="<?= base_url('login') ?>" method="post">
-        
+                <?= csrf_field()?>
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="email" placeholder="email" name="email" required>
+                            <!-- Message d'erreur général -->
+                    <?php if (session()->getFlashdata('error')): ?>
+                        <div class="error"><?= session()->getFlashdata('error') ?></div>
+                    <?php endif; ?>
+                    <!-- Message de succès -->
+                    <?php if (session()->getFlashdata('success')): ?>
+                        <div class="success"><?= session()->getFlashdata('success') ?></div>
+                    <?php endif; ?>
+                    <input type="email" placeholder="email" name="Email" required>
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
@@ -181,7 +197,7 @@
                     <i class='bx bxs-lock'></i>
                 </div>
                 <div class="forgot-link">
-                    <a href="#">Forgot password</a>
+                    <a href="<?=base_url('forgot-password')?>">Forgot password</a>
                     <button type="submit" class="btn">Login</button>
                     <p>or login with social platforms</p>
                     <div class="social-icons">
@@ -199,27 +215,15 @@
             <div class="toggle-panel toggle-left">
                 <h1>Hello, Welcome!</h1>
                 <p>Don't have a account</p>
-                <button class="btn register-btn">Register</button>
+                <button class="btn register-btn" onclick="window.location.href='<?= base_url('register') ?>'">Register</button>
+
             </div>
         </div>
 
 
 
     </div>  
-    <!-- <form action="<?= base_url('login') ?>" method="post">
-        <div>
-            <?php if (session()->getFlashdata('error')): ?>
-                <div class="error"><?= session()->getFlashdata('error') ?></div>
-            <?php endif; ?>
-            <label for="Email">Email</label>
-            <input type="text" id="Email" name="Email" placeholder="Email" required>
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required placeholder="Password">
-        </div>
-        <button type="submit">Login</button>
-    </form> -->
+  
 </body>
 
 </html>
