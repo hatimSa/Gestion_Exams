@@ -21,8 +21,8 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-           
-            
+            width: 90%;
+            max-width: 400px;
         }
 
         div {
@@ -63,23 +63,50 @@
             color: red;
             margin-bottom: 15px;
         }
+
+        .success {
+            color: green;
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
+    <!-- test <img src="<?= base_url('images/TEST.jpg');?>"> -->
     <form action="<?= base_url('login') ?>" method="post">
+        <?= csrf_field() ?>
         <div>
+            <!-- Message d'erreur général -->
             <?php if (session()->getFlashdata('error')): ?>
                 <div class="error"><?= session()->getFlashdata('error') ?></div>
             <?php endif; ?>
+            <!-- Message de succès -->
+            <?php if (session()->getFlashdata('success')): ?>
+                <div class="success"><?= session()->getFlashdata('success') ?></div>
+            <?php endif; ?>
             <label for="Email">Email</label>
-            <input type="text" id="Email" name="Email" placeholder="Email" required>
+            <input type="text" id="Email" name="Email" placeholder="Email" value="<?= old('Email') ?>" aria-label="Email" required>
         </div>
         <div>
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" required placeholder="Password">
+            <input type="password" id="password" name="password" placeholder="Password" aria-label="Password" required>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">
+            <span>🔒</span> Login
+        </button>
+        <a href="<?= base_url('forgot-password') ?>">Forgot Password?</a>
     </form>
 </body>
 

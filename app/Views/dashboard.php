@@ -57,21 +57,23 @@
 
 <body>
 
+    <!-- Sidebar -->
     <div class="sidebar">
         <h2>Dashboard</h2>
-        <a href="#"><i class="fas fa-home"></i> Home</a>
-        <a href="#"><i class="fas fa-user"></i> Profile</a>
-        <a href="#"><i class="fas fa-cog"></i> Settings</a>
-        <a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        <a href="/gestion_Exams/public/dashboard"><i class="fas fa-home"></i> Home</a>
+        <a href="/gestion_Exams/public/profil"><i class="fas fa-user"></i> Profile</a>
+        <a href="/gestion_Exams/public/usersList"><i class="fas fa-list"></i> Users List</a>
+        <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
 
+    <!-- Main Content -->
     <div class="main-content">
         <div class="header">
             <h1>Application Dashboard</h1>
         </div>
 
         <div class="card">
-            <h3>Welcome, <?= isset($user) ? $user['first_name'] . ' ' . $user['last_name'] : 'Guest' ?></h3>
+            <h3>Welcome, <?= isset($compte) ? $compte['first_name'] . ' ' . $compte['last_name'] : 'Guest' ?></h3>
             <p>This is your application dashboard. Here you can find various stats and quick links to your profile and settings.</p>
         </div>
 

@@ -11,7 +11,7 @@ class DatabaseConfig
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
-        'DBDebug' => (ENVIRONMENT !== 'production'),
+        'DBDebug' => true,
         'cacheOn' => false,
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
