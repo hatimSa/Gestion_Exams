@@ -180,8 +180,9 @@
                 <div class="form-group">
                     <label for="status">État :</label>
                     <select name="status" id="status" required>
-                        <option value="active">Activer</option>
-                        <option value="inactive">Désactiver</option>
+                        <option value="pending">En attente</option>
+                        <option value="accepted">Accepté</option>
+                        <option value="rejected">Rejeté</option>
                     </select>
                 </div>
                 <div class="form-group">
