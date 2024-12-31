@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Forgot Password</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,6 +21,8 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
         }
 
         div {
@@ -33,9 +35,7 @@
             font-weight: bold;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
+        input[type="email"] {
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
@@ -46,7 +46,7 @@
         button {
             width: 100%;
             padding: 10px;
-            background-color: #28a745;
+            background-color: #007bff;
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -55,40 +55,18 @@
         }
 
         button:hover {
-            background-color: #218838;
+            background-color: #0056b3;
         }
     </style>
 </head>
 
 <body>
-    <?php if (isset($validation)): ?>
-        <div style="color: red;">
-            <?= $validation->listErrors() ?>
+    <form action="<?= base_url('forgot-password') ?>" method="post">
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
         </div>
-    <?php endif; ?>
-
-    <form action="<?= base_url('register/store') ?>" method="post">
-        <label for="first_name">Prénom :</label>
-        <input type="text" name="first_name" id="first_name" required>
-        <br>
-
-        <label for="last_name">Nom :</label>
-        <input type="text" name="last_name" id="last_name" required>
-        <br>
-
-        <label for="email">Email :</label>
-        <input type="email" name="email" id="email" required>
-        <br>
-
-        <label for="phone_number">Numéro de téléphone :</label>
-        <input type="text" name="phone_number" id="phone_number" required>
-        <br>
-
-        <label for="password">Mot de passe :</label>
-        <input type="password" name="password" id="password" required>
-        <br>
-
-        <button type="submit">S'inscrire</button>
+        <button type="submit">Submit</button>
     </form>
 </body>
 

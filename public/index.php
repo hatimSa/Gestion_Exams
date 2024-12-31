@@ -1,5 +1,7 @@
 <?php
 
+define('ENVIRONMENT', 'development');
+
 /*
  *---------------------------------------------------------------
  * CHECK PHP VERSION
