@@ -178,7 +178,7 @@
     <div class="container">
         <div class="form-box login">
             <form action="<?= base_url('login') ?>" method="post">
-                <?= csrf_field()?>
+                <?= csrf_field() ?>
                 <h1>Login</h1>
                 <div class="input-box">
                             <!-- Message d'erreur général -->
