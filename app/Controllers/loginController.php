@@ -34,8 +34,11 @@ class LoginController extends BaseController
         // Charger le modèle pour interagir avec la base de données
         $userModel = new UserModel();
 
-        // Vérifier si l'utilisateur existe
-        $user = $userModel->where('email', $email)->first();
+        // Vérifier si l'utilisateur existe et récupérer son rôle
+        $user = $userModel->select('users.*, comptes.role_id')
+        ->join('comptes', 'comptes.compte_id = users.compte_id')
+        ->where('users.email', $email)
+            ->first();
 
         if ($user) {
             // Vérifier si le mot de passe est correct
@@ -45,8 +48,25 @@ class LoginController extends BaseController
                 session()->set('user_id', $user['user_id']);
                 session()->set('email', $user['email']);
 
-                // Rediriger vers le tableau de bord ou la page d'origine
-                return redirect()->to(session()->get('redirect_url') ?? '/dashboard');
+                // Récupérer le rôle de l'utilisateur
+                $role_id = $user['role_id'];
+
+                // Charger le modèle pour interagir avec les rôles
+                $roleModel = new \App\Models\RoleModel();
+                $role = $roleModel->find($role_id);
+
+                // Vérifier le rôle et rediriger vers le tableau de bord approprié
+                if ($role->role_type == 'admin') {
+                    return redirect()->to('/dashboard');
+                } elseif ($role->role_type == 'prof') {
+                    return redirect()->to('/profDashboard');
+                } elseif ($role->role_type == 'etd') {
+                    return redirect()->to('/etudDashboard');
+                } else {
+                    // Si le rôle est inconnu, rediriger vers une page d'erreur ou une page par défaut
+                    session()->setFlashdata('error', 'Unknown role.');
+                    return redirect()->to('/login');
+                }
             } else {
                 // Mot de passe incorrect
                 session()->setFlashdata('error', 'Invalid password.');
