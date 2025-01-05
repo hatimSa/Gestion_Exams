@@ -43,7 +43,7 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="header">
-            <h1>Application Dashboard</h1>
+            <h1>Admin Dashboard</h1>
         </div>
 
         <div class="card">

@@ -13,7 +13,13 @@ class UsersListController extends BaseController
         // Récupérer les comptes avec leurs rôles
         $comptes = $compteModel->getAllComptesWithRoles();
 
-        // Passer les données à la vue
-        return view('usersList', ['comptes' => $comptes]);
+        // Ajouter la variable $currentPage pour identifier la page active
+        $currentPage = 'usersList';
+
+        // Passer les données et la page actuelle à la vue
+        return view('usersList', [
+            'comptes' => $comptes,
+            'currentPage' => $currentPage,
+        ]);
     }
 }

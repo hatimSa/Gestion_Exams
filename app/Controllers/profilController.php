@@ -4,11 +4,9 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\CompteModel;
-use App\Models\UserModel;
 
 class ProfilController extends Controller
 {
-    // ProfilController.php
     public function index()
     {
         $session = session();
@@ -18,15 +16,21 @@ class ProfilController extends Controller
             return redirect()->to('/login')->with('error', 'Vous devez être connecté pour accéder à cette page.');
         }
 
-        // Récupérez les informations de l'utilisateur depuis la session ou la base de données
-        $compteModel = new \App\Models\CompteModel();
-        $compte = $compteModel->where('user_id', $session->get('user_id'))->first(); // Utilisez 'user_id' ici
+        // Récupérez les informations de l'utilisateur depuis la base de données
+        $compteModel = new CompteModel();
+        $compte = $compteModel->where('user_id', $session->get('user_id'))->first();
 
         if (!$compte) {
             return redirect()->to('/login')->with('error', 'Utilisateur introuvable.');
         }
 
-        // Passez les données de l'utilisateur à la vue
-        return view('profil', ['compte' => $compte]);
+        // Définissez la page active
+        $currentPage = 'profil';
+
+        // Passez les données de l'utilisateur et la page actuelle à la vue
+        return view('profil', [
+            'compte' => $compte,
+            'currentPage' => $currentPage,
+        ]);
     }
 }

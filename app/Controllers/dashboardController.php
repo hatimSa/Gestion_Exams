@@ -26,7 +26,14 @@ class DashboardController extends BaseController
         $user = $userModel->find($user_id);
         $compte = $compteModel->where('compte_id', $user['compte_id'])->first(); // Récupérer les informations du compte
 
-        // Passer les informations de l'utilisateur et du compte à la vue
-        return view('dashboard', ['user' => $user, 'compte' => $compte]);
+        // Ajouter la variable $currentPage pour identifier la page active
+        $currentPage = 'dashboard'; // Cette valeur correspond au bouton actif dans la barre latérale
+
+        // Passer les informations de l'utilisateur, du compte, et de la page actuelle à la vue
+        return view('dashboard', [
+            'user' => $user,
+            'compte' => $compte,
+            'currentPage' => $currentPage,
+        ]);
     }
 }
