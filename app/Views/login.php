@@ -215,7 +215,7 @@
             <div class="toggle-panel toggle-left">
                 <h1>Hello, Welcome!</h1>
                 <p>Don't have a account</p>
-                <button class="btn register-btn" onclick="window.location.href='<?= base_url('register') ?>'">Register</button>
+                
 
             </div>
         </div>
@@ -226,4 +226,4 @@
   
 </body>
 
-</html>
+                    </html>
