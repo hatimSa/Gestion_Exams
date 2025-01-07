@@ -172,23 +172,23 @@
                     <img src="/Gestion_Exams/public/images/profil.jpg" alt="Profil Picture">
                     <div>
                         <label for="first_name">Prénom</label>
-                        <input type="text" id="first_name" name="first_name" value="<?= esc($compte->first_name) ?>" readonly>
+                        <input type="text" id="first_name" name="first_name" value="<?= esc($compte['first_name']) ?>" readonly>
                     </div>
                     <div>
                         <label for="last_name">Nom</label>
-                        <input type="text" id="last_name" name="last_name" value="<?= esc($compte->last_name) ?>" readonly>
+                        <input type="text" id="last_name" name="last_name" value="<?= esc($compte['last_name']) ?>" readonly>
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" value="<?= esc($compte->email) ?>" readonly>
+                        <input type="email" id="email" name="email" value="<?= esc($compte['email']) ?>" readonly>
                     </div>
                     <div>
                         <label for="phone_number">Numéro de téléphone</label>
-                        <input type="text" id="phone_number" name="phone_number" value="<?= esc($compte->phone_number) ?>" readonly>
+                        <input type="text" id="phone_number" name="phone_number" value="<?= esc($compte['phone_number']) ?>" readonly>
                     </div>
                     <div>
                         <label for="etat">Status</label>
-                        <input type="text" id="etat" name="etat" value="<?= esc($compte->etat) ?>" readonly>
+                        <input type="text" id="etat" name="etat" value="<?= esc($compte['etat']) ?>" readonly>
                     </div>
                 </form>
             </div>

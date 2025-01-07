@@ -135,10 +135,10 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <h2><i class="fas fa-user-circle"></i> Admin</h2>
-        <a href="/gestion_Exams/public/dashboard" class="<?= ($currentPage === 'dashboard') ? 'active' : '' ?>"><i class="fas fa-home"></i> Home</a>
+        <a href="/gestion_Exams/public/dashboard"><i class="fas fa-home"></i> Home</a>
         <a href="/gestion_Exams/public/register" class="<?= ($currentPage === 'register') ? 'active' : '' ?>"><i class="fas fa-user-plus"></i> Ajouter</a>
-        <a href="/gestion_Exams/public/usersList" class="<?= ($currentPage === 'usersList') ? 'active' : '' ?>"><i class="fas fa-list"></i> Utlisateurs</a>
-        <a href="/gestion_Exams/public/profil" class="<?= ($currentPage === 'profil') ? 'active' : '' ?>"><i class="fas fa-user"></i> Profil</a>
+        <a href="/gestion_Exams/public/usersList"><i class="fas fa-list"></i> Utlisateurs</a>
+        <a href="/gestion_Exams/public/profil"><i class="fas fa-user"></i> Profile</a>
         <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
 
@@ -179,15 +179,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="role">Rôle :</label>
-                    <select name="role" id="role" required>
-                        <option value="admin">Admin</option>
-                        <option value="professeur">Professeur</option>
-                        <option value="etudiant">Etudiant</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
                     <label for="password">Mot de passe :</label>
                     <input type="password" name="password" id="password" required>
                 </div>
@@ -199,6 +190,16 @@
                         <option value="rejected">Rejeté</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="role_id">Rôle :</label>
+                    <select name="role_id" id="role_id" required>
+                        <option value="" disabled selected>-- Sélectionner un rôle --</option>
+                        <option value="1">etd</option>
+                        <option value="2">prof</option>
+                        <option value="3">admin</option>
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <button type="submit">Ajouter</button>
                 </div>

@@ -52,7 +52,7 @@
                 // Vérifie si l'utilisateur et son compte sont disponibles
                 if (isset($compte)) {
                     // Si l'utilisateur est connecté, affiche son prénom et nom
-                    echo strtoupper($compte->first_name) . ' ' . strtoupper($compte->last_name);
+                    echo strtoupper($compte['first_name']) . ' ' . strtoupper($compte['last_name']);
                 } else {
                     // Si l'utilisateur n'est pas connecté, affiche "Guest"
                     echo 'Guest';

@@ -10,71 +10,83 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        // Afficher le formulaire d'inscription avec la page active
+        // Display the registration form with the active page
         return view('register', ['currentPage' => 'register']);
     }
 
     public function store()
     {
-        // Récupérer les données du formulaire
-        $first_name = $this->request->getPost('first_name');
-        $last_name = $this->request->getPost('last_name');
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
-        $phone_number = $this->request->getPost('phone_number');
-        $etat = $this->request->getPost('etat');
-        $role_id = $this->request->getPost('role_id');
+        $validation = \Config\Services::validation();
 
-        // Validation des données
-        if (!$this->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|valid_email|is_unique[comptes.email]',
-            'password' => 'required|min_length[8]',
-        ])) {
-            return redirect()->to('/register')->withInput()->with('errors', $this->validator->getErrors());
+        // Validation rules
+        $validation->setRules([
+            'first_name'   => 'required|min_length[3]',
+            'last_name'    => 'required|min_length[3]',
+            'email'        => 'required|valid_email|is_unique[users.email]|is_unique[comptes.email]',
+            'phone_number' => 'required|numeric|min_length[8]',
+            'password'     => 'required|min_length[8]',
+            'status'       => 'required|in_list[pending,accepted,rejected]',
+            'role_id'      => 'required|integer'
+        ]);
+
+        if (!$validation->withRequest($this->request)->run()) {
+            return view('register', [
+                'validation' => $validation,
+                'currentPage' => 'register'
+            ]);
         }
 
-        // Hachage du mot de passe
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        // Retrieve form data
+        $firstName = $this->request->getPost('first_name');
+        $lastName = $this->request->getPost('last_name');
+        $email = $this->request->getPost('email');
+        $phoneNumber = $this->request->getPost('phone_number');
+        $password = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
+        $status = $this->request->getPost('status');
+        $roleId = $this->request->getPost('role_id');
 
-        // Créer l'utilisateur dans la table comptes
         $compteModel = new CompteModel();
+        $userModel = new UserModel();
+
+        // Insert into "comptes" table
         $compteData = [
-            'first_name' => $first_name,
-            'last_name' => $last_name,
-            'email' => $email,
-            'password' => $hashedPassword,
-            'phone_number' => $phone_number,
-            'role_id' => $role_id,
-            'etat' => $etat,
+            'first_name'   => $firstName,
+            'last_name'    => $lastName,
+            'email'        => $email,
+            'password'     => $password,
+            'phone_number' => $phoneNumber,
+            'etat'         => $status,
+            'role_id'      => $roleId,
+            'user_id'      => null,  // Leave it null or set it explicitly here
         ];
 
-        if ($compteModel->save($compteData)) {
-            // Récupérer l'ID du compte créé
-            $compte_id = $compteModel->getInsertID();
-
-            // Créer l'utilisateur dans la table users
-            $userModel = new UserModel();
-            $userData = [
-                'email' => $email,
-                'password' => $hashedPassword,
-                'compte_id' => $compte_id,  // Utilisation de compte_id
-            ];
-
-            if ($userModel->insertUser($userData)) {
-                // Récupérer l'ID de l'utilisateur créé
-                $user_id = $userModel->getInsertID();
-
-                // Mettre à jour la table comptes avec l'ID de l'utilisateur
-                $compteModel->update($compte_id, ['user_id' => $user_id]);
-
-                return redirect()->to('/login')->with('success', 'Inscription réussie !');
-            } else {
-                return redirect()->to('/register')->with('errors', ['Erreur lors de l\'ajout de l\'utilisateur dans la table users.']);
-            }
-        } else {
-            return redirect()->to('/register')->with('errors', ['Erreur lors de l\'ajout du compte dans la table comptes.']);
+        if (!$compteModel->insert($compteData)) {
+            return redirect()->back()->withInput()->with('error', 'Erreur lors de l\'ajout dans la table comptes.');
         }
+
+        // Retrieve the last inserted compte ID
+        $compteId = $compteModel->getInsertID();
+
+        if (!$compteId) {
+            return redirect()->back()->withInput()->with('error', 'Erreur : impossible de récupérer l\'ID du compte.');
+        }
+
+        // Ensure user_id in comptes matches the compte_id after inserting
+        $compteModel->update($compteId, ['user_id' => $compteId]);
+
+        // Now insert into the users table
+        $userData = [
+            'email'     => $email,
+            'password'  => $password,
+            'compte_id' => $compteId,
+            'user_id'   => $compteId, // This should match compte_id
+        ];
+
+        if (!$userModel->insert($userData)) {
+            return redirect()->back()->withInput()->with('error', 'Erreur lors de l\'ajout dans la table users.');
+        }
+
+        // Redirect to user list with success message
+        return redirect()->to('/usersList')->with('success', 'Utilisateur ajouté avec succès.');
     }
 }

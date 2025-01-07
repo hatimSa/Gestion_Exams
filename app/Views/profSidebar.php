@@ -51,7 +51,7 @@
         <a href="/gestion_Exams/public/profDashboard"><i class="fas fa-home"></i> Home</a>
         <a href="/manage-exams"><i class="fas fa-cogs"></i> Manage Exams</a>
         <a href="/student-results"><i class="fas fa-list"></i> Student Results</a>
-        <a href="/profil"><i class="fas fa-user"></i> Profil</a>
+        <a href="/gestion_Exams/public/profil"><i class="fas fa-user"></i> Profil</a>
         <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
 
