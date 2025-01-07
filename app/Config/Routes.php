@@ -14,6 +14,7 @@ $routes->get('/forgot-password', 'LoginController::forgotPassword'); // Réiniti
 $routes->post('/login', 'LoginController::Login');
 $routes->get('/dashboard', 'DashboardController::index');
 $routes->get('/dashboard', 'DashboardController::logout');
+$routes->get('/usersAdd', 'UsersAddController::index');
 $routes->get('/etudDashboard', 'EtudController::index');
 $routes->get('/etudDashboard', 'EtudController::logout');
 $routes->get('/profDashboard', 'ProfController::index');

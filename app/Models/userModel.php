@@ -12,8 +12,8 @@ class UserModel extends Model
 
     // Pour gérer les timestamps (si tes tables les supportent)
     protected $useTimestamps = true;
-    protected $createdField  = 'created_at'; // Si tu as une colonne pour la date de création
-    protected $updatedField  = 'updated_at'; // Si tu as une colonne pour la date de mise à jour
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
 
     // Récupérer un utilisateur avec ses informations de compte
     public function getUserWithCompte($userId)

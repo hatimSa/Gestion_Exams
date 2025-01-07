@@ -45,11 +45,14 @@ class EtudController extends BaseController
             ['exam_name' => 'History Exam', 'score' => 92]
         ];
 
+        $currentPage = 'etudDashboard';
+
         // Passer les données à la vue
         return view('etudDashboard', [
             'compte' => $compte,
             'upcomingExams' => $upcomingExams,
-            'recentResults' => $recentResults
+            'recentResults' => $recentResults,
+            'currentPage' => $currentPage
         ]);
     }
 

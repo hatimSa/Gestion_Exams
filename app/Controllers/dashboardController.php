@@ -26,6 +26,12 @@ class DashboardController extends BaseController
         $user = $userModel->find($user_id);
         $compte = $compteModel->where('compte_id', $user['compte_id'])->first(); // Récupérer les informations du compte
 
+        // Vérifier si le role_id est égal à 3 (admin)
+        if ($compte['role_id'] != 3) {
+            // Si le role_id n'est pas 3, rediriger vers une autre page (par exemple, page d'accueil)
+            return redirect()->to('/home');
+        }
+
         // Ajouter la variable $currentPage pour identifier la page active
         $currentPage = 'dashboard'; // Cette valeur correspond au bouton actif dans la barre latérale
 

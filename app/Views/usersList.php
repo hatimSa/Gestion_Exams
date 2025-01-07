@@ -174,7 +174,7 @@
         <h3 class="card-header">
             Liste des utilisateurs
             <!-- Add User Button -->
-            <a href="<?= site_url('/register') ?>" class="btn btn-primary" style="float: right;">Ajouter un utilisateur</a>
+            <a href="<?= site_url('/usersAdd') ?>" class="btn btn-primary" style="float: right;">Ajouter un utilisateur</a>
         </h3>
         <div class="card-body">
             <table id="comptes-table" class="table table-striped table-bordered" style="width:100%">

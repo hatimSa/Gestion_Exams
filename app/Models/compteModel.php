@@ -19,8 +19,8 @@ class CompteModel extends Model
         'user_id'
     ];
     protected $useTimestamps = true;
-    protected $createdField  = 'created_at'; // Si tu as une colonne pour la date de création
-    protected $updatedField  = 'updated_at'; // Si tu as une colonne pour la date de mise à jour
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
 
     // Récupérer tous les comptes avec les rôles associés
     public function getAllComptesWithRoles($status = null)

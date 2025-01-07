@@ -42,10 +42,13 @@ class ProfController extends Controller
             ['student_name' => 'Charlie', 'exam_name' => 'Physics Exam', 'score' => 78]
         ];
 
+        $currentPage = 'profDashboard';
+
         // Passer les données à la vue
         return view('profDashboard', [
             'compte' => $compte,
-            'studentResults' => $studentResults
+            'studentResults' => $studentResults,
+            'currentPage' => $currentPage
         ]);
     }
 
