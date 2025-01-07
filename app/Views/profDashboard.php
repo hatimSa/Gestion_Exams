@@ -51,7 +51,7 @@
         </div>
 
         <div class="card">
-            <h3>Welcome, <?php echo strtoupper($compte->first_name) . ' ' . strtoupper($compte->last_name); ?></h3>
+            <h3>Welcome, <?php echo strtoupper($compte['first_name']) . ' ' . strtoupper($compte['last_name']); ?></h3>
             <p>Here you can manage your exams and view student results.</p>
         </div>
 

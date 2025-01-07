@@ -36,4 +36,13 @@ class DashboardController extends BaseController
             'currentPage' => $currentPage,
         ]);
     }
+
+    public function logout()
+    {
+        // Supprimer toutes les données de session
+        session()->destroy();
+
+        // Rediriger vers la page de connexion
+        return redirect()->to('/login');
+    }
 }
