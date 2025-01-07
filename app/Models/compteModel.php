@@ -17,12 +17,22 @@ class CompteModel extends Model
         'etat',
         'role_id',
         'user_id'
-    ]; // Columns in the comptes table
-    public function getAllComptesWithRoles()
+    ];
+    protected $useTimestamps = true;
+    protected $createdField  = 'created_at'; // Si tu as une colonne pour la date de création
+    protected $updatedField  = 'updated_at'; // Si tu as une colonne pour la date de mise à jour
+
+    // Récupérer tous les comptes avec les rôles associés
+    public function getAllComptesWithRoles($status = null)
     {
-        // Effectuer une jointure avec la table `roles` pour récupérer les rôles
-        return $this->select('comptes.*, roles.role_type')
-            ->join('roles', 'roles.role_id = comptes.role_id', 'left') // Join pour récupérer le type de rôle
-            ->findAll();
+        $builder = $this->select('comptes.*, roles.role_type')
+            ->join('roles', 'roles.role_id = comptes.role_id', 'left'); // Join pour récupérer le type de rôle
+
+        // Ajouter un filtre sur le statut si fourni
+        if ($status) {
+            $builder->where('comptes.etat', $status);
+        }
+
+        return $builder->findAll();
     }
 }

@@ -25,7 +25,6 @@ class RegisterController extends Controller
             'email'        => 'required|valid_email|is_unique[users.email]|is_unique[comptes.email]',
             'phone_number' => 'required|numeric|min_length[8]',
             'password'     => 'required|min_length[8]',
-            'status'       => 'required|in_list[pending,accepted,rejected]',
             'role_id'      => 'required|integer'
         ]);
 
@@ -42,7 +41,6 @@ class RegisterController extends Controller
         $email = $this->request->getPost('email');
         $phoneNumber = $this->request->getPost('phone_number');
         $password = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
-        $status = $this->request->getPost('status');
         $roleId = $this->request->getPost('role_id');
 
         $compteModel = new CompteModel();
@@ -55,7 +53,6 @@ class RegisterController extends Controller
             'email'        => $email,
             'password'     => $password,
             'phone_number' => $phoneNumber,
-            'etat'         => $status,
             'role_id'      => $roleId,
             'user_id'      => null,  // Leave it null or set it explicitly here
         ];
@@ -87,6 +84,6 @@ class RegisterController extends Controller
         }
 
         // Redirect to user list with success message
-        return redirect()->to('/usersList')->with('success', 'Utilisateur ajouté avec succès.');
+        return redirect()->to('/login')->with('success', 'Utilisateur ajouté avec succès.');
     }
 }

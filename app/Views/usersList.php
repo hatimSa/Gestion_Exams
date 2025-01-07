@@ -184,6 +184,7 @@
                         <th>Prénom</th>
                         <th>Email</th>
                         <th>Rôle</th>
+                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -194,6 +195,7 @@
                             <td><?= esc($compte['first_name']) ?></td>
                             <td><?= esc($compte['email']) ?></td>
                             <td><?= esc($compte['role_type']) ?></td>
+                            <td><?= esc($compte['etat']) ?></td>
                             <td>
                                 <a href="<?= site_url('profile/' . $compte['compte_id']) ?>" class="btn btn-primary btn-sm">Voir</a>
                                 <a href="<?= site_url('comptes/edit/' . $compte['compte_id']) ?>" class="btn btn-warning btn-sm">Modifier</a>
