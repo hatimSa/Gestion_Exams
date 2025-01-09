@@ -1,0 +1,609 @@
+INFO - 2025-01-09 08:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-09 08:29:49 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\Gestion_Exams\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Gestion_Exams\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Gestion_Exams\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Gestion_Exams\app\Controllers\registerController.php(60): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(933): App\Controllers\RegisterController->store()
+#9 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+#10 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Gestion_Exams\public\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-01-09 08:29:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: register/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`first_name`, `last_name`, `email`, `password`, `phone_number`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES (:first_name:, :last_name:, :email:, :password:, :phone_number:, :role_id:, :user_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\registerController.php(60): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-09 08:29:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `comptes` (`first_name`, `last_name`, `email`, `password`, `phone_number`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'wee\', \'wee\', \'wee@gmail.com\', \'$2y$10$e5D3kEgusCJJBeiQSvRL6e61.rqzXhfdBAPG1Zcg/MpGAVAoF/UfK\', \'0611428708\', \'1\', NULL, \'2025-01-09 08:29:49\', \'2025-01-09 08:29:49\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comptes` (`first_name`, `last_name`, `email`, `password`, `phone_number`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'wee\', \'wee\', \'wee@gmail.com\', \'$2y$10$e5D3kEgusCJJBeiQSvRL6e61.rqzXhfdBAPG1Zcg/MpGAVAoF/UfK\', \'0611428708\', \'1\', NULL, \'2025-01-09 08:29:49\', \'2025-01-09 08:29:49\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`first_name`, `last_name`, `email`, `password`, `phone_number`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES (:first_name:, :last_name:, :email:, :password:, :phone_number:, :role_id:, :user_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\registerController.php(60): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-09 08:29:49 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `comptes` (`first_name`, `last_name`, `email`, `password`, `phone_number`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'wee\', \'wee\', \'wee@gmail.com\', \'$2y$10$e5D3kEgusCJJBeiQSvRL6e61.rqzXhfdBAPG1Zcg/MpGAVAoF/UfK\', \'0611428708\', \'1\', NULL, \'2025-01-09 08:29:49\', \'2025-01-09 08:29:49\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `comptes` (`first_name`, `last_name`, `email`, `password`, `phone_number`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'wee\', \'wee\', \'wee@gmail.com\', \'$2y$10$e5D3kEgusCJJBeiQSvRL6e61.rqzXhfdBAPG1Zcg/MpGAVAoF/UfK\', \'0611428708\', \'1\', NULL, \'2025-01-09 08:29:49\', \'2025-01-09 08:29:49\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comptes` (`first_name`, `last_name`, `email`, `password`, `phone_number`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'wee\', \'wee\', \'wee@gmail.com\', \'$2y$10$e5D3kEgusCJJBeiQSvRL6e61.rqzXhfdBAPG1Zcg/MpGAVAoF/UfK\', \'0611428708\', \'1\', NULL, \'2025-01-09 08:29:49\', \'2025-01-09 08:29:49\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`first_name`, `last_name`, `email`, `password`, `phone_number`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES (:first_name:, :last_name:, :email:, :password:, :phone_number:, :role_id:, :user_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\registerController.php(60): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-09 08:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 08:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-09 09:13:01 --> ErrorException: Undefined variable $currentPage
+[Method: GET, Route: comptes/edit/18]
+in APPPATH\Views\sidebar.php on line 50.
+ 1 APPPATH\Views\sidebar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $currentPage', 'C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\sidebar.php', 50)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('sidebar', [], true)
+ 5 APPPATH\Views\usersEdit.php(1): view('sidebar')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersEdit.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('usersEdit', [], true)
+ 9 APPPATH\Controllers\usersListController.php(45): view('usersEdit', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->edit('18')
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-09 09:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-09 09:13:23 --> ErrorException: Undefined variable $currentPage
+[Method: GET, Route: comptes/edit/18]
+in APPPATH\Views\sidebar.php on line 50.
+ 1 APPPATH\Views\sidebar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $currentPage', 'C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\sidebar.php', 50)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('sidebar', [], true)
+ 5 APPPATH\Views\usersEdit.php(1): view('sidebar')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersEdit.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('usersEdit', [], true)
+ 9 APPPATH\Controllers\usersListController.php(45): view('usersEdit', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->edit('18')
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-09 09:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:20:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-09 09:22:30 --> ErrorException: Undefined array key "role_type"
+[Method: GET, Route: comptes/edit/18]
+in APPPATH\Views\usersEdit.php on line 28.
+ 1 APPPATH\Views\usersEdit.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role_type"', 'C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersEdit.php', 28)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersEdit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('usersEdit', [], true)
+ 5 APPPATH\Controllers\usersListController.php(44): view('usersEdit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->edit('18')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-09 09:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-09 09:23:57 --> ErrorException: Undefined array key "role_type"
+[Method: GET, Route: comptes/edit/18]
+in APPPATH\Views\usersEdit.php on line 28.
+ 1 APPPATH\Views\usersEdit.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role_type"', 'C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersEdit.php', 28)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\usersEdit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('usersEdit', [], true)
+ 5 APPPATH\Controllers\usersListController.php(44): view('usersEdit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->edit('18')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-09 09:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:33:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:34:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 09:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:03:19 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussama
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:03:25 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussama
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-09 10:04:48 --> BadMethodCallException: Call to undefined method App\Models\CompteModel::getAllComptesWithRoles
+[Method: GET, Route: usersList]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\usersListController.php(24): CodeIgniter\Model->__call('getAllComptesWithRoles', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-09 10:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:05:03 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussama
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:05:08 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussama
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:06:26 --> Editing Compte: Array
+(
+    [compte_id] => 28
+    [first_name] => Lionel
+    [last_name] => Messi
+    [email] => liolio@gmail.com
+    [password] => $2y$10$68U5p7MEIUwmO462EBlPVOiu6yRCdg1r2UpGcPfe2nOqDCSVmCtKO
+    [phone_number] => 0001112225
+    [etat] => accepted
+    [user_id] => 28
+    [role_id] => 2
+    [created_at] => 2025-01-07 17:17:22
+    [updated_at] => 2025-01-07 18:37:55
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:06:31 --> Editing Compte: Array
+(
+    [compte_id] => 28
+    [first_name] => Lionel
+    [last_name] => Messi
+    [email] => liolio@gmail.com
+    [password] => $2y$10$68U5p7MEIUwmO462EBlPVOiu6yRCdg1r2UpGcPfe2nOqDCSVmCtKO
+    [phone_number] => 0001112225
+    [etat] => accepted
+    [user_id] => 28
+    [role_id] => 2
+    [created_at] => 2025-01-07 17:17:22
+    [updated_at] => 2025-01-07 18:37:55
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:15:51 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussama
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:16:41 --> Editing Compte: Array
+(
+    [compte_id] => 16
+    [first_name] => hatim
+    [last_name] => salhi
+    [email] => hatim@gmail.com
+    [password] => $2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW
+    [phone_number] => 0642444654
+    [etat] => accepted
+    [user_id] => 16
+    [role_id] => 3
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => admin
+)
+
+INFO - 2025-01-09 10:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:16:46 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussam
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-09 11:16:35
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:17:07 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussam
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-09 11:16:35
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:17:19 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussam
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-09 11:16:35
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:17:45 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussam
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-09 11:16:35
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:17:54 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussam
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-09 11:16:35
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:18:17 --> Editing Compte: Array
+(
+    [compte_id] => 16
+    [first_name] => hatim
+    [last_name] => salhi
+    [email] => hatim@gmail.com
+    [password] => $2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW
+    [phone_number] => 0642444654
+    [etat] => accepted
+    [user_id] => 16
+    [role_id] => 3
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => admin
+)
+
+INFO - 2025-01-09 10:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:18:30 --> Editing Compte: Array
+(
+    [compte_id] => 16
+    [first_name] => hatim
+    [last_name] => salhi
+    [email] => hatim@gmail.com
+    [password] => $2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW
+    [phone_number] => 0642444654
+    [etat] => accepted
+    [user_id] => 16
+    [role_id] => 3
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => admin
+)
+
+INFO - 2025-01-09 10:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:21:11 --> Editing Compte: Array
+(
+    [compte_id] => 16
+    [first_name] => hatim
+    [last_name] => salhi
+    [email] => hatim@gmail.com
+    [password] => $2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW
+    [phone_number] => 0642444654
+    [etat] => accepted
+    [user_id] => 16
+    [role_id] => 3
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => admin
+)
+
+INFO - 2025-01-09 10:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:22:20 --> Editing Compte: Array
+(
+    [compte_id] => 16
+    [first_name] => hatim
+    [last_name] => salhi
+    [email] => hatim@gmail.com
+    [password] => $2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW
+    [phone_number] => 0642444654
+    [etat] => accepted
+    [user_id] => 16
+    [role_id] => 3
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => admin
+)
+
+INFO - 2025-01-09 10:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:23:04 --> Editing Compte: Array
+(
+    [compte_id] => 16
+    [first_name] => hatim
+    [last_name] => salhi
+    [email] => hatim@gmail.com
+    [password] => $2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW
+    [phone_number] => 0642444654
+    [etat] => accepted
+    [user_id] => 16
+    [role_id] => 3
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => admin
+)
+
+INFO - 2025-01-09 10:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:25:15 --> Editing Compte: Array
+(
+    [compte_id] => 16
+    [first_name] => hatim
+    [last_name] => salhi
+    [email] => hatim@gmail.com
+    [password] => $2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW
+    [phone_number] => 0642444654
+    [etat] => accepted
+    [user_id] => 16
+    [role_id] => 3
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => admin
+)
+
+INFO - 2025-01-09 10:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:25:51 --> Editing Compte: Array
+(
+    [compte_id] => 16
+    [first_name] => hatim
+    [last_name] => salhi
+    [email] => hatim@gmail.com
+    [password] => $2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW
+    [phone_number] => 0642444654
+    [etat] => accepted
+    [user_id] => 16
+    [role_id] => 3
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-07 14:31:05
+    [role_type] => admin
+)
+
+INFO - 2025-01-09 10:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:25:57 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussam
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 2
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-09 11:16:35
+    [role_type] => prof
+)
+
+INFO - 2025-01-09 10:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-09 10:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-09 10:26:08 --> Editing Compte: Array
+(
+    [compte_id] => 18
+    [first_name] => oussam
+    [last_name] => ahorig
+    [email] => just_ouss@gmail.com
+    [password] => $2y$10$AnqnVeC7hPBUwjubae0amusiy1FZp7TvkNPlTzcnsRxm5LHU/7mY2
+    [phone_number] => 0661749685
+    [etat] => accepted
+    [user_id] => 18
+    [role_id] => 3
+    [created_at] => 2025-01-07 14:31:05
+    [updated_at] => 2025-01-09 11:26:01
+    [role_type] => admin
+)
+
+INFO - 2025-01-09 10:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

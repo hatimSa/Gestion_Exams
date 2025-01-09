@@ -21,4 +21,6 @@ $routes->get('/profDashboard', 'ProfController::index');
 $routes->get('/profDashboard', 'ProfController::logout');
 $routes->get('/profil', 'ProfilController::index');
 $routes->get('/usersList', 'UsersListController::index');
+$routes->get('comptes/edit/(:num)', 'UsersListController::edit/$1');
+$routes->post('/comptes/update/(:num)', 'UsersListController::update/$1');
 $routes->get('/logout', 'LoginController::logout');

@@ -173,11 +173,10 @@
     <div class="card">
         <h3 class="card-header">
             Liste des utilisateurs
-            <!-- Add User Button -->
             <a href="<?= site_url('/usersAdd') ?>" class="btn btn-primary" style="float: right;">Ajouter un utilisateur</a>
         </h3>
         <div class="card-body">
-            <table id="comptes-table" class="table table-striped table-bordered" style="width:100%">
+            <table id="comptes-table" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Nom</th>
@@ -212,17 +211,12 @@
 <script>
     $(document).ready(function() {
         $('#comptes-table').DataTable({
-            "language": {
-                "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/French.json"
+            language: {
+                url: "//cdn.datatables.net/plug-ins/1.10.20/i18n/French.json"
             },
-            "pagingType": "full_numbers",
-            "order": [
-                [0, "asc"]
-            ],
-            "columnDefs": [{
-                "orderable": false,
-                "targets": 4
-            }]
+            pagingType: "full_numbers",
+            order: [[0, "asc"]],
+            columnDefs: [{ orderable: false, targets: 4 }]
         });
     });
 </script>
