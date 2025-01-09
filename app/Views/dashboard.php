@@ -32,6 +32,44 @@
             margin-bottom: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.bar {
+    width: 30px;
+    background-color: #6e7cb2;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.bar:hover {
+    background-color: #4c4c9d;
+}
+
+.bar-label {
+    position: absolute;
+    
+    top: -20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+
     </style>
 </head>
 
@@ -65,9 +103,24 @@
         <div class="card">
             <h3>Statistics</h3>
             <p>Display some useful statistics here.</p>
+            <div class="chart-container">
+                <?php 
+                // Fetch the data from the database (assumes you have $months and $counts arrays)
+                // Example data, replace with actual dynamic data from your database query
+                $months = ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun'];
+                $counts = [12, 8, 15, 20, 10, 18];
+
+                for ($i = 0; $i < count($months); $i++): ?>
+                    <div class="bar" style="height: <?php echo $counts[$i] * 10; ?>px;" title="<?php echo $months[$i] . ': ' . $counts[$i]; ?>">
+                        <span class="bar-label"><?php echo $months[$i]; ?></span>
+                    </div>
+                <?php endfor; ?>
+            </div>
+        </div>
+    
+        </div>
         </div>
     </div>
-
 </body>
 
 </html>
