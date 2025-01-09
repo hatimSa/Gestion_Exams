@@ -32,8 +32,7 @@ class DashboardController extends BaseController
             return redirect()->to('/home');
         }
 
-        // Ajouter la variable $currentPage pour identifier la page active
-        $currentPage = 'dashboard'; // Cette valeur correspond au bouton actif dans la barre latérale
+        $currentPage = 'dashboard';
 
         // Passer les informations de l'utilisateur, du compte, et de la page actuelle à la vue
         return view('dashboard', [
@@ -45,10 +44,7 @@ class DashboardController extends BaseController
 
     public function logout()
     {
-        // Supprimer toutes les données de session
         session()->destroy();
-
-        // Rediriger vers la page de connexion
         return redirect()->to('/login');
     }
 }

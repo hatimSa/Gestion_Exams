@@ -161,7 +161,7 @@
 <body>
 
     <!-- Inclure le sidebar -->
-    <?= view('sidebar'); ?>
+    <?= view('Sidebar'); ?>
 
     <!-- Main Content -->
     <div class="main-content">
