@@ -22,3 +22,6 @@ $routes->get('/profDashboard', 'ProfController::logout');
 $routes->get('/profil', 'ProfilController::index');
 $routes->get('/usersList', 'UsersListController::index');
 $routes->get('/logout', 'LoginController::logout');
+$routes->get('/comptes/delete/(:num)', 'UsersListController::delete/$1');
+
+

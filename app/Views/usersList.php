@@ -199,7 +199,12 @@
                             <td>
                                 <a href="<?= site_url('profile/' . $compte['compte_id']) ?>" class="btn btn-primary btn-sm">Voir</a>
                                 <a href="<?= site_url('comptes/edit/' . $compte['compte_id']) ?>" class="btn btn-warning btn-sm">Modifier</a>
-                                <a href="<?= site_url('comptes/delete/' . $compte['compte_id']) ?>" class="btn btn-danger btn-sm">Supprimer</a>
+                                <a href="<?= site_url('comptes/delete/' . $compte['compte_id']) ?>" 
+   class="btn btn-danger btn-sm" 
+   onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce compte ?');">
+   Supprimer
+</a>
+
                             </td>
                         </tr>
                     <?php endforeach ?>
