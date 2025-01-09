@@ -32,12 +32,18 @@ class DashboardController extends BaseController
             return redirect()->to('/home');
         }
 
+        // Récupérer les 3 derniers étudiants et professeurs
+        $students = $compteModel->getLatestStudents();
+        $professors = $compteModel->getLatestProfessors();
+
         $currentPage = 'dashboard';
 
-        // Passer les informations de l'utilisateur, du compte, et de la page actuelle à la vue
+        // Passer les informations de l'utilisateur, du compte, les étudiants et les professeurs à la vue
         return view('dashboard', [
             'user' => $user,
             'compte' => $compte,
+            'students' => $students,
+            'professors' => $professors,
             'currentPage' => $currentPage,
         ]);
     }

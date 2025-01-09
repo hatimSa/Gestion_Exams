@@ -68,15 +68,33 @@
             padding: 20px;
         }
 
+        .tables-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .table-wrapper {
+            flex: 1;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .table-wrapper h4 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
         }
 
         th,
         td {
-            padding: 12px;
+            padding: 10px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
@@ -97,12 +115,9 @@
     </style>
 </head>
 
+<?php include('Sidebar.php'); ?>
+
 <body>
-
-    <!-- Sidebar -->
-    <?php include('sidebar.php'); ?>
-
-    <!-- Main Content -->
     <div class="main-content">
         <div class="header">
             <h1>Admin Dashboard</h1>
@@ -141,59 +156,66 @@
 
         <!-- Users Tables Section -->
         <div class="card-body">
-            <!-- Table des étudiants -->
-            <h3>Étudiants</h3>
-            <table id="students-table">
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (!empty($students)): ?>
-                        <?php foreach ($students as $student): ?>
+            <h3>Derniers Enregistrements</h3>
+            <div class="tables-container">
+                <!-- Table des étudiants -->
+                <div class="table-wrapper">
+                    <h4>Étudiants</h4>
+                    <table id="students-table">
+                        <thead>
                             <tr>
-                                <td><?= strtoupper($student['last_name']); ?></td>
-                                <td><?= strtoupper($student['first_name']); ?></td>
-                                <td><?= $student['email']; ?></td>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Email</th>
                             </tr>
-                        <?php endforeach; ?>
-                    <?php else: ?>
-                        <tr>
-                            <td colspan="3">Aucun étudiant trouvé.</td>
-                        </tr>
-                    <?php endif; ?>
-                </tbody>
-            </table>
+                        </thead>
+                        <tbody>
+                            <?php if (!empty($students)): ?>
+                                <?php foreach ($students as $student): ?>
+                                    <tr>
+                                        <td><?= strtoupper($student['last_name']); ?></td>
+                                        <td><?= strtoupper($student['first_name']); ?></td>
+                                        <td><?= $student['email']; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="3">Aucun étudiant trouvé.</td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
 
-            <!-- Table des professeurs -->
-            <h3>Professeurs</h3>
-            <table id="teachers-table">
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (!empty($teachers)): ?>
-                        <?php foreach ($teachers as $teacher): ?>
+                <!-- Table des professeurs -->
+                <div class="table-wrapper">
+                    <h4>Professeurs</h4>
+                    <table id="teachers-table">
+                        <thead>
                             <tr>
-                                <td><?= strtoupper($teacher['last_name']); ?></td>
-                                <td><?= strtoupper($teacher['first_name']); ?></td>
-                                <td><?= $teacher['email']; ?></td>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Email</th>
                             </tr>
-                        <?php endforeach; ?>
-                    <?php else: ?>
-                        <tr>
-                            <td colspan="3">Aucun professeur trouvé.</td>
-                        </tr>
-                    <?php endif; ?>
-                </tbody>
-            </table>
+                        </thead>
+                        <tbody>
+                            <?php if (!empty($professors)): ?>
+                                <?php foreach ($professors as $professor): ?>
+                                    <tr>
+                                        <td><?= strtoupper($professor['last_name']); ?></td>
+                                        <td><?= strtoupper($professor['first_name']); ?></td>
+                                        <td><?= $professor['email']; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="3">Aucun professeur trouvé.</td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </body>
