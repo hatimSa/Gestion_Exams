@@ -56,11 +56,11 @@ class LoginController extends BaseController
                 $role = $roleModel->find($role_id);
 
                 // Vérifier le rôle et rediriger vers le tableau de bord approprié
-                if ($role->role_type == 'admin') {
+                if ($role['role_type'] == 'admin') {
                     return redirect()->to('/dashboard');
-                } elseif ($role->role_type == 'prof') {
+                } elseif ($role['role_type'] == 'prof') {
                     return redirect()->to('/profDashboard');
-                } elseif ($role->role_type == 'etd') {
+                } elseif ($role['role_type'] == 'etd') {
                     return redirect()->to('/etudDashboard');
                 } else {
                     // Si le rôle est inconnu, rediriger vers une page d'erreur ou une page par défaut

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,7 +46,7 @@
         }
 
         .bar {
-            width: 30px;
+            width: 40px;
             background-color: #6e7cb2;
             position: relative;
             transition: background-color 0.3s ease;
@@ -57,11 +58,13 @@
 
         .bar-label {
             position: absolute;
-            top: -20px;
-            width: 100%;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
             font-size: 12px;
             color: #333;
+            white-space: nowrap;
         }
 
         .card-body {
@@ -153,7 +156,6 @@
                 <?php endfor; ?>
             </div>
         </div>
-
         <!-- Users Tables Section -->
         <div class="card-body">
             <h3>Derniers Enregistrements</h3>
@@ -167,6 +169,7 @@
                                 <th>Nom</th>
                                 <th>Prénom</th>
                                 <th>Email</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -176,6 +179,11 @@
                                         <td><?= strtoupper($student['last_name']); ?></td>
                                         <td><?= strtoupper($student['first_name']); ?></td>
                                         <td><?= $student['email']; ?></td>
+                                        <td>
+                                            <a href="#" class="btn btn-info btn-sm">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php else: ?>
@@ -196,6 +204,7 @@
                                 <th>Nom</th>
                                 <th>Prénom</th>
                                 <th>Email</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -205,6 +214,11 @@
                                         <td><?= strtoupper($professor['last_name']); ?></td>
                                         <td><?= strtoupper($professor['first_name']); ?></td>
                                         <td><?= $professor['email']; ?></td>
+                                        <td>
+                                            <a href="#" class="btn btn-info btn-sm">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php else: ?>
@@ -218,6 +232,8 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
