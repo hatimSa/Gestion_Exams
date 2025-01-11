@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Réclamations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -14,16 +15,51 @@
             padding: 0;
         }
 
-        h2 {
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+            z-index: 10;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        h1 {
             text-align: center;
-            margin-top: 20px;
             font-size: 24px;
             color: #4CAF50;
+            margin-top: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         table {
-            width: 90%;
-            margin: 20px auto;
+            width: 100%;
+            margin: 20px 0;
             border-collapse: collapse;
             border-radius: 10px;
             overflow: hidden;
@@ -61,18 +97,36 @@
 
         td:first-child {
             font-weight: bold;
+            color: #4CAF50;
         }
 
-        /* Style for the "Utilisateur" column */
-        td:first-child {
-            color: #4CAF50;
+        .actions a {
+            padding: 5px 10px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .btn-info:hover {
+            background-color: #138496;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            table {
-                width: 100%;
-            }
 
             th,
             td {
@@ -83,26 +137,41 @@
     </style>
 </head>
 
-<?php include('Sidebar.php'); ?>
+<?= view('sidebar'); ?>
 
 <body>
 
-    <h2>Liste des réclamations</h2>
+    <div class="main-content">
+        <div class="header">
+            <h1>Liste des réclamations</h1>
+        </div>
 
-    <table>
-        <tr>
-            <th>Utilisateur</th>
-            <th>Objet</th>
-            <th>Message</th>
-        </tr>
-        <?php foreach ($reclamations as $reclamation) : ?>
-            <tr>
-                <td><?= $reclamation['first_name'] . ' ' . $reclamation['last_name'] ?></td>
-                <td><?= $reclamation['objet'] ?></td>
-                <td><?= $reclamation['message'] ?></td>
-            </tr>
-        <?php endforeach ?>
-    </table>
+        <div class="container">
+            <?php if (empty($reclamations)) : ?>
+                <p style="text-align: center; color: #555;">Aucune réclamation n'a été soumise pour le moment.</p>
+            <?php else : ?>
+                <table>
+                    <tr>
+                        <th>Utilisateur</th>
+                        <th>Objet</th>
+                        <th>Message</th>
+                        <th>Actions</th>
+                    </tr>
+                    <?php foreach ($reclamations as $reclamation) : ?>
+                        <tr>
+                            <td><?= htmlspecialchars($reclamation['first_name']) . ' ' . htmlspecialchars($reclamation['last_name']) ?></td>
+                            <td><?= htmlspecialchars($reclamation['objet']) ?></td>
+                            <td><?= htmlspecialchars($reclamation['message']) ?></td>
+                            <td class="actions">
+                                <a href="/reclamation/response/<?= $reclamation['id'] ?>" class="btn btn-info">Répondre</a>
+                                <a href="/reclamation/delete/<?= $reclamation['id'] ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette réclamation ?');">Supprimer</a>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                </table>
+            <?php endif ?>
+        </div>
+    </div>
 
 </body>
 

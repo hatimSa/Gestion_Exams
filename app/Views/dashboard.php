@@ -118,7 +118,7 @@
     </style>
 </head>
 
-<?php include('Sidebar.php'); ?>
+<?= view('sidebar'); ?>
 
 <body>
     <div class="main-content">
