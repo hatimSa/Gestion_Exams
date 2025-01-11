@@ -26,3 +26,5 @@ $routes->get('comptes/edit/(:num)', 'UsersListController::edit/$1');
 $routes->post('/comptes/update/(:num)', 'UsersListController::update/$1');
 $routes->get('/comptes/delete/(:num)', 'UsersListController::delete/$1');
 $routes->get('/logout', 'LoginController::logout');
+$routes->get('/reclamations', 'ReclamationController::index');
+
