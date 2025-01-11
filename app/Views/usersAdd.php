@@ -158,7 +158,7 @@
                 </div>
             <?php endif; ?>
 
-            <form action="<?= base_url('register/store') ?>" method="post">
+            <form action="<?= base_url('usersAdd/store') ?>" method="post">
                 <div class="form-group">
                     <label for="first_name">Prénom :</label>
                     <input type="text" name="first_name" id="first_name" required>
