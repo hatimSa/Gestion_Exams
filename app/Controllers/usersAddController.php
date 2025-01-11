@@ -26,7 +26,7 @@ class UsersAddController extends Controller
             'email'        => 'required|valid_email|is_unique[users.email]|is_unique[comptes.email]',
             'phone_number' => 'required|numeric|min_length[8]',
             'password'     => 'required|min_length[8]',
-            'etat'       => 'required|in_list[pending,accepted,rejected]',
+            'status'       => 'required|in_list[pending,accepted,rejected]',
             'role_id'      => 'required|integer'
         ]);
 
@@ -43,7 +43,7 @@ class UsersAddController extends Controller
         $email = $this->request->getPost('email');
         $phoneNumber = $this->request->getPost('phone_number');
         $password = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
-        $status = $this->request->getPost('etat');
+        $status = $this->request->getPost('status');
         $roleId = $this->request->getPost('role_id'); // Ensure role_id is received correctly
 
         $compteModel = new CompteModel();
