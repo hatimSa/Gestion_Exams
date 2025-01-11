@@ -44,7 +44,6 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            /* Aligner verticalement */
         }
 
         /* Style du formulaire de profil */
@@ -59,7 +58,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Centrer les éléments à l'intérieur de la carte */
         }
 
         .card-header {
@@ -73,7 +71,6 @@
         .card-body {
             text-align: left;
             width: 100%;
-            /* Pour que les inputs prennent toute la largeur de la carte */
         }
 
         img {
@@ -149,11 +146,31 @@
             outline: none;
         }
 
-        /* Ajouter un effet d'ombre sur la carte */
-        .card:hover {
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .upload-button {
+            display: block;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background-color 0.3s ease;
+            width: auto;
+            max-width: 140px;
+            text-align: center;
+        }
+
+        .upload-button:hover {
+            background-color: #218838;
+        }
+
+        /* Cacher le champ de téléchargement de fichier */
+        input[type="file"] {
+            display: none;
         }
     </style>
 </head>
@@ -161,7 +178,7 @@
 <body>
 
     <!-- Inclure le sidebar -->
-    <?= view('Sidebar'); ?>
+    <?= view('sidebar'); ?>
 
     <!-- Main Content -->
     <div class="main-content">
@@ -169,7 +186,10 @@
             <h3 class="card-header">Votre Profil</h3>
             <div class="card-body">
                 <form>
-                    <img src="/Gestion_Exams/public/images/profil.jpg" alt="Profil Picture">
+                    <img src="/Gestion_Exams/public/images/profil.jpg" alt="Profil Picture" style="display: block; margin: 0 auto;">
+                    <!-- Bouton d'upload -->
+                    <label for="file-upload" class="upload-button">Uploader une photo</label>
+                    <input type="file" id="file-upload" name="file-upload" accept="image/*" onchange="alert('Fonction de téléchargement à implémenter.')">
                     <div>
                         <label for="first_name">Prénom</label>
                         <input type="text" id="first_name" name="first_name" value="<?= esc($compte['first_name']) ?>" readonly>
