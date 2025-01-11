@@ -83,7 +83,7 @@
             box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
         }
 
-        h3{
+        h3 {
             margin-bottom: 30px;
             color: #007bff;
             font-size: 1.8rem;
@@ -176,8 +176,16 @@
 
 <body>
 
-    <!-- Inclure le sidebar -->
-    <?= view('sidebar'); ?>
+    <!-- Inclure le sidebar selon le rôle de l'utilisateur -->
+    <?php
+    if ($role == '3') {
+        echo view('sidebar');
+    } elseif ($role == '2') {
+        echo view('profSidebar');
+    } elseif ($role == '1') {
+        echo view('etudSidebar');
+    }
+    ?>
 
     <!-- Main Content -->
     <div class="main-content">
