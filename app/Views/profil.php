@@ -83,12 +83,11 @@
             box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
         }
 
-        h1 {
+        h3{
             margin-bottom: 30px;
             color: #007bff;
             font-size: 1.8rem;
             font-weight: 600;
-            text-transform: uppercase;
             letter-spacing: 1px;
         }
 

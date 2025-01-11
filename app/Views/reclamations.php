@@ -41,7 +41,7 @@
             padding: 20px;
         }
 
-        h1 {
+        h2 {
             text-align: center;
             font-size: 24px;
             color: #4CAF50;
@@ -143,7 +143,7 @@
 
     <div class="main-content">
         <div class="header">
-            <h1>Liste des réclamations</h1>
+            <h2>Liste des réclamations</h2>
         </div>
 
         <div class="container">
