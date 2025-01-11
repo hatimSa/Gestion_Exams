@@ -83,6 +83,8 @@ class UsersListController extends BaseController
             'first_name' => $this->request->getPost('first_name'),
             'last_name'  => $this->request->getPost('last_name'),
             'email'      => $this->request->getPost('email'),
+            'phone_number'      => $this->request->getPost('phone_number'),
+            'etat'       => $this->request->getPost('etat'),
             // You need to update role_id based on role_type, not directly role_type
             'role_id'    => $this->getRoleIdFromType($this->request->getPost('role_type')),
         ];
