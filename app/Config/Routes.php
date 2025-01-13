@@ -24,6 +24,7 @@ $routes->get('/profil', 'ProfilController::index');
 $routes->get('/usersList', 'UsersListController::index');
 $routes->get('comptes/edit/(:num)', 'UsersListController::edit/$1');
 $routes->post('/comptes/update/(:num)', 'UsersListController::update/$1');
+$routes->get('details/(:num)', 'UsersListController::details/$1');
 $routes->get('/comptes/delete/(:num)', 'UsersListController::delete/$1');
 $routes->get('/reclamations', 'ReclamationsController::index');
 $routes->get('/logout', 'LoginController::logout');

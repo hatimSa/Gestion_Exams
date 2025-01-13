@@ -104,6 +104,28 @@ class UsersListController extends BaseController
         return $role ? $role['role_id'] : null; // Return role_id for the given role_type
     }
 
+    public function details($id)
+    {
+        // Charger le modèle
+        $compteModel = new CompteModel();
+
+        // Trouver l'utilisateur par ID
+        $compte = $compteModel->find($id);
+
+        if (!$compte) {
+            return 'Utilisateur introuvable';
+        }
+
+        // Définir la variable currentPage
+        $currentPage = 'usersList';
+
+        // Retourner la vue des détails de l'utilisateur
+        return view('userDetails', [
+            'compte' => $compte,
+            'currentPage' => $currentPage,  // Passer la variable currentPage à la vue
+        ]);
+    }
+
     public function delete($id)
     {
         // Vérifier si l'utilisateur est connecté

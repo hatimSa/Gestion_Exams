@@ -10,6 +10,18 @@ class UsersAddController extends Controller
 {
     public function index()
     {
+        if (!session()->has('user_id')) {
+            return redirect()->to('/login');
+        }
+
+        $user_id = session()->get('user_id');
+        $compteModel = new CompteModel();
+        $compte = $compteModel->find($user_id);
+
+        if ($compte['role_id'] != 3) {
+            return redirect()->to('/home');
+        }
+
         // Display the registration form with the active page
         return view('usersAdd', ['currentPage' => 'usersAdd']);
     }
