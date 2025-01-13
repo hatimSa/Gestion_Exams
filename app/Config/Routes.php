@@ -28,3 +28,6 @@ $routes->get('details/(:num)', 'UsersListController::details/$1');
 $routes->get('/comptes/delete/(:num)', 'UsersListController::delete/$1');
 $routes->get('/reclamations', 'ReclamationsController::index');
 $routes->get('/logout', 'LoginController::logout');
+$routes->get('/comptes/delete/(:num)', 'UsersListController::delete/$1');
+
+
