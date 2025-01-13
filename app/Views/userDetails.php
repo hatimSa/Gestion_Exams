@@ -183,7 +183,18 @@
                 </div>
                 <div>
                     <label for="role_id">Role</label>
-                    <input type="text" id="role_id" name="role_id" value="<?= esc($compte['role_id']) ?>" readonly>
+                    <?php
+                    // Tableau de correspondance des rôles
+                    $roles = [
+                        1 => 'etd',
+                        2 => 'prof',
+                        3 => 'admin',
+                    ];
+
+                    // Obtenir le rôle en fonction de role_id ou définir 'Inconnu' par défaut
+                    $role = isset($roles[$compte['role_id']]) ? $roles[$compte['role_id']] : 'Inconnu';
+                    ?>
+                    <input type="text" id="role_id" name="role_id" value="<?= esc($role) ?>" readonly>
                 </div>
             </div>
         </div>
