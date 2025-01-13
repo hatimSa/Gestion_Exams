@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 INFO - 2025-01-09 08:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-09 08:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-09 08:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -97,6 +98,8 @@ in APPPATH\Views\dashboard.php on line 130.
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
  7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
 =======
+=======
+>>>>>>> origin/fatimazohra
 INFO - 2025-01-09 16:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-09 16:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 ERROR - 2025-01-09 16:24:33 --> mysqli_sql_exception: Index for table 'comptes' is corrupt; try to repair it in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
@@ -129,11 +132,15 @@ WHERE `email` = :email:
  5 APPPATH\Controllers\registerController.php(31): CodeIgniter\Validation\Validation->run()
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->store()
  7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+<<<<<<< HEAD
+>>>>>>> origin/fatimazohra
+=======
 >>>>>>> origin/fatimazohra
  8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 <<<<<<< HEAD
 INFO - 2025-01-09 09:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-09 09:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -265,6 +272,8 @@ in SYSTEMPATH\Model.php on line 932.
  1 APPPATH\Controllers\usersListController.php(52): CodeIgniter\Model->__call('getCompteWithRole', [...])
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->edit('17')
 =======
+=======
+>>>>>>> origin/fatimazohra
 CRITICAL - 2025-01-09 16:24:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Index for table 'comptes' is corrupt; try to repair it
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
  1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
@@ -457,12 +466,16 @@ CRITICAL - 2025-01-09 17:11:27 --> ErrorException: Trying to access array offset
 in APPPATH\Controllers\usersListController.php on line 27.
  1 APPPATH\Controllers\usersListController.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Gestion_Exams\\app\\Controllers\\usersListController.php', 27)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsersListController->index()
+<<<<<<< HEAD
+>>>>>>> origin/fatimazohra
+=======
 >>>>>>> origin/fatimazohra
  3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsersListController))
  4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 <<<<<<< HEAD
 INFO - 2025-01-09 23:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-09 23:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -819,6 +832,8 @@ INFO - 2025-01-09 23:30:57 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-09 23:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-09 23:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 =======
+=======
+>>>>>>> origin/fatimazohra
 INFO - 2025-01-09 17:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2025-01-09 17:11:30 --> ErrorException: Trying to access array offset on value of type null
 [Method: GET, Route: usersList]
@@ -912,4 +927,7 @@ INFO - 2025-01-09 17:26:39 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-09 17:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-09 17:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-09 17:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
+>>>>>>> origin/fatimazohra
+=======
 >>>>>>> origin/fatimazohra
