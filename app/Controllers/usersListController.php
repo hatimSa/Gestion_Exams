@@ -13,34 +13,28 @@ class UsersListController extends BaseController
             // Si non connecté, rediriger vers la page de connexion
             return redirect()->to('/login');
         }
-    
+
         // Récupérer les informations de l'utilisateur depuis la session
         $user_id = session()->get('user_id');
-    
+
         // Charger le modèle
         $compteModel = new CompteModel();
-    
+
         // Récupérer les données du compte de l'utilisateur
-        $compte = $compteModel->find($user_id);
-    
-        // Vérifier si le compte existe
-        if ($compte === null) {
-            // Si le compte n'existe pas, rediriger vers une autre page avec un message d'erreur
-            return redirect()->to('/login')->with('error', 'Utilisateur non trouvé');
-        }
-    
+        $compte = $compteModel->find($user_id); // Récupérer les informations du compte de l'utilisateur connecté
+
         // Vérifier si le role_id est égal à 3 (admin)
         if ($compte['role_id'] != 3) {
             // Si le role_id n'est pas 3, rediriger vers une autre page (par exemple, page d'accueil)
             return redirect()->to('/home');
         }
-    
+
         // Récupérer les comptes avec leurs rôles
         $comptes = $compteModel->getAllComptesWithRoles();
-    
+
         // Ajouter la variable $currentPage pour identifier la page active
         $currentPage = 'usersList';
-    
+
         // Passer les données et la page actuelle à la vue
         return view('usersList', [
             'comptes' => $comptes,
