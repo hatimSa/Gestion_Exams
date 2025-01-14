@@ -34,13 +34,22 @@ class LoginController extends BaseController
         // Charger le modèle pour interagir avec la base de données
         $userModel = new UserModel();
 
-        // Vérifier si l'utilisateur existe et récupérer son rôle
-        $user = $userModel->select('users.*, comptes.role_id')
+        // Vérifier si l'utilisateur existe et récupérer son rôle et état
+        $user = $userModel->select('users.*, comptes.role_id, comptes.etat')
         ->join('comptes', 'comptes.compte_id = users.compte_id')
         ->where('users.email', $email)
             ->first();
 
         if ($user) {
+            // Vérifier l'état du compte
+            if ($user['etat'] === 'pending') {
+                session()->setFlashdata('error', "Votre compte est en attente d'activation.");
+                return redirect()->to('/login');
+            } elseif ($user['etat'] === 'rejected') {
+                session()->setFlashdata('error', 'Votre compte est rejeté pour le moment.');
+                return redirect()->to('/login');
+            }
+
             // Vérifier si le mot de passe est correct
             if (password_verify($password, $user['password'])) {
                 // Authentification réussie, stocker l'ID de l'utilisateur dans la session

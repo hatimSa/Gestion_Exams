@@ -180,7 +180,7 @@
                                         <td><?= strtoupper($student['first_name']); ?></td>
                                         <td><?= $student['email']; ?></td>
                                         <td>
-                                            <a href="#" class="btn btn-info btn-sm">
+                                            <a href="<?= site_url('details/' . $student['compte_id']) ?>" class="btn btn-info btn-sm">
                                                 <i class="fas fa-eye"></i>
                                             </a>
                                         </td>
@@ -215,7 +215,7 @@
                                         <td><?= strtoupper($professor['first_name']); ?></td>
                                         <td><?= $professor['email']; ?></td>
                                         <td>
-                                            <a href="#" class="btn btn-info btn-sm">
+                                            <a href="<?= site_url('details/' . $professor['compte_id']) ?>" class="btn btn-info btn-sm">
                                                 <i class="fas fa-eye"></i>
                                             </a>
                                         </td>
