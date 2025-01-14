@@ -119,6 +119,53 @@
             box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
         }
 
+        /* Styles pour centrer les boutons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            /* Centre horizontalement */
+            align-items: center;
+            /* Centre verticalement (si nécessaire) */
+            margin-top: 20px;
+            /* Ajout d'espace au-dessus des boutons */
+        }
+
+        /* Styles pour les boutons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+            /* Espacement entre les boutons */
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            color: #fff;
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+        }
+
         .upload-button {
             display: block;
             padding: 8px 15px;
@@ -195,6 +242,10 @@
                     $role = isset($roles[$compte['role_id']]) ? $roles[$compte['role_id']] : 'Inconnu';
                     ?>
                     <input type="text" id="role_id" name="role_id" value="<?= esc($role) ?>" readonly>
+                </div>
+                <div class="button-container">
+                    <a href="<?= site_url('comptes/edit/' . $compte['compte_id']) ?>" class="btn btn-warning">Modifier</a>
+                    <a href="<?= site_url('comptes/delete/' . $compte['compte_id']) ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?');">Supprimer</a>
                 </div>
             </div>
         </div>
