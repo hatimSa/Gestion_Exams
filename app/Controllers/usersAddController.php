@@ -97,4 +97,10 @@ class UsersAddController extends Controller
         // Redirect to user list with success message
         return redirect()->to('/usersList')->with('success', 'Utilisateur ajouté avec succès.');
     }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/login');
+    }
 }

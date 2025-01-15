@@ -163,4 +163,11 @@ class UsersListController extends BaseController
             return redirect()->to('/usersList')->with('error', 'Une erreur est survenue lors de la suppression.');
         }
     }
+
+    public function logout()
+    {
+        // Supprimer la session et rediriger vers la page de connexion
+        session()->destroy();
+        return redirect()->to('/login');
+    }
 }

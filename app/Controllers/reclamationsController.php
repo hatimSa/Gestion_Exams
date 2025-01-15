@@ -27,4 +27,10 @@ class ReclamationsController extends Controller
             'currentPage' => $currentPage,
         ]);
     }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/login');
+    }
 }
