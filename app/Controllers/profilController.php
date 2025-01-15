@@ -34,4 +34,11 @@ class ProfilController extends Controller
             'role' => $role
         ]);
     }
+
+    public function logout()
+    {
+        // Supprimer la session et rediriger vers la page de connexion
+        session()->destroy();
+        return redirect()->to('/login');
+    }
 }
