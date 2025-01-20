@@ -54,4 +54,5 @@ $routes->get('/test-db', 'TestDBController::index');
 
 // Route pour la gestion des examens (utilisez celle-ci)
 $routes->get('/manage-exams', 'ManageExams::index');
+$routes->get('studentResults/listeResult', 'listeResultController::index');
 
