@@ -8,7 +8,7 @@ class CompteModel extends Model
 {
     protected $table = 'comptes';
     protected $primaryKey = 'compte_id';
-    protected $allowedFields = ['first_name', 'last_name', 'email', 'password', 'phone_number', 'etat', 'user_id', 'role_id'];
+    protected $allowedFields = ['first_name', 'last_name', 'email', 'password', 'phone_number', 'etat', 'user_id', 'role_id', 'department_id', 'filiere_id'];
 
     // Fetch all comptes with their corresponding roles
     public function getAllComptesWithRoles()
@@ -26,6 +26,20 @@ class CompteModel extends Model
             ->where('compte_id', $compte_id)
             ->first();
     }
+
+    // Compter les comptes basés sur leur rôle
+    public function countByRole($role_type)
+    {
+        return $this->join('roles', 'roles.role_id = comptes.role_id')
+        ->where('roles.role_type', $role_type)
+            ->countAllResults();
+    }
+
+    public function countAll()
+    {
+        return $this->countAllResults();
+    }
+
 
     // Fetch the 3 latest student records
     public function getLatestStudents()

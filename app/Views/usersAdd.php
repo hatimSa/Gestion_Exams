@@ -173,9 +173,9 @@
                     <label for="role_id">Rôle :</label>
                     <select name="role_id" id="role_id" required>
                         <option value="" disabled selected>-- Sélectionner un rôle --</option>
-                        <option value="1">etd</option>
-                        <option value="2">prof</option>
-                        <option value="3">admin</option>
+                        <option value="1">Étudiant</option>
+                        <option value="2">Professeur</option>
+                        <option value="3">Admin</option>
                     </select>
                 </div>
 

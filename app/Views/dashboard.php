@@ -15,6 +15,69 @@
             padding: 0;
         }
 
+        .tile-stats {
+            position: relative;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #6e7cb2, #4c4c9d);
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tile-stats:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .tile-stats .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .tile-stats .num {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tile-stats h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .tile-stats p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Custom colors for each card */
+        .tile-blue {
+            background: linear-gradient(135deg, #1e90ff, #1c75d1);
+        }
+
+        .tile-green {
+            background: linear-gradient(135deg, #28a745, #218838);
+        }
+
+        .tile-red {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+        }
+
+        .tile-aqua {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+        }
+
+        .tile-yellow {
+            background: linear-gradient(135deg, #ffc107, #e0a800);
+            color: #fff;
+        }
+
         .main-content {
             margin-left: 250px;
             padding: 20px;
@@ -138,6 +201,58 @@
                 ?>
             </h3>
             <p>This is your application dashboard. Here you can find various stats and quick links to your profile and settings.</p>
+        </div>
+
+        <div class="row">
+            <!-- Card Étudiants -->
+            <div class="col-md-4">
+                <div class="tile-stats tile-blue">
+                    <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="num"><?= $totalStudents; ?></div>
+                    <h3>Étudiants</h3>
+                    <p>Total des étudiants inscrits.</p>
+                </div>
+            </div>
+
+            <!-- Card Professeurs -->
+            <div class="col-md-4">
+                <div class="tile-stats tile-green">
+                    <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="num"><?= $totalProfessors; ?></div>
+                    <h3>Professeurs</h3>
+                    <p>Total des professeurs enregistrés.</p>
+                </div>
+            </div>
+
+            <!-- Card Utilisateurs -->
+            <div class="col-md-4">
+                <div class="tile-stats tile-red">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <div class="num"><?= $totalUsers; ?></div>
+                    <h3>Utilisateurs</h3>
+                    <p>Nombre total d'utilisateurs dans le système.</p>
+                </div>
+            </div>
+
+            <!-- Card Departements -->
+            <div class="col-md-4">
+                <div class="tile-stats tile-aqua">
+                    <div class="icon"><i class="fas fa-building"></i></div>
+                    <div class="num"><?= $totalDepartements; ?></div>
+                    <h3>Departements</h3>
+                    <p>Total des departements existants.</p>
+                </div>
+            </div>
+
+            <!-- Card filieres -->
+            <div class="col-md-4">
+                <div class="tile-stats tile-yellow">
+                    <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="num"><?= $totalFilieres; ?></div>
+                    <h3>Filieres</h3>
+                    <p>Total des filieres existantes.</p>
+                </div>
+            </div>
         </div>
 
         <!-- Statistics Section -->

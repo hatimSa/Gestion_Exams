@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url('bootstrap-4.0.0-dist/css/bootstrap.min.css'); ?>">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-
-
     <title>Login Page</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', 'sans-serf';
+            font-family: 'Poppins', 'sans-serif';
         }
 
         body {
@@ -23,18 +20,39 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+            background: url('<?= base_url('images/Prof.jpg'); ?>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            flex-direction: column;
+            /* Ajouté pour permettre un alignement vertical */
         }
 
         .container {
             position: relative;
             width: 850px;
             height: 550px;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
+            /* Ajout d'une transparence au fond du formulaire */
             border-radius: 30px;
             box-shadow: 0 0 30px rgba(0, 0, 0, .2);
             overflow: hidden;
+            z-index: 2;
+            margin-bottom: 30px;
+            /* Ajouté pour l'espacement sous la carte de login */
+        }
 
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(226, 226, 226, 0.8), rgba(201, 214, 255, 0.8));
+            /* Dégradé en arrière-plan */
+            z-index: 1;
         }
 
         .form-box {
@@ -49,18 +67,15 @@
             text-align: center;
             padding: 40px;
             z-index: 1;
-
         }
 
         form {
-
             width: 100%;
         }
 
         .container h1 {
             font-size: 36px;
             margin: -10px 0;
-
         }
 
         .input-box {
@@ -83,7 +98,6 @@
         .input-box input::placeholder {
             color: #888;
             font-weight: 400;
-
         }
 
         .input-box i {
@@ -93,7 +107,6 @@
             transform: translateY(-50%);
             font-size: 20px;
             color: #888;
-
         }
 
         .forgot-link {
@@ -122,7 +135,6 @@
         .container p {
             font-size: 14.5px;
             margin: 15px 0;
-
         }
 
         .social-icons a {
@@ -134,7 +146,6 @@
             color: #333;
             text-decoration: none;
             margin: 0 8px;
-
         }
 
         .toggle-box {
@@ -152,14 +163,12 @@
             background: #7494ec;
             border-radius: 150px;
             z-index: 2;
-
         }
 
         .toggle-panel {
             position: absolute;
             width: 50%;
             height: 100%;
-            /* background:seagreen; */
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -189,6 +198,15 @@
             color: green;
             margin-bottom: 10px;
         }
+
+        /* Proverbes */
+        .proverb-box {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -211,7 +229,7 @@
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Passsword" name="password" required>
+                    <input type="password" placeholder="Password" name="password" required>
                     <i class='bx bxs-lock'></i>
                 </div>
                 <div class="forgot-link">
@@ -226,7 +244,6 @@
                     </div>
                 </div>
             </form>
-
         </div>
 
         <div class="toggle-box">
@@ -236,8 +253,40 @@
                 <button class="btn register-btn" onclick="window.location.href='<?= base_url('register') ?>'">Register</button>
             </div>
         </div>
-
     </div>
+
+    <!-- Section des proverbes, en dehors de la .container -->
+    <div class="proverb-box">
+        <p id="proverb">Loading proverb...</p>
+    </div>
+
+    <script>
+        // Tableau de proverbes
+        var proverbs = [
+            "La patience est la clé du paradis.",
+            "Celui qui sait attendre obtient toujours ce qu'il souhaite.",
+            "Le succès ne se mesure pas à la destination finale, mais au chemin parcouru.",
+            "Le chemin de mille kilomètres commence par un pas.",
+            "La sagesse, c'est de savoir qu'on ne sait rien.",
+            "Chaque nuage a une doublure d'argent.",
+            "Qui sème le vent récolte la tempête.",
+            "Mieux vaut tard que jamais.",
+        ];
+
+        // Sélectionne l'élément avec l'id "proverb"
+        var proverbElement = document.getElementById("proverb");
+
+        function changeProverb() {
+            // Choisis un proverbe aléatoire à afficher
+            var randomProverb = proverbs[Math.floor(Math.random() * proverbs.length)];
+
+            // Affiche le proverbe dans l'élément
+            proverbElement.textContent = randomProverb;
+        }
+
+        // Appelle la fonction pour changer le proverbe toutes les 5000 millisecondes (5 secondes)
+        setInterval(changeProverb, 5000);
+    </script>
 
 </body>
 

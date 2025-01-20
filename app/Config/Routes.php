@@ -43,6 +43,12 @@ $routes->get('/profDashboard/logout', 'ProfController::logout');
 $routes->get('/reclamations', 'ReclamationsController::index');
 $routes->get('/reclamations/logout', 'ReclamationsController::logout');
 
+// Routes pour les examens
+$routes->get('/examsList', 'ExamsListController::index');
+$routes->get('/examsList/logout', 'ExamsListController::logout');
+$routes->get('/examsAdd', 'ExamsAddController::index');
+$routes->get('/examsAdd/logout', 'ExamsAddController::logout');
+
 // Routes pour le profil
 $routes->get('/profil', 'ProfilController::index');
 $routes->get('/profil/logout', 'ProfilController::logout');

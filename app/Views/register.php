@@ -21,26 +21,42 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+            background: url('<?= base_url('images/Prof.jpg'); ?>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            flex-direction: column;
+            /* Pour empiler le formulaire et les proverbes */
         }
 
         .container {
             position: relative;
-            width: 900px;
-            /* Augmenter la largeur */
-            height: 600px;
-            /* Augmenter la hauteur */
-            background: #fff;
+            width: 850px;
+            height: 650px;
+            /* Augmenter la hauteur pour inclure les proverbes */
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 30px;
             box-shadow: 0 0 30px rgba(0, 0, 0, .2);
             overflow: hidden;
+            z-index: 2;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(226, 226, 226, 0.8), rgba(201, 214, 255, 0.8));
+            z-index: 1;
         }
 
         .form-box {
             position: absolute;
             right: 0;
             width: 55%;
-            /* Augmenter la largeur de la boîte de formulaire */
             height: 100%;
             background: #fff;
             display: flex;
@@ -149,7 +165,6 @@
         .toggle-panel {
             position: absolute;
             width: 45%;
-            /* Augmenter la largeur du panneau de bascule */
             height: 100%;
             color: #fff;
             display: flex;
@@ -179,6 +194,15 @@
         .success {
             color: green;
             margin-bottom: 10px;
+        }
+
+        /* Proverbes */
+        .proverb-box {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -225,8 +249,8 @@
                 <div class="input-box">
                     <select name="role_id" id="role_id" required>
                         <option value="" disabled selected>-- Sélectionner un rôle --</option>
-                        <option value="1">etd</option>
-                        <option value="2">prof</option>
+                        <option value="1">Étudiant</option>
+                        <option value="2">Professeur</option>
                     </select>
                     <i class='bx bxs-user'></i>
                 </div>
@@ -249,6 +273,35 @@
             </div>
         </div>
     </div>
+
+    <!-- Section des proverbes, en dehors de la .container -->
+    <div class="proverb-box">
+        <p id="proverb">Loading proverb...</p>
+    </div>
+
+    <script>
+        // Tableau de proverbes
+        var proverbs = [
+            "La patience est la clé du paradis.",
+            "Celui qui sait attendre obtient toujours ce qu'il souhaite.",
+            "Le succès ne se mesure pas à la destination finale, mais au chemin parcouru.",
+            "Le chemin de mille kilomètres commence par un pas.",
+            "La sagesse, c'est de savoir qu'on ne sait rien.",
+            "Chaque nuage a une doublure d'argent.",
+            "Qui sème le vent récolte la tempête.",
+            "Mieux vaut tard que jamais.",
+        ];
+
+        // Fonction pour changer le proverbe toutes les 5 secondes
+        function changeProverb() {
+            var randomIndex = Math.floor(Math.random() * proverbs.length);
+            document.getElementById("proverb").textContent = proverbs[randomIndex];
+        }
+
+        // Changer le proverbe toutes les 5 secondes
+        setInterval(changeProverb, 5000);
+        changeProverb(); // Initialiser le proverbe au chargement
+    </script>
 </body>
 
 </html>

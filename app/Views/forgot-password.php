@@ -7,13 +7,39 @@
     <title>Forgot Password</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
+            background: url('<?= base_url('images/Prof.jpg'); ?>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 850px;
+            height: 550px;
+            background: rgba(255, 255, 255, 0.8);
+            /* Ajout d'une transparence au fond du formulaire */
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(226, 226, 226, 0.8), rgba(201, 214, 255, 0.8));
+            /* Dégradé en arrière-plan */
+            z-index: 1;
         }
 
         form {
