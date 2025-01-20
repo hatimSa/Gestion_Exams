@@ -10,36 +10,10 @@ class UsersAddController extends Controller
 {
     public function index()
     {
-        if (!session()->has('user_id')) {
-            // Si non connecté, rediriger vers la page de connexion
-            return redirect()->to('/login');
-        }
-
-        // Récupérer les informations de l'utilisateur depuis la session
-        $user_id = session()->get('user_id');
-
-        // Charger le modèle
-        $compteModel = new CompteModel();
-
-        // Récupérer les données du compte de l'utilisateur
-        $compte = $compteModel->find($user_id);
-
-        if ($compte['role_id'] != 3) {
-            return redirect()->to('/home');
-        }
-
-        // Récupérer les comptes avec leurs rôles
-        $comptes = $compteModel->getAllComptesWithRoles();
-
-        // Ajouter la variable $currentPage pour identifier la page active
-        $currentPage = 'usersList';
-
-        // Passer les données et la page actuelle à la vue
-        return view('usersList', [
-            'comptes' => $comptes,
-            'currentPage' => $currentPage,
-        ]);
+        // Display the registration form with the active page
+        return view('usersAdd', ['currentPage' => 'usersAdd']);
     }
+
 
     public function store()
     {
@@ -52,7 +26,7 @@ class UsersAddController extends Controller
             'email'        => 'required|valid_email|is_unique[users.email]|is_unique[comptes.email]',
             'phone_number' => 'required|numeric|min_length[8]',
             'password'     => 'required|min_length[8]',
-            'etat'       => 'required|in_list[pending,accepted,rejected]',
+            'status'       => 'required|in_list[pending,accepted,rejected]',
             'role_id'      => 'required|integer'
         ]);
 
@@ -69,7 +43,7 @@ class UsersAddController extends Controller
         $email = $this->request->getPost('email');
         $phoneNumber = $this->request->getPost('phone_number');
         $password = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
-        $status = $this->request->getPost('etat');
+        $status = $this->request->getPost('status');
         $roleId = $this->request->getPost('role_id'); // Ensure role_id is received correctly
 
         $compteModel = new CompteModel();

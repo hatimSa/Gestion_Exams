@@ -48,6 +48,7 @@
             color: #333;
             text-align: center;
             padding: 40px;
+            padding-left: 65px;
             z-index: 1;
             flex-direction: column;
             justify-content: center;

@@ -66,7 +66,7 @@
             font-size: 2rem;
             font-weight: bold;
             color: #007bff;
-            margin-bottom: 20px;
+            margin-bottom: 58px;
             letter-spacing: 1px;
         }
 
