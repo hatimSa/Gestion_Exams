@@ -16,16 +16,15 @@
             padding: 0;
         }
 
-        .sidebar {
-            width: 250px;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            height: 100%;
-            padding-top: 20px;
-            z-index: 10;
-            /* Assurer que la sidebar est au-dessus du contenu principal */
-        }
+            .sidebar {
+                width: 250px;
+                background-color: #333;
+                color: #fff;
+                position: fixed;
+                height: 100%;
+                padding-top: 20px;
+                z-index: 10;
+                }
 
         .sidebar a {
             display: block;
@@ -38,6 +37,12 @@
             background-color: #575757;
         }
 
+        /* Contenu principal */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            min-height: 100vh;
+        }
         /* Contenu principal */
         .main-content {
             margin-left: 250px;
@@ -66,6 +71,12 @@
             text-transform: uppercase;
         }
 
+        #comptes-table td {
+            background-color: #f9f9f9;
+            font-size: 14px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+        }
         #comptes-table td {
             background-color: #f9f9f9;
             font-size: 14px;
@@ -166,6 +177,47 @@
             color: #333;
         }
 
+        .card-body {
+            padding: 15px;
+        }
+
+        /* Style de l'alerte */
+        .alert {
+            font-size: 16px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .alert-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .alert-dismissible .close {
+            color: white;
+            font-size: 18px;
+            padding: 0.75rem 1.25rem;
+        }
+
+        #success-alert {
+            width: 300px; /* Réduit la largeur de l'alerte */
+            margin: 0 auto;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Affichage de l'alerte de succès si elle existe -->
+    <?php if (session()->getFlashdata('success')): ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert" id="success-alert">
+            <strong>Succès! </strong> <?= session()->getFlashdata('success') ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php endif; ?>
         .card-body {
             padding: 15px;
         }

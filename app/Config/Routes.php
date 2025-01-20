@@ -22,6 +22,7 @@ $routes->post('/register/store', 'RegisterController::store');
 $routes->get('/dashboard', 'DashboardController::index');
 $routes->get('/dashboard/logout', 'DashboardController::logout');
 
+
 // Routes pour les utilisateurs
 $routes->get('/usersAdd', 'UsersAddController::index');
 $routes->get('/usersAdd/logout', 'UsersAddController::logout');
@@ -56,3 +57,5 @@ $routes->get('/test-db', 'TestDBController::index');
 $routes->get('/manage-exams', 'ManageExams::index');
 $routes->get('studentResults/listeResult', 'listeResultController::index');
 
+//routes pour gestion notes
+$routes->get('/student-results', 'resultController::index');
