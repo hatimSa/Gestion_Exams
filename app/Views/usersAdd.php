@@ -16,15 +16,12 @@
 
         .sidebar {
             width: 250px;
-            background-color: #4c4c9d;
+            background-color: #333;
             color: #fff;
             position: fixed;
             height: 100%;
             padding-top: 20px;
-        }
-
-        .sidebar h2 {
-            padding-left: 28px;
+            z-index: 10;
         }
 
         .sidebar a {
@@ -35,17 +32,7 @@
         }
 
         .sidebar a:hover {
-            background-color: #6e7cb2;
-        }
-
-        .sidebar a.active {
-            background-color: #6e7cb2;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .sidebar a.active i {
-            color: #fff;
+            background-color: #575757;
         }
 
         .main-content {
@@ -130,17 +117,9 @@
     </style>
 </head>
 
-<body>
+<?= view('sidebar'); ?>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2><i class="fas fa-user-circle"></i> Admin</h2>
-        <a href="/gestion_Exams/public/dashboard" class="<?= ($currentPage === 'dashboard') ? 'active' : '' ?>"><i class="fas fa-home"></i> Home</a>
-        <a href="/gestion_Exams/public/usersAdd" class="<?= ($currentPage === 'usersAdd') ? 'active' : '' ?>"><i class="fas fa-user-plus"></i> Ajouter</a>
-        <a href="/gestion_Exams/public/usersList" class="<?= ($currentPage === 'usersList') ? 'active' : '' ?>"><i class="fas fa-list"></i> Utlisateurs</a>
-        <a href="/gestion_Exams/public/profil" class="<?= ($currentPage === 'profil') ? 'active' : '' ?>"><i class="fas fa-user"></i> Profil</a>
-        <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
-    </div>
+<body>
 
     <!-- Main Content -->
     <div class="main-content">
@@ -157,7 +136,7 @@
                 </div>
             <?php endif; ?>
 
-            <form action="<?= base_url('register/store') ?>" method="post">
+            <form action="<?= base_url('usersAdd/store') ?>" method="post">
                 <div class="form-group">
                     <label for="first_name">Prénom :</label>
                     <input type="text" name="first_name" id="first_name" required>

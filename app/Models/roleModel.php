@@ -6,10 +6,12 @@ use CodeIgniter\Model;
 
 class RoleModel extends Model
 {
-    protected $table      = 'roles';
+    protected $table = 'roles';
     protected $primaryKey = 'role_id';
-
     protected $allowedFields = ['role_type'];
 
-    protected $returnType = 'object';
+    public function getRoleIdByType($role_type)
+    {
+        return $this->where('role_type', $role_type)->first();
+    }
 }

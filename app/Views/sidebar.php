@@ -16,7 +16,7 @@
             padding-top: 20px;
         }
 
-        .sidebar h2 {
+        .sidebar h1 {
             padding-left: 28px;
         }
 
@@ -46,10 +46,11 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <h2><i class="fas fa-user-circle"></i> Admin</h2>
+        <h1><i class="fas fa-user-circle"></i> Admin</h1>
         <a href="/gestion_Exams/public/dashboard" class="<?= ($currentPage === 'dashboard') ? 'active' : '' ?>"><i class="fas fa-home"></i> Home</a>
-        <a href="/gestion_Exams/public/usersAdd" class="<?= ($currentPage === 'register') ? 'active' : '' ?>"><i class="fas fa-user-plus"></i> Ajouter</a>
+        <a href="/gestion_Exams/public/usersAdd" class="<?= ($currentPage === 'usersAdd') ? 'active' : '' ?>"><i class="fas fa-user-plus"></i> Ajouter</a>
         <a href="/gestion_Exams/public/usersList" class="<?= ($currentPage === 'usersList') ? 'active' : '' ?>"><i class="fas fa-list"></i> Utlisateurs</a>
+        <a href="/gestion_Exams/public/reclamations" class="<?= ($currentPage === 'reclamations') ? 'active' : '' ?>"><i class="fas fa-exclamation-circle"></i> Réclamations</a>
         <a href="/gestion_Exams/public/profil" class="<?= ($currentPage === 'profil') ? 'active' : '' ?>"><i class="fas fa-user"></i> Profil</a>
         <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>

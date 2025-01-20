@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des utilisateurs</title>
-    <!-- Lien vers Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.datatables.net/2.2.0/css/dataTables.bootstrap5.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Style de base */
         body {
@@ -24,6 +24,7 @@
             height: 100%;
             padding-top: 20px;
             z-index: 10;
+            /* Assurer que la sidebar est au-dessus du contenu principal */
         }
 
         .sidebar a {
@@ -40,8 +41,10 @@
         /* Contenu principal */
         .main-content {
             margin-left: 250px;
+            /* Espace laissé pour la sidebar */
             padding: 20px;
             min-height: 100vh;
+            /* Pour que le contenu occupe toute la hauteur de la page */
         }
 
         /* Style du tableau */
@@ -166,42 +169,15 @@
         .card-body {
             padding: 15px;
         }
-
-        /* Style de l'alerte */
-        .alert {
-            font-size: 16px;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-
-        .alert-success {
-            background-color: #28a745;
-            color: white;
-        }
-
-        .alert-dismissible .close {
-            color: white;
-            font-size: 18px;
-            padding: 0.75rem 1.25rem;
-        }
-
-        #success-alert {
-            width: 300px; /* Réduit la largeur de l'alerte */
-            margin: 0 auto;
-            transition: opacity 0.5s ease;
-        }
     </style>
 </head>
 
 <body>
-    <!-- Affichage de l'alerte de succès si elle existe -->
+
+    <!-- Flash Message -->
     <?php if (session()->getFlashdata('success')): ?>
-        <div class="alert alert-success alert-dismissible fade show" role="alert" id="success-alert">
-            <strong>Succès! </strong> <?= session()->getFlashdata('success') ?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+        <div class="alert alert-success">
+            <?= session()->getFlashdata('success') ?>
         </div>
     <?php endif; ?>
 
@@ -211,6 +187,7 @@
         <div class="card">
             <h3 class="card-header">
                 Liste des utilisateurs
+                <!-- Add User Button -->
                 <a href="<?= site_url('/usersAdd') ?>" class="btn btn-primary" style="float: right;">Ajouter un utilisateur</a>
             </h3>
             <div class="card-body">
@@ -234,9 +211,9 @@
                                 <td><?= esc($compte['role_type']) ?></td>
                                 <td><?= esc($compte['etat']) ?></td>
                                 <td>
-                                    <a href="<?= site_url('profile/' . $compte['compte_id']) ?>" class="btn btn-primary btn-sm">Voir</a>
+                                    <a href="<?= site_url('details/' . $compte['compte_id']) ?>" class="btn btn-primary btn-sm">Voir</a>
                                     <a href="<?= site_url('comptes/edit/' . $compte['compte_id']) ?>" class="btn btn-warning btn-sm">Modifier</a>
-                                    <a href="<?= site_url('comptes/delete/' . $compte['compte_id']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce compte ?');">Supprimer</a>
+                                    <a href="<?= site_url('comptes/delete/' . $compte['compte_id']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?');">Supprimer</a>
                                 </td>
                             </tr>
                         <?php endforeach ?>
@@ -246,9 +223,30 @@
         </div>
     </div>
 
-    <!-- Inclure jQuery et Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JS Scripts -->
+    <script src=" https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.0/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.2.0/js/dataTables.bootstrap5.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#comptes-table').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/French.json"
+                },
+                "pagingType": "full_numbers",
+                "order": [
+                    [0, "asc"]
+                ],
+                "columnDefs": [{
+                    "orderable": false,
+                    "targets": 5
+                }]
+            });
+        });
+    </script>
+
 </body>
+
 </html>
