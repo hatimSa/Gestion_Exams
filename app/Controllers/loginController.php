@@ -34,13 +34,22 @@ class LoginController extends BaseController
         // Charger le modèle pour interagir avec la base de données
         $userModel = new UserModel();
 
-        // Vérifier si l'utilisateur existe et récupérer son rôle
-        $user = $userModel->select('users.*, comptes.role_id')
+        // Vérifier si l'utilisateur existe et récupérer son rôle et état
+        $user = $userModel->select('users.*, comptes.role_id, comptes.etat')
         ->join('comptes', 'comptes.compte_id = users.compte_id')
         ->where('users.email', $email)
             ->first();
 
         if ($user) {
+            // Vérifier l'état du compte
+            if ($user['etat'] === 'pending') {
+                session()->setFlashdata('error', "Votre compte est en attente d'activation.");
+                return redirect()->to('/login');
+            } elseif ($user['etat'] === 'rejected') {
+                session()->setFlashdata('error', 'Votre compte est rejeté pour le moment.');
+                return redirect()->to('/login');
+            }
+
             // Vérifier si le mot de passe est correct
             if (password_verify($password, $user['password'])) {
                 // Authentification réussie, stocker l'ID de l'utilisateur dans la session
@@ -56,11 +65,11 @@ class LoginController extends BaseController
                 $role = $roleModel->find($role_id);
 
                 // Vérifier le rôle et rediriger vers le tableau de bord approprié
-                if ($role->role_type == 'admin') {
+                if ($role['role_type'] == 'admin') {
                     return redirect()->to('/dashboard');
-                } elseif ($role->role_type == 'prof') {
+                } elseif ($role['role_type'] == 'prof') {
                     return redirect()->to('/profDashboard');
-                } elseif ($role->role_type == 'etd') {
+                } elseif ($role['role_type'] == 'etd') {
                     return redirect()->to('/etudDashboard');
                 } else {
                     // Si le rôle est inconnu, rediriger vers une page d'erreur ou une page par défaut

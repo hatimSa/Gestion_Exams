@@ -24,13 +24,21 @@ class ProfilController extends Controller
             return redirect()->to('/login')->with('error', 'Utilisateur introuvable.');
         }
 
-        // Définissez la page active
+        $role = $compte['role_id'];
         $currentPage = 'profil';
 
         // Passez les données de l'utilisateur et la page actuelle à la vue
         return view('profil', [
             'compte' => $compte,
             'currentPage' => $currentPage,
+            'role' => $role
         ]);
+    }
+
+    public function logout()
+    {
+        // Supprimer la session et rediriger vers la page de connexion
+        session()->destroy();
+        return redirect()->to('/login');
     }
 }

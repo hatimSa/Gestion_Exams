@@ -11,35 +11,21 @@ class UsersAddController extends Controller
     public function index()
     {
         if (!session()->has('user_id')) {
-            // Si non connecté, rediriger vers la page de connexion
             return redirect()->to('/login');
         }
 
-        // Récupérer les informations de l'utilisateur depuis la session
         $user_id = session()->get('user_id');
-
-        // Charger le modèle
         $compteModel = new CompteModel();
-
-        // Récupérer les données du compte de l'utilisateur
         $compte = $compteModel->find($user_id);
 
         if ($compte['role_id'] != 3) {
             return redirect()->to('/home');
         }
 
-        // Récupérer les comptes avec leurs rôles
-        $comptes = $compteModel->getAllComptesWithRoles();
-
-        // Ajouter la variable $currentPage pour identifier la page active
-        $currentPage = 'usersList';
-
-        // Passer les données et la page actuelle à la vue
-        return view('usersList', [
-            'comptes' => $comptes,
-            'currentPage' => $currentPage,
-        ]);
+        // Display the registration form with the active page
+        return view('usersAdd', ['currentPage' => 'usersAdd']);
     }
+
 
     public function store()
     {
@@ -110,5 +96,11 @@ class UsersAddController extends Controller
 
         // Redirect to user list with success message
         return redirect()->to('/usersList')->with('success', 'Utilisateur ajouté avec succès.');
+    }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/login');
     }
 }
