@@ -115,17 +115,25 @@
         <a href="/gestion_Exams/public/examsAdd" class="btn">Ajouter un exam</a>
         <table>
             <tr>
-                <th>Exam name</th>
+                <th>Département</th>
+                <th>Filière</th>
+                <th>Module</th>
                 <th>Date</th>
+                <th>heure de début</th>
+                <th>heure de fin</th>
                 <th>Actions</th>
             </tr>
             <?php foreach ($exams as $exam): ?>
                 <tr>
-                    <td><?= $exam['exam_name'] ?></td>
+                    <td><?= $exam['departement_name'] ?></td>
+                    <td><?= $exam['filiere_name'] ?></td>
+                    <td><?= $exam['module'] ?></td>
                     <td><?= $exam['exam_date'] ?></td>
+                    <td><?= $exam['start_time'] ?></td>
+                    <td><?= $exam['end_time'] ?></td>
                     <td>
                         <a href="/edit-exam/<?= $exam['exam_id'] ?>" class="btn">Modifier</a>
-                        <a href="/delete-exam/<?= $exam['exam_id'] ?>" class="btn" onclick="return confirm('Are you sure you want to delete this exam?')">Supprimer</a>
+                        <a href="/delete-exam/<?= $exam['exam_id'] ?>" class="btn" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet exam?')">Supprimer</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

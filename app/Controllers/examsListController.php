@@ -16,8 +16,11 @@ class ExamsListController extends BaseController
         // Charger le modèle
         $examModel = new ExamModel();
 
-        // Récupérer la liste des exams
-        $exams = $examModel->findAll();
+        // Récupérer la liste des exams avec les noms des filières et des départements
+        $exams = $examModel->select('exams.*, filieres.filiere_name, departements.departement_name')
+            ->join('filieres', 'exams.filiere_id = filieres.filiere_id')
+            ->join('departements', 'filieres.departement_id = departements.departement_id')
+            ->findAll();
 
         // Définir la variable currentPage
         $currentPage = 'examsList';

@@ -8,7 +8,7 @@ class CompteModel extends Model
 {
     protected $table = 'comptes';
     protected $primaryKey = 'compte_id';
-    protected $allowedFields = ['first_name', 'last_name', 'email', 'password', 'phone_number', 'etat', 'user_id', 'role_id', 'department_id', 'filiere_id'];
+    protected $allowedFields = ['first_name', 'last_name', 'email', 'password', 'phone_number', 'etat', 'user_id', 'role_id', 'departement_id', 'filiere_id'];
 
     // Fetch all comptes with their corresponding roles
     public function getAllComptesWithRoles()

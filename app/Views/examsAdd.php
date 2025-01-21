@@ -121,15 +121,35 @@
             <h1>Ajouter un Nouvel Exam</h1>
         </div>
 
-        <form action="/add-exam" method="post">
+        <form action="<?= base_url('examsAdd/store') ?>" method="post">
+
+            <div class="input-box">
+                <select name="filiere_id" id="filiere_id" required>
+                    <option value="" disabled selected>-- Sélectionner une filière --</option>
+                    <?php foreach ($filieres as $filiere): ?>
+                        <option value="<?= $filiere['filiere_id']; ?>"><?= $filiere['filiere_name']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
             <div class="form-group">
-                <label for="exam_name">Nom de l'Exam:</label>
-                <input type="text" id="exam_name" name="exam_name" required>
+                <label for="module">Module de l'exam:</label>
+                <input type="text" id="module" name="module" required>
             </div>
 
             <div class="form-group">
                 <label for="exam_date">Date de l'Exam:</label>
                 <input type="date" id="exam_date" name="exam_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="start_time">heure de début</label>
+                <input type="time" id="start_time" name="start_time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="end_time">heure de fin</label>
+                <input type="time" id="end_time" name="end_time" required>
             </div>
 
             <button type="submit" class="btn">Ajouter l'Exam</button>

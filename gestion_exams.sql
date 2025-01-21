@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : lun. 20 jan. 2025 à 18:03
+-- Généré le : dim. 19 jan. 2025 à 20:56
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -37,6 +37,8 @@ CREATE TABLE `comptes` (
   `etat` enum('pending','accepted','rejected') NOT NULL DEFAULT 'pending',
   `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL DEFAULT 1,
+  `departement_id` int(11) NOT NULL,
+  `filiere_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -45,28 +47,28 @@ CREATE TABLE `comptes` (
 -- Déchargement des données de la table `comptes`
 --
 
-INSERT INTO `comptes` (`compte_id`, `first_name`, `last_name`, `email`, `password`, `phone_number`, `etat`, `user_id`, `role_id`, `created_at`, `updated_at`) VALUES
-(37, 'simo', 'adly', 'simo@example.com', '$2y$10$c99fh3LGv.i.eQWXwpACju.9TG7Vl.Cj7rhA67Zaj94nJTZlvCUuu', '0606589873', 'accepted', 37, 1, '2025-01-11 19:47:24', '2025-01-16 00:26:58'),
-(16, 'hatim', 'salhi', 'hatim@gmail.com', '$2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW', '0642444654', 'accepted', 16, 3, '2025-01-07 13:31:05', '2025-01-16 00:24:33'),
-(27, 'hicham', 'amazigh', 'hicham@example.com', '$2y$10$WjhmmuJDjrB3WC39eTnIOOgOuQWKntQtQsLOc2RoIz3Fe98lp.XlW', '0302459681', 'pending', 27, 1, '2025-01-07 16:11:32', '2025-01-16 18:27:50'),
-(26, 'saad', 'elfakkak', 'saad@gmail.com', '$2y$10$ljhE2alguYZtYSWWiEmtneWNqjhDPClGqNSMcIPrKijNoq8k.sq4i', '0706524174', 'pending', 26, 1, '2025-01-07 14:27:44', '2025-01-16 00:25:19'),
-(28, 'Lionel', 'Messi', 'liolio@gmail.com', '$2y$10$68U5p7MEIUwmO462EBlPVOiu6yRCdg1r2UpGcPfe2nOqDCSVmCtKO', '0001112225', 'accepted', 28, 2, '2025-01-07 16:17:22', '2025-01-16 00:25:42'),
-(29, 'luis', 'suarez', 'luis@gmail.com', '$2y$10$FnLhGjQ8ozpk5c4iFMBIsO3EnIeYjkA35PfgSxC1GfxqD5jQ73wBi', '0804569874', 'accepted', 29, 2, '2025-01-07 16:35:59', '2025-01-16 00:25:56'),
-(35, 'sergio', 'busquets', 'sergio@gmail.com', '$2y$10$FXkqwvS0UD.FB58cSg7TBOkfNbEZ4rL8hhNz5h3eI9qoxb3JPpDcq', '0587988754', 'accepted', 35, 2, '2025-01-09 07:45:39', '2025-01-16 00:26:27'),
-(36, 'karim', 'benzima', 'karim@gmail.com', '$2y$10$0eQEp/t3krnrBsC0q5A9h.HfwiderKt7zmpXzgqnSFTyYqno4Q9le', '0796321473', 'rejected', 36, 1, '2025-01-09 08:30:31', '2025-01-16 00:26:48'),
-(38, 'gareth', 'bale', 'bale@gmail.com', '$2y$10$NNrjpWsZL0Cd7TpGR95dfu0e5bwTOeWHBqFaGJXjXBkwcsmLjaHMy', '0405987456', 'pending', 38, 1, '2025-01-11 20:13:10', '2025-01-16 17:45:12'),
-(39, 'pep', 'guardiola', 'pep@gmail.com', '$2y$10$.sl8jZ4M4yCUV68rlwrAk.C11s4VFhrbJUQtHeSpP3eq7wUXXSaia', '0304589636', 'rejected', 39, 2, '2025-01-11 20:14:05', '2025-01-16 00:27:49'),
-(40, 'Youssef', 'Belhdi', 'youssef@gmail.com', '$2y$10$qOopF.CfaTYRPbxKOoRqy.UyJKinXHZtxEpJNqmq6n/vB4/4IAQji', '0688969685', 'accepted', 40, 1, '2025-01-13 18:45:12', '2025-01-16 00:28:18'),
-(42, 'john', 'doe', 'john.doe@example.com', '$2y$10$xK8YCw1G1gxCrN27E2HTm.taGKINGC7pjKN/28UDBOV78eJ3CGZL2', '0669857496', 'accepted', 42, 1, '2025-01-14 16:52:07', '2025-01-16 00:28:26'),
-(43, 'Mohamed', 'Tazi', 'mohamed.tazi@example.com', '$2y$10$uGh2Hk7ZRIv36MZRmFHZd0E2SOTztiTcN5A.MKnsh30M3ZnR1XZKi', '0601234567', 'accepted', 43, 2, '2025-01-15 23:00:00', '2025-01-16 18:20:37'),
-(44, 'Amina', 'El Alaoui', 'amina.alaoui@example.com', '$2y$10$1vQf5t.MnKoDtv8zphEqDk6sOwp9RBO3wnY5hFXuI72eMZXaYm7qa', '0602345678', 'accepted', 44, 2, '2025-01-15 23:00:00', '2025-01-16 18:20:44'),
-(45, 'Youssef', 'Oukacha', 'youssef.oukacha@example.com', '$2y$10$FXhRIaDF0VRv9OvmnTe3p7VwczkHptm0eFy5vD1u9FihLf9osw4Qu', '0603456789', 'accepted', 45, 1, '2025-01-15 23:00:00', '2025-01-16 18:27:25'),
-(46, 'Imane', 'Benjelloun', 'imane.benjelloun@example.com', '$2y$10$5uMjZZkm7Z8FZHgUG1Wx6J8sqq6x13T1Amf.wE0YotWpkjeyb4cCm', '0604567890', 'accepted', 46, 2, '2025-01-15 23:00:00', '2025-01-16 18:20:57'),
-(47, 'Rachid', 'Fassi', 'rachid.fassi@example.com', '$2y$10$BZH10hFzM5Yg9tpdI7Kp8yq.fADz5jxxK1gCk3NNN6py3ohubHoS6', '0605678901', 'accepted', 47, 2, '2025-01-15 23:00:00', '2025-01-16 18:21:03'),
-(48, 'Karim', 'Tariq', 'karim.tariq@example.com', '$2y$10$NKhXkXfOxKplzFsk9rXFSdOCN.KMcLg69bb0FZvwzTRHZ3Cq.W3He', '0606789012', 'accepted', 48, 1, '2025-01-16 18:25:43', '2025-01-16 18:25:43'),
-(49, 'Sami', 'El Moutaouakkil', 'sami.moutaouakkil@example.com', '$2y$10$GZZpglRHmRytGbNMbmbkaHRlgOlAsvq4jH.EyzEjzNuytkaVbZX0S.', '0607890123', 'accepted', 49, 1, '2025-01-16 18:25:43', '2025-01-16 18:25:43'),
-(50, 'Fatima', 'Zahra', 'fatima.zahra@example.com', '$2y$10$kqerOls0zXZyFEyT91STU1Zt6fy7Lpn0yTzYglqDlMttc0Af7ZngcC', '0609876543', 'accepted', 50, 1, '2025-01-16 18:25:43', '2025-01-16 18:25:43'),
-(51, 'oussama', 'ahorig', 'just_ouss@gmail.com', '$2y$10$Gm4/o8pUcFgrDSe8VMT2qOBNCSaRSBnPmPcV3rg7j2UyTXrUsUTjG', '0630587496', 'accepted', 51, 1, '2025-01-16 18:29:15', '2025-01-16 18:29:15');
+INSERT INTO `comptes` (`compte_id`, `first_name`, `last_name`, `email`, `password`, `phone_number`, `etat`, `user_id`, `role_id`, `departement_id`, `filiere_id`, `created_at`, `updated_at`) VALUES
+(37, 'simo', 'adly', 'simo@example.com', '$2y$10$c99fh3LGv.i.eQWXwpACju.9TG7Vl.Cj7rhA67Zaj94nJTZlvCUuu', '0606589873', 'accepted', 37, 1, 1, 1, '2025-01-11 19:47:24', '2025-01-16 00:26:58'),
+(16, 'hatim', 'salhi', 'hatim@gmail.com', '$2y$10$czPmCSXnGmnjqMcc51J9leT4qiDmHKLgIsEjwnp27w46GjX5YYugW', '0642444654', 'accepted', 16, 3, 1, 1, '2025-01-07 13:31:05', '2025-01-16 00:24:33'),
+(27, 'hicham', 'amazigh', 'hicham@example.com', '$2y$10$WjhmmuJDjrB3WC39eTnIOOgOuQWKntQtQsLOc2RoIz3Fe98lp.XlW', '0302459681', 'pending', 27, 1, 1, 3, '2025-01-07 16:11:32', '2025-01-16 18:27:50'),
+(26, 'saad', 'elfakkak', 'saad@gmail.com', '$2y$10$ljhE2alguYZtYSWWiEmtneWNqjhDPClGqNSMcIPrKijNoq8k.sq4i', '0706524174', 'pending', 26, 1, 1, 4, '2025-01-07 14:27:44', '2025-01-16 00:25:19'),
+(28, 'Lionel', 'Messi', 'liolio@gmail.com', '$2y$10$68U5p7MEIUwmO462EBlPVOiu6yRCdg1r2UpGcPfe2nOqDCSVmCtKO', '0001112225', 'accepted', 28, 2, 2, 6, '2025-01-07 16:17:22', '2025-01-16 00:25:42'),
+(29, 'luis', 'suarez', 'luis@gmail.com', '$2y$10$FnLhGjQ8ozpk5c4iFMBIsO3EnIeYjkA35PfgSxC1GfxqD5jQ73wBi', '0804569874', 'accepted', 29, 2, 3, 11, '2025-01-07 16:35:59', '2025-01-16 00:25:56'),
+(35, 'sergio', 'busquets', 'sergio@gmail.com', '$2y$10$FXkqwvS0UD.FB58cSg7TBOkfNbEZ4rL8hhNz5h3eI9qoxb3JPpDcq', '0587988754', 'accepted', 35, 2, 2, 6, '2025-01-09 07:45:39', '2025-01-16 00:26:27'),
+(36, 'karim', 'benzima', 'karim@gmail.com', '$2y$10$0eQEp/t3krnrBsC0q5A9h.HfwiderKt7zmpXzgqnSFTyYqno4Q9le', '0796321473', 'rejected', 36, 1, 4, 16, '2025-01-09 08:30:31', '2025-01-16 00:26:48'),
+(38, 'gareth', 'bale', 'bale@gmail.com', '$2y$10$NNrjpWsZL0Cd7TpGR95dfu0e5bwTOeWHBqFaGJXjXBkwcsmLjaHMy', '0405987456', 'pending', 38, 1, 5, 20, '2025-01-11 20:13:10', '2025-01-16 17:45:12'),
+(39, 'pep', 'guardiola', 'pep@gmail.com', '$2y$10$.sl8jZ4M4yCUV68rlwrAk.C11s4VFhrbJUQtHeSpP3eq7wUXXSaia', '0304589636', 'rejected', 39, 2, 2, 6, '2025-01-11 20:14:05', '2025-01-16 00:27:49'),
+(40, 'Youssef', 'Belhdi', 'youssef@gmail.com', '$2y$10$qOopF.CfaTYRPbxKOoRqy.UyJKinXHZtxEpJNqmq6n/vB4/4IAQji', '0688969685', 'accepted', 40, 1, 3, 11, '2025-01-13 18:45:12', '2025-01-16 00:28:18'),
+(42, 'john', 'doe', 'john.doe@example.com', '$2y$10$xK8YCw1G1gxCrN27E2HTm.taGKINGC7pjKN/28UDBOV78eJ3CGZL2', '0669857496', 'accepted', 42, 1, 3, 11, '2025-01-14 16:52:07', '2025-01-16 00:28:26'),
+(43, 'Mohamed', 'Tazi', 'mohamed.tazi@example.com', '$2y$10$uGh2Hk7ZRIv36MZRmFHZd0E2SOTztiTcN5A.MKnsh30M3ZnR1XZKi', '0601234567', 'accepted', 43, 2, 1, 1, '2025-01-15 23:00:00', '2025-01-16 18:20:37'),
+(44, 'Amina', 'El Alaoui', 'amina.alaoui@example.com', '$2y$10$1vQf5t.MnKoDtv8zphEqDk6sOwp9RBO3wnY5hFXuI72eMZXaYm7qa', '0602345678', 'accepted', 44, 2, 3, 11, '2025-01-15 23:00:00', '2025-01-16 18:20:44'),
+(45, 'Youssef', 'Oukacha', 'youssef.oukacha@example.com', '$2y$10$FXhRIaDF0VRv9OvmnTe3p7VwczkHptm0eFy5vD1u9FihLf9osw4Qu', '0603456789', 'accepted', 45, 1, 4, 3, '2025-01-15 23:00:00', '2025-01-16 18:27:25'),
+(46, 'Imane', 'Benjelloun', 'imane.benjelloun@example.com', '$2y$10$5uMjZZkm7Z8FZHgUG1Wx6J8sqq6x13T1Amf.wE0YotWpkjeyb4cCm', '0604567890', 'accepted', 46, 2, 1, 1, '2025-01-15 23:00:00', '2025-01-16 18:20:57'),
+(47, 'Rachid', 'Fassi', 'rachid.fassi@example.com', '$2y$10$BZH10hFzM5Yg9tpdI7Kp8yq.fADz5jxxK1gCk3NNN6py3ohubHoS6', '0605678901', 'accepted', 47, 2, 1, 3, '2025-01-15 23:00:00', '2025-01-16 18:21:03'),
+(48, 'Karim', 'Tariq', 'karim.tariq@example.com', '$2y$10$NKhXkXfOxKplzFsk9rXFSdOCN.KMcLg69bb0FZvwzTRHZ3Cq.W3He', '0606789012', 'accepted', 48, 1, 1, 4, '2025-01-16 18:25:43', '2025-01-16 18:25:43'),
+(49, 'Sami', 'El Moutaouakkil', 'sami.moutaouakkil@example.com', '$2y$10$GZZpglRHmRytGbNMbmbkaHRlgOlAsvq4jH.EyzEjzNuytkaVbZX0S.', '0607890123', 'accepted', 49, 1, 5, 2, '2025-01-16 18:25:43', '2025-01-16 18:25:43'),
+(50, 'Fatima', 'Zahra', 'fatima.zahra@example.com', '$2y$10$kqerOls0zXZyFEyT91STU1Zt6fy7Lpn0yTzYglqDlMttc0Af7ZngcC', '0609876543', 'accepted', 50, 1, 1, 4, '2025-01-16 18:25:43', '2025-01-16 18:25:43'),
+(51, 'oussama', 'ahorig', 'just_ouss@gmail.com', '$2y$10$Gm4/o8pUcFgrDSe8VMT2qOBNCSaRSBnPmPcV3rg7j2UyTXrUsUTjG', '0630587496', 'accepted', 51, 1, 0, 0, '2025-01-16 18:29:15', '2025-01-16 18:29:15');
 
 --
 -- Déclencheurs `comptes`
@@ -82,6 +84,28 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `departements`
+--
+
+CREATE TABLE `departements` (
+  `departement_id` int(11) NOT NULL,
+  `departement_name` enum('Informarique','Mathematique','Physique','Chimie','Biologie-Giologie') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Déchargement des données de la table `departements`
+--
+
+INSERT INTO `departements` (`departement_id`, `departement_name`) VALUES
+(1, 'Informarique'),
+(2, 'Mathematique'),
+(3, 'Physique'),
+(4, 'Chimie'),
+(5, 'Biologie-Giologie');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `exams`
 --
 
@@ -89,10 +113,51 @@ CREATE TABLE `exams` (
   `exam_id` int(11) NOT NULL,
   `module` varchar(100) NOT NULL,
   `exam_date` date NOT NULL,
+  `start_time` time NOT NULL,
+  `end_time` time NOT NULL,
+  `filiere_id` int(11) NOT NULL,
   `responsable_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `filieres`
+--
+
+CREATE TABLE `filieres` (
+  `filiere_id` int(11) NOT NULL,
+  `filiere_name` varchar(100) NOT NULL,
+  `departement_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Déchargement des données de la table `filieres`
+--
+
+INSERT INTO `filieres` (`filiere_id`, `filiere_name`, `departement_id`) VALUES
+(1, 'Génie Logiciel', 1),
+(2, 'Réseaux et Télécommunications', 1),
+(3, 'Intelligence Artificielle et Big Data', 1),
+(4, 'Sécurité Informatique', 1),
+(5, 'Systèmes Embarqués', 1),
+(6, 'Mathématiques Pures', 2),
+(7, 'Mathématiques Appliquées', 2),
+(8, 'Statistiques et Analyse de Données', 2),
+(9, 'Actuariat', 2),
+(10, 'Modélisation et Simulation', 2),
+(11, 'Physique Fondamentale', 3),
+(12, 'Physique Appliquée', 3),
+(13, 'Énergies Renouvelables', 3),
+(14, 'Optique et Photonique', 3),
+(15, 'Nanotechnologies', 3),
+(16, 'Chimie Analytique', 4),
+(17, 'Matériaux et Polymères', 4),
+(18, 'Chimie Environnementale', 4),
+(19, 'Biologie Cellulaire et Moléculaire', 5),
+(20, 'Sciences de la Terre et des Planètes', 5);
 
 -- --------------------------------------------------------
 
@@ -180,14 +245,30 @@ ALTER TABLE `comptes`
   ADD PRIMARY KEY (`compte_id`),
   ADD UNIQUE KEY `email` (`email`),
   ADD KEY `fk_comptes_users` (`user_id`),
-  ADD KEY `fk_comptes_roles` (`role_id`);
+  ADD KEY `fk_comptes_roles` (`role_id`),
+  ADD KEY `fk_comptes_departements` (`departement_id`),
+  ADD KEY `fk_comptes_filieres` (`filiere_id`);
+
+--
+-- Index pour la table `departements`
+--
+ALTER TABLE `departements`
+  ADD PRIMARY KEY (`departement_id`);
 
 --
 -- Index pour la table `exams`
 --
 ALTER TABLE `exams`
   ADD PRIMARY KEY (`exam_id`),
+  ADD KEY `fk_exams_filieres` (`filiere_id`),
   ADD KEY `fk_exams_responsable` (`responsable_id`);
+
+--
+-- Index pour la table `filieres`
+--
+ALTER TABLE `filieres`
+  ADD PRIMARY KEY (`filiere_id`),
+  ADD KEY `departement_id` (`departement_id`);
 
 --
 -- Index pour la table `notes`
@@ -222,10 +303,22 @@ ALTER TABLE `comptes`
   MODIFY `compte_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
+-- AUTO_INCREMENT pour la table `departements`
+--
+ALTER TABLE `departements`
+  MODIFY `departement_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT pour la table `exams`
 --
 ALTER TABLE `exams`
   MODIFY `exam_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `filieres`
+--
+ALTER TABLE `filieres`
+  MODIFY `filiere_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT pour la table `notes`

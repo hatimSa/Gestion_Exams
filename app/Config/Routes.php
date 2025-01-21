@@ -47,6 +47,7 @@ $routes->get('/reclamations/logout', 'ReclamationsController::logout');
 $routes->get('/examsList', 'ExamsListController::index');
 $routes->get('/examsList/logout', 'ExamsListController::logout');
 $routes->get('/examsAdd', 'ExamsAddController::index');
+$routes->post('/examsAdd/store', 'ExamsAddController::store');
 $routes->get('/examsAdd/logout', 'ExamsAddController::logout');
 
 // Routes pour le profil

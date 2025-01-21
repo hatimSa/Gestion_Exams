@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Ajouter un Utilisateur</title>
+    <title>Ajouter un Utilisateur</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -43,7 +43,6 @@
         .header {
             color: black;
             text-align: center;
-
         }
 
         .card {
@@ -51,7 +50,6 @@
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
         }
 
         .error {
@@ -81,22 +79,33 @@
             outline: none;
         }
 
-
         .sidebar a.active i {
             color: #fff;
         }
 
-        .form-group select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .input-box {
+            margin-bottom: 15px;
         }
 
-        .form-group select:focus {
+        .input-box select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            color: #333;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .input-box select:focus {
             border-color: #6e7cb2;
+            background-color: #fff;
             outline: none;
+        }
+
+        .input-box select option {
+            padding: 10px;
         }
 
         .form-group button {
@@ -152,6 +161,24 @@
                     <input type="email" name="email" id="email" required>
                 </div>
 
+                <div class="input-box">
+                    <select name="departement_id" id="departement_id" required>
+                        <option value="" disabled selected>-- Sélectionner un département --</option>
+                        <?php foreach ($departements as $departement): ?>
+                            <option value="<?= $departement['departement_id']; ?>"><?= $departement['departement_name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <select name="filiere_id" id="filiere_id" required>
+                        <option value="" disabled selected>-- Sélectionner une filière --</option>
+                        <?php foreach ($filieres as $filiere): ?>
+                            <option value="<?= $filiere['filiere_id']; ?>"><?= $filiere['filiere_name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <label for="phone_number">Numéro de téléphone :</label>
                     <input type="text" name="phone_number" id="phone_number" required>
@@ -161,16 +188,18 @@
                     <label for="password">Mot de passe :</label>
                     <input type="password" name="password" id="password" required>
                 </div>
-                <div class="form-group">
-                    <label for="etat">État :</label>
+
+                <div class="input-box">
+                    <label for="etat">Status :</label>
                     <select name="etat" id="etat" required>
                         <option value="pending">pending</option>
                         <option value="accepted">accepted</option>
                         <option value="rejected">rejected</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="role_id">Rôle :</label>
+
+                <div class="input-box">
+                    <label for="role">Rôle :</label>
                     <select name="role_id" id="role_id" required>
                         <option value="" disabled selected>-- Sélectionner un rôle --</option>
                         <option value="1">Étudiant</option>

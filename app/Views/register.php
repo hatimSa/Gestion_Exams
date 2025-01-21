@@ -27,30 +27,19 @@
             background-attachment: fixed;
             position: relative;
             flex-direction: column;
-            /* Pour empiler le formulaire et les proverbes */
         }
 
         .container {
             position: relative;
-            width: 850px;
-            height: 650px;
-            /* Augmenter la hauteur pour inclure les proverbes */
+            width: 1000px;
+            /* Augmenter la largeur */
+            height: 750px;
+            /* Augmenter la hauteur */
             background: rgba(255, 255, 255, 0.8);
             border-radius: 30px;
             box-shadow: 0 0 30px rgba(0, 0, 0, .2);
             overflow: hidden;
             z-index: 2;
-        }
-
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(226, 226, 226, 0.8), rgba(201, 214, 255, 0.8));
-            z-index: 1;
         }
 
         .form-box {
@@ -196,7 +185,6 @@
             margin-bottom: 10px;
         }
 
-        /* Proverbes */
         .proverb-box {
             margin-top: 30px;
             text-align: center;
@@ -219,11 +207,9 @@
                 <?= csrf_field() ?>
                 <h1>Register</h1>
                 <div class="input-box">
-                    <!-- Message d'erreur général -->
                     <?php if (session()->getFlashdata('error')): ?>
                         <div class="error"><?= session()->getFlashdata('error') ?></div>
                     <?php endif; ?>
-                    <!-- Message de succès -->
                     <?php if (session()->getFlashdata('success')): ?>
                         <div class="success"><?= session()->getFlashdata('success') ?></div>
                     <?php endif; ?>
@@ -237,6 +223,23 @@
                 <div class="input-box">
                     <input type="email" placeholder="Email" name="email" id="email" required>
                     <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <select name="departement_id" id="departement_id" required>
+                        <option value="" disabled selected>-- Sélectionner un département --</option>
+                        <?php foreach ($departements as $departement): ?>
+                            <option value="<?= $departement['departement_id']; ?>"><?= $departement['departement_name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <select name="filiere_id" id="filiere_id" required>
+                        <option value="" disabled selected>-- Sélectionner une filière --</option>
+                        <?php foreach ($filieres as $filiere): ?>
+                            <option value="<?= $filiere['filiere_id']; ?>"><?= $filiere['filiere_name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
                 <div class="input-box">
                     <input type="text" placeholder="Phone Number" name="phone_number" id="phone_number" required>
@@ -274,13 +277,11 @@
         </div>
     </div>
 
-    <!-- Section des proverbes, en dehors de la .container -->
     <div class="proverb-box">
         <p id="proverb">Loading proverb...</p>
     </div>
 
     <script>
-        // Tableau de proverbes
         var proverbs = [
             "La patience est la clé du paradis.",
             "Celui qui sait attendre obtient toujours ce qu'il souhaite.",
@@ -292,13 +293,11 @@
             "Mieux vaut tard que jamais.",
         ];
 
-        // Fonction pour changer le proverbe toutes les 5 secondes
         function changeProverb() {
             var randomIndex = Math.floor(Math.random() * proverbs.length);
             document.getElementById("proverb").textContent = proverbs[randomIndex];
         }
 
-        // Changer le proverbe toutes les 5 secondes
         setInterval(changeProverb, 5000);
         changeProverb(); // Initialiser le proverbe au chargement
     </script>
