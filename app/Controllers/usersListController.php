@@ -51,6 +51,12 @@ class UsersListController extends BaseController
         $compteModel = new CompteModel();
         $compte = $compteModel->getCompteWithRole($compte_id);
 
+        // Charger les départements et les filières
+        $departementModel = new \App\Models\DepartementModel();
+        $filiereModel = new \App\Models\FiliereModel();
+        $departements = $departementModel->findAll();
+        $filieres = $filiereModel->findAll();
+
         // Debugging: Check if data is being fetched
         log_message('debug', 'Editing Compte: ' . print_r($compte, true));
 
@@ -60,6 +66,8 @@ class UsersListController extends BaseController
 
         return view('usersEdit', [
             'compte' => $compte,
+            'departements' => $departements,
+            'filieres' => $filieres,
             'currentPage' => 'usersEdit',
         ]);
     }
@@ -87,6 +95,8 @@ class UsersListController extends BaseController
             'etat'       => $this->request->getPost('etat'),
             // You need to update role_id based on role_type, not directly role_type
             'role_id'    => $this->getRoleIdFromType($this->request->getPost('role_type')),
+            'departement_id' => $this->request->getPost('departement_id'),
+            'filiere_id' => $this->request->getPost('filiere_id'),
         ];
 
         // Update the compte record with new data

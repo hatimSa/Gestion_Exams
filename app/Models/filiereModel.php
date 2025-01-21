@@ -19,4 +19,12 @@ class FiliereModel extends Model
     {
         return $this->findAll();
     }
+
+    public function getFilieresByProf($filiere_id)
+    {
+        return $this->db->table('filieres')
+        ->where('filiere_id', $filiere_id)
+            ->get()
+            ->getResultArray();
+    }
 }

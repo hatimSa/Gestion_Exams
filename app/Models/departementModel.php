@@ -21,4 +21,12 @@ class DepartementModel extends Model
     {
         return $this->findAll(); // Récupère tous les départements
     }
+
+    public function getDepartementsByProf($departement_id)
+    {
+        return $this->db->table('departements')
+        ->where('departement_id', $departement_id)
+            ->get()
+            ->getResultArray();
+    }
 }

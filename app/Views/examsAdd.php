@@ -87,6 +87,28 @@
             box-sizing: border-box;
         }
 
+        .input-box select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .input-box select:focus {
+            border-color: #4CAF50;
+            outline: none;
+            background-color: #fff;
+        }
+
+        .input-box option {
+            padding: 10px;
+        }
+
         .btn {
             background-color: #4CAF50;
             color: white;

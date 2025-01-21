@@ -7,6 +7,8 @@
     <title>Liste des utilisateurs</title>
     <link href="https://cdn.datatables.net/2.2.0/css/dataTables.bootstrap5.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ajout de Font Awesome pour les icônes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         /* Style de base */
         body {
@@ -24,7 +26,6 @@
             height: 100%;
             padding-top: 20px;
             z-index: 10;
-            /* Assurer que la sidebar est au-dessus du contenu principal */
         }
 
         .sidebar a {
@@ -38,16 +39,12 @@
             background-color: #575757;
         }
 
-        /* Contenu principal */
         .main-content {
             margin-left: 250px;
-            /* Espace laissé pour la sidebar */
             padding: 20px;
             min-height: 100vh;
-            /* Pour que le contenu occupe toute la hauteur de la page */
         }
 
-        /* Style du tableau */
         #comptes-table {
             width: 100%;
             border-collapse: collapse;
@@ -74,10 +71,14 @@
         }
 
         #comptes-table tr:hover {
-            background-color: #f1f1f1;
+            background-color: #eaf3ff;
+            transition: background-color 0.3s ease-in-out;
         }
 
-        /* Style des boutons d'action */
+        td:last-child {
+            text-align: center;
+        }
+
         .btn {
             padding: 6px 12px;
             border-radius: 5px;
@@ -116,58 +117,26 @@
             background-color: #c82333;
         }
 
-        /* Pagination */
-        .dataTables_paginate {
-            margin-top: 20px;
+        .alert-success {
+            font-size: 16px;
             text-align: center;
-        }
-
-        .dataTables_paginate .paginate_button {
-            padding: 8px 12px;
-            border-radius: 4px;
-            margin: 0 3px;
-            cursor: pointer;
-            background-color: #e9ecef;
-            color: #333;
-        }
-
-        .dataTables_paginate .paginate_button:hover {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .dataTables_paginate .paginate_button.current {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .dataTables_paginate .paginate_button.current:hover {
-            background-color: #0056b3;
-        }
-
-        /* Info de pagination */
-        .dataTables_info {
-            font-size: 14px;
-            color: #555;
-        }
-
-        /* Style de la carte */
-        .card {
-            margin-top: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .card-header {
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .card-body {
+            animation: fadeIn 1s ease-out;
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            background-color: #d4edda;
+            color: #155724;
             padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -187,13 +156,14 @@
         <div class="card">
             <h3 class="card-header">
                 Liste des utilisateurs
-                <!-- Add User Button -->
                 <a href="<?= site_url('/usersAdd') ?>" class="btn btn-primary" style="float: right;">Ajouter un utilisateur</a>
             </h3>
             <div class="card-body">
                 <table id="comptes-table" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
+                            <td>Département</td>
+                            <td>Filière</td>
                             <th>Nom</th>
                             <th>Prénom</th>
                             <th>Email</th>
@@ -205,15 +175,23 @@
                     <tbody>
                         <?php foreach ($comptes as $compte) : ?>
                             <tr>
+                                <td><?= esc($compte['departement_name']) ?></td>
+                                <td><?= esc($compte['filiere_name']) ?></td>
                                 <td><?= esc($compte['last_name']) ?></td>
                                 <td><?= esc($compte['first_name']) ?></td>
                                 <td><?= esc($compte['email']) ?></td>
                                 <td><?= esc($compte['role_type']) ?></td>
                                 <td><?= esc($compte['etat']) ?></td>
                                 <td>
-                                    <a href="<?= site_url('details/' . $compte['compte_id']) ?>" class="btn btn-primary btn-sm">Voir</a>
-                                    <a href="<?= site_url('comptes/edit/' . $compte['compte_id']) ?>" class="btn btn-warning btn-sm">Modifier</a>
-                                    <a href="<?= site_url('comptes/delete/' . $compte['compte_id']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?');">Supprimer</a>
+                                    <a href="<?= site_url('details/' . $compte['compte_id']) ?>" class="btn btn-primary btn-sm d-inline-block mx-0">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="<?= site_url('comptes/edit/' . $compte['compte_id']) ?>" class="btn btn-warning btn-sm d-inline-block mx-0">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <a href="<?= site_url('comptes/delete/' . $compte['compte_id']) ?>" class="btn btn-danger btn-sm d-inline-block mx-0" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?');">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
                                 </td>
                             </tr>
                         <?php endforeach ?>
@@ -224,7 +202,7 @@
     </div>
 
     <!-- JS Scripts -->
-    <script src=" https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/2.2.0/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.2.0/js/dataTables.bootstrap5.js"></script>
@@ -238,12 +216,13 @@
                 "pagingType": "full_numbers",
                 "order": [
                     [0, "asc"]
-                ],
-                "columnDefs": [{
-                    "orderable": false,
-                    "targets": 5
-                }]
+                ]
             });
+
+            // Cache le message flash après 5 secondes
+            setTimeout(function() {
+                $('.alert-success').fadeOut('slow');
+            }, 5000);
         });
     </script>
 

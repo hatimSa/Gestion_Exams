@@ -132,8 +132,8 @@
                     <td><?= $exam['start_time'] ?></td>
                     <td><?= $exam['end_time'] ?></td>
                     <td>
-                        <a href="/edit-exam/<?= $exam['exam_id'] ?>" class="btn">Modifier</a>
-                        <a href="/delete-exam/<?= $exam['exam_id'] ?>" class="btn" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet exam?')">Supprimer</a>
+                        <a href="<?= base_url('exams/edit/' . $exam['exam_id']) ?>" class="btn">Modifier</a>
+                        <a href="<?= base_url('exams/delete/' . $exam['exam_id']) ?>" class="btn" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet exam?')">Supprimer</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -13,4 +13,9 @@ class ExamModel extends Model
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
+
+    public function getExamsByProfessor($responsable_id)
+    {
+        return $this->where('responsable_id', $responsable_id)->findAll();
+    }
 }

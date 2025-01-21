@@ -45,6 +45,9 @@ $routes->get('/reclamations/logout', 'ReclamationsController::logout');
 
 // Routes pour les examens
 $routes->get('/examsList', 'ExamsListController::index');
+$routes->get('exams/edit/(:num)', 'ExamsListController::edit/$1');
+$routes->post('exams/update/(:num)', 'ExamsListController::update/$1');
+$routes->get('exams/delete/(:num)', 'ExamsListController::delete/$1');
 $routes->get('/examsList/logout', 'ExamsListController::logout');
 $routes->get('/examsAdd', 'ExamsAddController::index');
 $routes->post('/examsAdd/store', 'ExamsAddController::store');

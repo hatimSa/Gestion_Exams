@@ -77,6 +77,30 @@
                         <?= csrf_field() ?>
 
                         <div class="form-group">
+                            <label for="departement_id">Département</label>
+                            <select name="departement_id" id="departement_id" class="form-control" required>
+                                <option value="" disabled selected>-- Sélectionner un département --</option>
+                                <?php foreach ($departements as $departement): ?>
+                                    <option value="<?= $departement['departement_id']; ?>" <?= ($compte['departement_id'] === $departement['departement_id'] ? 'selected' : '') ?>>
+                                        <?= $departement['departement_name']; ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filiere_id">Filière</label>
+                            <select name="filiere_id" id="filiere_id" class="form-control" required>
+                                <option value="" disabled selected>-- Sélectionner une filière --</option>
+                                <?php foreach ($filieres as $filiere): ?>
+                                    <option value="<?= $filiere['filiere_id']; ?>" <?= ($compte['filiere_id'] === $filiere['filiere_id'] ? 'selected' : '') ?>>
+                                        <?= $filiere['filiere_name']; ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
                             <label for="first_name">Prénom</label>
                             <input type="text" name="first_name" id="first_name" value="<?= esc($compte['first_name']) ?>" class="form-control" required>
                         </div>
