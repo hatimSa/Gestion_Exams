@@ -23,6 +23,7 @@ $routes->post('/register/store', 'RegisterController::store');
 $routes->get('/dashboard', 'DashboardController::index');
 $routes->get('/dashboard/logout', 'DashboardController::logout');
 
+
 // Routes pour les utilisateurs
 $routes->get('/usersAdd', 'UsersAddController::index');
 $routes->get('usersAdd/getFilieresByDepartement/(:num)', 'UsersAddController::getFilieresByDepartement/$1');
@@ -61,3 +62,12 @@ $routes->get('/profil/logout', 'ProfilController::logout');
 
 // Routes pour les tests
 $routes->get('/test-db', 'TestDBController::index');
+//routes pour gestion exams
+
+
+// Route pour la gestion des examens (utilisez celle-ci)
+$routes->get('/manage-exams', 'ManageExams::index');
+$routes->get('studentResults/listeResult', 'listeResultController::index');
+
+//routes pour gestion notes
+$routes->get('/student-results', 'resultController::index');
