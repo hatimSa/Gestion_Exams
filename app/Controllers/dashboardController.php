@@ -32,23 +32,25 @@ class DashboardController extends BaseController
             return redirect()->to('/home');
         }
 
-        // Ajouter la variable $currentPage pour identifier la page active
-        $currentPage = 'dashboard'; // Cette valeur correspond au bouton actif dans la barre latérale
+        // Récupérer les 3 derniers étudiants et professeurs
+        $students = $compteModel->getLatestStudents();
+        $professors = $compteModel->getLatestProfessors();
 
-        // Passer les informations de l'utilisateur, du compte, et de la page actuelle à la vue
+        $currentPage = 'dashboard';
+
+        // Passer les informations de l'utilisateur, du compte, les étudiants et les professeurs à la vue
         return view('dashboard', [
             'user' => $user,
             'compte' => $compte,
+            'students' => $students,
+            'professors' => $professors,
             'currentPage' => $currentPage,
         ]);
     }
 
     public function logout()
     {
-        // Supprimer toutes les données de session
         session()->destroy();
-
-        // Rediriger vers la page de connexion
         return redirect()->to('/login');
     }
 }
