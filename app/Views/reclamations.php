@@ -125,6 +125,24 @@
             background-color: #c82333;
         }
 
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .actions a {
+            padding: 6px 12px;
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+        }
+
+        .actions a.delete {
+            background-color: #f44336;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
 
@@ -137,8 +155,11 @@
     </style>
 </head>
 
+<<<<<<< HEAD
 <?= view('sidebar'); ?>
 
+=======
+>>>>>>> d355fe59093fa2b59fa89df1e7025251d174461b
 <body>
 
     <div class="main-content">
@@ -146,6 +167,7 @@
             <h2>Liste des réclamations</h2>
         </div>
 
+<<<<<<< HEAD
         <div class="container">
             <?php if (empty($reclamations)) : ?>
                 <p style="text-align: center; color: #555;">Aucune réclamation n'a été soumise pour le moment.</p>
@@ -172,6 +194,44 @@
             <?php endif ?>
         </div>
     </div>
+=======
+    <?php if (session()->getFlashdata('success')) : ?>
+        <div style="color: green; margin: 10px 20px;">
+            <?= session()->getFlashdata('success') ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('error')) : ?>
+        <div style="color: red; margin: 10px 20px;">
+            <?= session()->getFlashdata('error') ?>
+        </div>
+    <?php endif; ?>
+
+    <table>
+        <tr>
+            <th>Utilisateur</th>
+            <th>Objet</th>
+            <th>Message</th>
+            <th>Actions</th>
+        </tr>
+        <?php foreach ($reclamations as $reclamation) : ?>
+            <tr>
+                <td><?= htmlspecialchars($reclamation['first_name'] . ' ' . $reclamation['last_name']) ?></td>
+                <td><?= htmlspecialchars($reclamation['objet']) ?></td>
+                <td><?= htmlspecialchars($reclamation['message']) ?></td>
+                <td>
+                    <div class="actions">
+                        <a href="/reclamations/edit/<?= $reclamation['id'] ?>">Modifier</a>
+                        <a href="/reclamations/delete/<?= $reclamation['id'] ?>" class="delete"
+                            onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette réclamation ?');">
+                            Supprimer
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+>>>>>>> d355fe59093fa2b59fa89df1e7025251d174461b
 
 </body>
 

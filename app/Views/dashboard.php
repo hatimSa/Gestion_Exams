@@ -33,6 +33,7 @@
             margin-bottom: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+<<<<<<< HEAD
 
         .chart-container {
             display: flex;
@@ -115,6 +116,46 @@
             margin-top: 20px;
             color: #333;
         }
+=======
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.bar {
+    width: 30px;
+    background-color: #6e7cb2;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.bar:hover {
+    background-color: #4c4c9d;
+}
+
+.bar-label {
+    position: absolute;
+    
+    top: -20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+
+>>>>>>> 17697edadcfc9500ac69aba6f7689989dcd35c33
     </style>
 </head>
 
@@ -145,6 +186,7 @@
             <h3>Statistics</h3>
             <p>Display some useful statistics here.</p>
             <div class="chart-container">
+<<<<<<< HEAD
                 <?php
                 $days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
                 $counts = [12, 8, 15, 20, 10, 18, 3];
@@ -152,10 +194,22 @@
                 for ($i = 0; $i < count($days); $i++): ?>
                     <div class="bar" style="height: <?= $counts[$i] * 10; ?>px;" title="<?= $days[$i] . ': ' . $counts[$i]; ?>">
                         <span class="bar-label"><?= $days[$i]; ?></span>
+=======
+                <?php 
+                // Fetch the data from the database (assumes you have $months and $counts arrays)
+                // Example data, replace with actual dynamic data from your database query
+                $months = ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun'];
+                $counts = [12, 8, 15, 20, 10, 18];
+
+                for ($i = 0; $i < count($months); $i++): ?>
+                    <div class="bar" style="height: <?php echo $counts[$i] * 10; ?>px;" title="<?php echo $months[$i] . ': ' . $counts[$i]; ?>">
+                        <span class="bar-label"><?php echo $months[$i]; ?></span>
+>>>>>>> 17697edadcfc9500ac69aba6f7689989dcd35c33
                     </div>
                 <?php endfor; ?>
             </div>
         </div>
+<<<<<<< HEAD
         <!-- Users Tables Section -->
         <div class="card-body">
             <h3>Derniers Enregistrements</h3>
@@ -234,6 +288,12 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+=======
+    
+        </div>
+        </div>
+    </div>
+>>>>>>> 17697edadcfc9500ac69aba6f7689989dcd35c33
 </body>
 
 </html>
