@@ -58,7 +58,9 @@
         <div class="card">
             <h3>Manage Exams</h3>
             <ul>
-                <li><a href="/manage-exams">View All Exams</a></li>
+            <li><a href="<?php echo site_url('manage-exams'); ?>">View All Exams</a></li>
+
+
                 <li><a href="/add-exam">Add New Exam</a></li>
             </ul>
         </div>

@@ -49,3 +49,9 @@ $routes->get('/profil/logout', 'ProfilController::logout');
 
 // Routes pour les tests
 $routes->get('/test-db', 'TestDBController::index');
+//routes pour gestion exams
+
+
+// Route pour la gestion des examens (utilisez celle-ci)
+$routes->get('/manage-exams', 'ManageExams::index');
+
