@@ -21,26 +21,31 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+            background: url('<?= base_url('images/Prof.jpg'); ?>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            flex-direction: column;
         }
 
         .container {
             position: relative;
-            width: 900px;
+            width: 1000px;
             /* Augmenter la largeur */
-            height: 600px;
+            height: 750px;
             /* Augmenter la hauteur */
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 30px;
             box-shadow: 0 0 30px rgba(0, 0, 0, .2);
             overflow: hidden;
+            z-index: 2;
         }
 
         .form-box {
             position: absolute;
             right: 0;
             width: 55%;
-            /* Augmenter la largeur de la boîte de formulaire */
             height: 100%;
             background: #fff;
             display: flex;
@@ -149,7 +154,6 @@
         .toggle-panel {
             position: absolute;
             width: 45%;
-            /* Augmenter la largeur du panneau de bascule */
             height: 100%;
             color: #fff;
             display: flex;
@@ -180,6 +184,14 @@
             color: green;
             margin-bottom: 10px;
         }
+
+        .proverb-box {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -195,11 +207,9 @@
                 <?= csrf_field() ?>
                 <h1>Register</h1>
                 <div class="input-box">
-                    <!-- Message d'erreur général -->
                     <?php if (session()->getFlashdata('error')): ?>
                         <div class="error"><?= session()->getFlashdata('error') ?></div>
                     <?php endif; ?>
-                    <!-- Message de succès -->
                     <?php if (session()->getFlashdata('success')): ?>
                         <div class="success"><?= session()->getFlashdata('success') ?></div>
                     <?php endif; ?>
@@ -215,6 +225,23 @@
                     <i class='bx bxs-envelope'></i>
                 </div>
                 <div class="input-box">
+                    <select name="departement_id" id="departement_id" required>
+                        <option value="" disabled selected>-- Sélectionner un département --</option>
+                        <?php foreach ($departements as $departement): ?>
+                            <option value="<?= $departement['departement_id']; ?>"><?= $departement['departement_name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <select name="filiere_id" id="filiere_id" required>
+                        <option value="" disabled selected>-- Sélectionner une filière --</option>
+                        <?php foreach ($filieres as $filiere): ?>
+                            <option value="<?= $filiere['filiere_id']; ?>"><?= $filiere['filiere_name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="input-box">
                     <input type="text" placeholder="Phone Number" name="phone_number" id="phone_number" required>
                     <i class='bx bxs-phone'></i>
                 </div>
@@ -225,8 +252,8 @@
                 <div class="input-box">
                     <select name="role_id" id="role_id" required>
                         <option value="" disabled selected>-- Sélectionner un rôle --</option>
-                        <option value="1">etd</option>
-                        <option value="2">prof</option>
+                        <option value="1">Étudiant</option>
+                        <option value="2">Professeur</option>
                     </select>
                     <i class='bx bxs-user'></i>
                 </div>
@@ -249,6 +276,31 @@
             </div>
         </div>
     </div>
+
+    <div class="proverb-box">
+        <p id="proverb">Loading proverb...</p>
+    </div>
+
+    <script>
+        var proverbs = [
+            "La patience est la clé du paradis.",
+            "Celui qui sait attendre obtient toujours ce qu'il souhaite.",
+            "Le succès ne se mesure pas à la destination finale, mais au chemin parcouru.",
+            "Le chemin de mille kilomètres commence par un pas.",
+            "La sagesse, c'est de savoir qu'on ne sait rien.",
+            "Chaque nuage a une doublure d'argent.",
+            "Qui sème le vent récolte la tempête.",
+            "Mieux vaut tard que jamais.",
+        ];
+
+        function changeProverb() {
+            var randomIndex = Math.floor(Math.random() * proverbs.length);
+            document.getElementById("proverb").textContent = proverbs[randomIndex];
+        }
+
+        setInterval(changeProverb, 5000);
+        changeProverb(); // Initialiser le proverbe au chargement
+    </script>
 </body>
 
 </html>

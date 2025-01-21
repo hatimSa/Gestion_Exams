@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\CompteModel;
+use App\Models\DepartementModel;
+use App\Models\FiliereModel;
 
 class DashboardController extends BaseController
 {
@@ -35,6 +37,17 @@ class DashboardController extends BaseController
         // Récupérer les 3 derniers étudiants et professeurs
         $students = $compteModel->getLatestStudents();
         $professors = $compteModel->getLatestProfessors();
+        // Compter les utilisateurs par rôle
+        $totalStudents = $compteModel->countByRole('etd');
+        $totalProfessors = $compteModel->countByRole('prof');
+        $totalUsers = $compteModel->countAll(); // Nombre total d'utilisateurs
+
+        $departementModel = new DepartementModel();
+        $totalDepartements = $departementModel->countAllDepartements();
+
+        $filiereModel = new FiliereModel();
+        $totalFilieres = $filiereModel->countAllFilieres();
+
 
         $currentPage = 'dashboard';
 
@@ -44,6 +57,11 @@ class DashboardController extends BaseController
             'compte' => $compte,
             'students' => $students,
             'professors' => $professors,
+            'totalStudents' => $totalStudents,
+            'totalProfessors' => $totalProfessors,
+            'totalUsers' => $totalUsers,
+            'totalDepartements' => $totalDepartements,
+            'totalFilieres' => $totalFilieres,
             'currentPage' => $currentPage,
         ]);
     }
