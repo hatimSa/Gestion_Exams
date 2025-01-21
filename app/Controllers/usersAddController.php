@@ -121,6 +121,17 @@ class UsersAddController extends Controller
         return redirect()->to('/usersList')->with('success', 'Utilisateur ajouté avec succès.');
     }
 
+    public function getFilieresByDepartement($departement_id)
+    {
+        $filiereModel = new FiliereModel();
+
+        // Récupérer les filières pour le département donné
+        $filieres = $filiereModel->where('departement_id', $departement_id)->findAll();
+
+        // Retourner les filières au format JSON
+        return $this->response->setJSON($filieres);
+    }
+
     public function logout()
     {
         session()->destroy();

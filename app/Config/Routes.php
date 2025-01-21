@@ -16,6 +16,7 @@ $routes->get('/login', 'LoginController::index'); // Connexion
 $routes->post('/login', 'LoginController::Login');
 $routes->get('/forgot-password', 'LoginController::forgotPassword'); // Réinitialisation du mot de passe
 $routes->get('/register', 'RegisterController::index');
+$routes->get('getFilieresByDepartement/(:num)', 'RegisterController::getFilieresByDepartement/$1');
 $routes->post('/register/store', 'RegisterController::store');
 
 // Routes pour le tableau de bord
@@ -24,8 +25,9 @@ $routes->get('/dashboard/logout', 'DashboardController::logout');
 
 // Routes pour les utilisateurs
 $routes->get('/usersAdd', 'UsersAddController::index');
-$routes->get('/usersAdd/logout', 'UsersAddController::logout');
+$routes->get('usersAdd/getFilieresByDepartement/(:num)', 'UsersAddController::getFilieresByDepartement/$1');
 $routes->post('/usersAdd/store', 'UsersAddController::store');
+$routes->get('/usersAdd/logout', 'UsersAddController::logout');
 $routes->get('/usersList', 'UsersListController::index');
 $routes->get('/usersList/logout', 'UsersListController::logout');
 $routes->get('comptes/edit/(:num)', 'UsersListController::edit/$1');

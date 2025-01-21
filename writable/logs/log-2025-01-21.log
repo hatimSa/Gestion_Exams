@@ -1339,3 +1339,216 @@ INFO - 2025-01-21 14:55:27 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-21 14:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-21 14:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-21 14:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-21 15:27:30 --> Editing Compte: Array
+(
+    [compte_id] => 64
+    [first_name] => cristiano
+    [last_name] => ronaldo
+    [email] => cris@gmail.com
+    [password] => $2y$10$Mji34i6njB0akMNb9Z2ebe4x1FUqJEd8OdYCWXHkCDezSJZmNJU/i
+    [phone_number] => 0321457812
+    [etat] => pending
+    [user_id] => 64
+    [role_id] => 2
+    [departement_id] => 3
+    [filiere_id] => 12
+    [created_at] => 2025-01-21 16:26:42
+    [updated_at] => 2025-01-21 16:26:42
+    [role_type] => prof
+    [departement_name] => Physique
+    [filiere_name] => Physique Appliquée
+)
+
+INFO - 2025-01-21 15:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-21 15:35:20 --> Editing Compte: Array
+(
+    [compte_id] => 65
+    [first_name] => zindine
+    [last_name] => zidane
+    [email] => zidane@gmail.com
+    [password] => $2y$10$gtrspBJd8phoFBeRTJd0mu8/SC.4pEWOSddUXxri0B5rLsOgses4e
+    [phone_number] => 0632123247
+    [etat] => accepted
+    [user_id] => 65
+    [role_id] => 1
+    [departement_id] => 2
+    [filiere_id] => 10
+    [created_at] => 2025-01-21 16:33:01
+    [updated_at] => 2025-01-21 16:33:01
+    [role_type] => etd
+    [departement_name] => Mathematique
+    [filiere_name] => Modélisation et Simulation
+)
+
+INFO - 2025-01-21 15:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-21 15:37:26 --> Editing Compte: Array
+(
+    [compte_id] => 65
+    [first_name] => zindine
+    [last_name] => zidane
+    [email] => zidane@gmail.com
+    [password] => $2y$10$gtrspBJd8phoFBeRTJd0mu8/SC.4pEWOSddUXxri0B5rLsOgses4e
+    [phone_number] => 0632123247
+    [etat] => accepted
+    [user_id] => 65
+    [role_id] => 1
+    [departement_id] => 2
+    [filiere_id] => 10
+    [created_at] => 2025-01-21 16:33:01
+    [updated_at] => 2025-01-21 16:33:01
+    [role_type] => etd
+    [departement_name] => Mathematique
+    [filiere_name] => Modélisation et Simulation
+)
+
+INFO - 2025-01-21 15:37:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-21 15:37:48 --> Editing Compte: Array
+(
+    [compte_id] => 43
+    [first_name] => Mohamed
+    [last_name] => Tazi
+    [email] => mohamed.tazi@example.com
+    [password] => $2y$10$uGh2Hk7ZRIv36MZRmFHZd0E2SOTztiTcN5A.MKnsh30M3ZnR1XZKi
+    [phone_number] => 0601234567
+    [etat] => accepted
+    [user_id] => 43
+    [role_id] => 2
+    [departement_id] => 1
+    [filiere_id] => 1
+    [created_at] => 2025-01-16 00:00:00
+    [updated_at] => 2025-01-16 19:20:37
+    [role_type] => prof
+    [departement_name] => Informatique
+    [filiere_name] => Génie Logiciel
+)
+
+INFO - 2025-01-21 15:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-21 15:37:58 --> Editing Compte: Array
+(
+    [compte_id] => 46
+    [first_name] => Imane
+    [last_name] => Benjelloun
+    [email] => imane.benjelloun@example.com
+    [password] => $2y$10$5uMjZZkm7Z8FZHgUG1Wx6J8sqq6x13T1Amf.wE0YotWpkjeyb4cCm
+    [phone_number] => 0604567890
+    [etat] => accepted
+    [user_id] => 46
+    [role_id] => 2
+    [departement_id] => 1
+    [filiere_id] => 1
+    [created_at] => 2025-01-16 00:00:00
+    [updated_at] => 2025-01-16 19:20:57
+    [role_type] => prof
+    [departement_name] => Informatique
+    [filiere_name] => Génie Logiciel
+)
+
+INFO - 2025-01-21 15:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-21 15:38:08 --> Editing Compte: Array
+(
+    [compte_id] => 47
+    [first_name] => Rachid
+    [last_name] => Fassi
+    [email] => rachid.fassi@example.com
+    [password] => $2y$10$BZH10hFzM5Yg9tpdI7Kp8yq.fADz5jxxK1gCk3NNN6py3ohubHoS6
+    [phone_number] => 0605678901
+    [etat] => accepted
+    [user_id] => 47
+    [role_id] => 2
+    [departement_id] => 1
+    [filiere_id] => 3
+    [created_at] => 2025-01-16 00:00:00
+    [updated_at] => 2025-01-16 19:21:03
+    [role_type] => prof
+    [departement_name] => Informatique
+    [filiere_name] => Intelligence Artificielle et Big Data
+)
+
+INFO - 2025-01-21 15:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-21 15:38:31 --> Editing Compte: Array
+(
+    [compte_id] => 44
+    [first_name] => Amina
+    [last_name] => El Alaoui
+    [email] => amina.alaoui@example.com
+    [password] => $2y$10$1vQf5t.MnKoDtv8zphEqDk6sOwp9RBO3wnY5hFXuI72eMZXaYm7qa
+    [phone_number] => 0602345678
+    [etat] => accepted
+    [user_id] => 44
+    [role_id] => 2
+    [departement_id] => 3
+    [filiere_id] => 11
+    [created_at] => 2025-01-16 00:00:00
+    [updated_at] => 2025-01-16 19:20:44
+    [role_type] => prof
+    [departement_name] => Physique
+    [filiere_name] => Physique Fondamentale
+)
+
+INFO - 2025-01-21 15:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-21 15:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

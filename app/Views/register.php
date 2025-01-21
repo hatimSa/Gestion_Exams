@@ -207,12 +207,6 @@
                 <?= csrf_field() ?>
                 <h1>Register</h1>
                 <div class="input-box">
-                    <?php if (session()->getFlashdata('error')): ?>
-                        <div class="error"><?= session()->getFlashdata('error') ?></div>
-                    <?php endif; ?>
-                    <?php if (session()->getFlashdata('success')): ?>
-                        <div class="success"><?= session()->getFlashdata('success') ?></div>
-                    <?php endif; ?>
                     <input type="text" placeholder="First Name" name="first_name" id="first_name" required>
                     <i class='bx bxs-user'></i>
                 </div>
@@ -236,9 +230,7 @@
                 <div class="input-box">
                     <select name="filiere_id" id="filiere_id" required>
                         <option value="" disabled selected>-- Sélectionner une filière --</option>
-                        <?php foreach ($filieres as $filiere): ?>
-                            <option value="<?= $filiere['filiere_id']; ?>"><?= $filiere['filiere_name']; ?></option>
-                        <?php endforeach; ?>
+                        <!-- Les options seront chargées dynamiquement ici -->
                     </select>
                 </div>
                 <div class="input-box">
@@ -282,24 +274,40 @@
     </div>
 
     <script>
-        var proverbs = [
-            "La patience est la clé du paradis.",
-            "Celui qui sait attendre obtient toujours ce qu'il souhaite.",
-            "Le succès ne se mesure pas à la destination finale, mais au chemin parcouru.",
-            "Le chemin de mille kilomètres commence par un pas.",
-            "La sagesse, c'est de savoir qu'on ne sait rien.",
-            "Chaque nuage a une doublure d'argent.",
-            "Qui sème le vent récolte la tempête.",
-            "Mieux vaut tard que jamais.",
-        ];
+        // Fonction pour charger dynamiquement les filières en fonction du département sélectionné
+        document.getElementById('departement_id').addEventListener('change', function() {
+            const departementId = this.value;
+            const filiereSelect = document.getElementById('filiere_id');
 
-        function changeProverb() {
-            var randomIndex = Math.floor(Math.random() * proverbs.length);
-            document.getElementById("proverb").textContent = proverbs[randomIndex];
-        }
+            if (departementId) {
+                // Afficher l'URL pour vérifier qu'elle est correcte
+                console.log(`Fetching filieres for departement_id: ${departementId}`);
 
-        setInterval(changeProverb, 5000);
-        changeProverb(); // Initialiser le proverbe au chargement
+                fetch(`<?= base_url('getFilieresByDepartement') ?>/${departementId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Vérifier les données dans la console
+                        console.log(data);
+
+                        // Réinitialiser les options de filières
+                        filiereSelect.innerHTML = '<option value="" disabled selected>-- Sélectionner une filière --</option>';
+
+                        // Ajouter les options de filières récupérées
+                        data.forEach(filiere => {
+                            const option = document.createElement('option');
+                            option.value = filiere.filiere_id;
+                            option.textContent = filiere.filiere_name;
+                            filiereSelect.appendChild(option);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Erreur lors du chargement des filières:', error);
+                    });
+            } else {
+                // Réinitialiser les options si aucun département n'est sélectionné
+                filiereSelect.innerHTML = '<option value="" disabled selected>-- Sélectionner une filière --</option>';
+            }
+        });
     </script>
 </body>
 

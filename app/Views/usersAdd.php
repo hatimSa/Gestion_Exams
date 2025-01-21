@@ -215,6 +215,38 @@
         </div>
     </div>
 
+    <script>
+        document.getElementById('departement_id').addEventListener('change', function() {
+            const departementId = this.value;
+            const filiereSelect = document.getElementById('filiere_id');
+
+            // Vérifie si un département a été sélectionné
+            if (departementId) {
+                // Envoi une requête AJAX pour récupérer les filières associées au département sélectionné
+                fetch(`<?= base_url('usersAdd/getFilieresByDepartement') ?>/${departementId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Vide la liste actuelle des filières
+                        filiereSelect.innerHTML = '<option value="" disabled selected>-- Sélectionner une filière --</option>';
+
+                        // Remplir le champ filière avec les nouvelles options
+                        data.forEach(filiere => {
+                            const option = document.createElement('option');
+                            option.value = filiere.filiere_id;
+                            option.textContent = filiere.filiere_name;
+                            filiereSelect.appendChild(option);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Erreur lors du chargement des filières:', error);
+                    });
+            } else {
+                // Si aucun département n'est sélectionné, vider la liste des filières
+                filiereSelect.innerHTML = '<option value="" disabled selected>-- Sélectionner une filière --</option>';
+            }
+        });
+    </script>
+
 </body>
 
 </html>
