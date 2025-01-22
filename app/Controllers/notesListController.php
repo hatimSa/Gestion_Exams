@@ -3,45 +3,76 @@
 namespace App\Controllers;
 
 use App\Models\NoteModel;
+use App\Models\CompteModel;
+use App\Models\ExamModel;
 
 class NotesListController extends BaseController
 {
     public function index()
     {
-        $noteModel = new NoteModel(); // Assurez-vous que NoteModel est correctement configuré
+        $noteModel = new NoteModel();
         $data['notes'] = $noteModel->getNotesWithDetails(); // Chargez les données avec les détails nécessaires
 
-        // Passez les données à la vue
         return view('notesList', $data);
     }
 
     public function store()
     {
-        // Vérifier si des notes ont été soumises via POST
         if ($this->request->getMethod() === 'post') {
-            // Récupérer les notes envoyées par le formulaire
             $notes = $this->request->getPost('notes');
+            $absences = $this->request->getPost('abs');  // Récupérer les absences
 
-            // Instancier le modèle NoteModel
+            if (!$notes) {
+                return redirect()->to('/notesList')->with('error', 'Aucune donnée soumise.');
+            }
+
             $noteModel = new NoteModel();
 
-            // Parcourir les notes et les enregistrer dans la base de données
             foreach ($notes as $noteId => $noteValue) {
-                // Préparer les données pour la mise à jour
-                $data = [
-                    'note' => $noteValue
-                ];
+                // Si l'étudiant est absent (case cochée), on marque "abs"
+                if (isset($absences[$noteId])) {
+                    $data['note'] = 'abs';
+                } else {
+                    // Validation de la note : soit une valeur numérique, soit "abs"
+                    if ($noteValue !== 'abs' && (!is_numeric($noteValue) || $noteValue < 0 || $noteValue > 20)) {
+                        return redirect()->to('/notesList')->with('error', 'Toutes les notes doivent être comprises entre 0 et 20 ou marquées comme "abs".');
+                    }
+                    $data['note'] = $noteValue;
+                }
 
-                // Mettre à jour la note dans la base de données
+                // Mise à jour ou insertion
                 $noteModel->update($noteId, $data);
             }
 
-            // Rediriger vers la page des résultats des étudiants ou afficher un message de succès
-            return redirect()->to('notesList')->with('success', 'Les notes ont été enregistrées avec succès.');
+            return redirect()->to('/notesFinal')->with('success', 'Les notes ont été enregistrées avec succès.');
         }
 
-        // Si la méthode n'est pas POST, rediriger ou afficher un message d'erreur
-        return redirect()->to('notesList')->with('error', 'Erreur lors de l\'enregistrement des notes.');
+        return redirect()->to('/notesList')->with('error', 'Aucune donnée soumise.');
+    }
+
+    public function notesList($exam_id)
+    {
+        $examModel = new ExamModel();
+        $exam = $examModel->find($exam_id);
+
+        if (!$exam) {
+            return redirect()->to('/examsList')->with('error', 'Examen non trouvé.');
+        }
+
+        // Vérifier si l'utilisateur a accès à cet examen (ajouter la logique d'accès)
+        // Par exemple : vérifier si l'utilisateur est un professeur lié à cet examen
+
+        $noteModel = new NoteModel();
+        $notes = $noteModel->getNotesForExam($exam_id);
+
+        if (empty($notes)) {
+            return redirect()->to('notesList')->with('error', 'Aucune note trouvée pour cet examen.');
+        }
+
+        return view('notesList', [
+            'exam' => $exam,
+            'notes' => $notes,
+        ]);
     }
 
     public function delete($note_id)
@@ -54,11 +85,11 @@ class NotesListController extends BaseController
 
     public function update($note_id)
     {
-        // Implement the update logic here.
+        // Implémenter la logique de mise à jour ici
     }
 
     public function add()
     {
-        // Implement the add logic here.
+        // Implémenter la logique d'ajout ici
     }
 }

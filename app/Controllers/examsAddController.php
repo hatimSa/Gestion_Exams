@@ -6,6 +6,7 @@ use App\Models\ExamModel;
 use App\Models\DepartementModel;
 use App\Models\FiliereModel;
 use App\Models\CompteModel;
+use App\Models\NoteModel;
 
 class ExamsAddController extends BaseController
 {
@@ -57,8 +58,10 @@ class ExamsAddController extends BaseController
             return redirect()->to('/login')->with('error', 'Vous devez être connecté pour ajouter un examen');
         }
 
-        // Récupérer le modèle Exam
+        // Récupérer les modèles nécessaires
         $examModel = new ExamModel();
+        $compteModel = new CompteModel();
+        $notesModel = new \App\Models\NoteModel(); // Assurez-vous que le modèle existe
 
         // Récupérer les données du formulaire
         $data = [
@@ -75,13 +78,25 @@ class ExamsAddController extends BaseController
             return redirect()->back()->withInput()->with('errors', $examModel->errors());
         }
 
-        // Rediriger vers la liste des examens avec un message de succès
-        return redirect()->to('/examsList')->with('success', 'Exam ajouté avec succès');
-    }
+        // Récupérer l'ID de l'examen ajouté
+        $exam_id = $examModel->getInsertID();
 
-    public function logout()
-    {
-        session()->destroy();
-        return redirect()->to('/login');
+        // Récupérer les étudiants avec role_id == 1 et appartenant à la même filière
+        $filiere_id = $data['filiere_id'];
+        $students = $compteModel->where('filiere_id', $filiere_id)
+            ->where('role_id', 1) // Filtrer par role_id == 1
+            ->findAll();
+
+        // Insérer une ligne dans la table notes pour chaque étudiant
+        foreach ($students as $student) {
+            $noteData = [
+                'student_id' => $student['user_id'], // Récupérer l'ID de l'étudiant
+                'exam_id' => $exam_id,
+            ];
+            $notesModel->save($noteData);
+        }
+
+        // Rediriger vers la liste des examens avec un message de succès
+        return redirect()->to('/examsList')->with('success', 'Exam ajouté avec succès et notes initialisées.');
     }
 }

@@ -115,13 +115,28 @@ class ExamsListController extends BaseController
             return redirect()->to('/login');
         }
 
+        // Charger les modèles nécessaires
         $examModel = new ExamModel();
+        $noteModel = new NoteModel();
 
-        if ($examModel->delete($id)) {
-            return redirect()->to('/examsList')->with('success', 'Examen supprimé avec succès');
+        // Récupérer l'examen à supprimer
+        $exam = $examModel->find($id);
+        if (!$exam) {
+            return redirect()->to('/examsList')->with('error', 'Examen introuvable.');
         }
 
-        return redirect()->to('/examsList')->with('error', 'Erreur lors de la suppression');
+        // Supprimer les notes associées à cet examen
+        $notes = $noteModel->where('exam_id', $id)->findAll();
+        foreach ($notes as $note) {
+            $noteModel->delete($note['note_id']);
+        }
+
+        // Supprimer l'examen
+        if ($examModel->delete($id)) {
+            return redirect()->to('/examsList')->with('success', 'Examen et ses notes supprimés avec succès');
+        }
+
+        return redirect()->to('/examsList')->with('error', 'Erreur lors de la suppression de l\'examen');
     }
 
     public function noter($exam_id)

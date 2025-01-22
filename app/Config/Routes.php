@@ -59,6 +59,7 @@ $routes->get('/examsAdd/logout', 'ExamsAddController::logout');
 $routes->get('/notesList', 'NotesListController::index');
 $routes->get('exams/notesList/(:num)', 'ExamsListController::noter/$1');
 $routes->post('/notesList/store', 'NotesListController::store');
+$routes->get('/notesFinal', 'NotesFinalController::index');
 
 
 // Routes pour le profil
