@@ -6,6 +6,7 @@ namespace App\Controllers;
 use App\Models\DepartementModel;
 use App\Models\ExamModel;
 use App\Models\FiliereModel;
+use App\Models\NoteModel;
 
 class ExamsListController extends BaseController
 {
@@ -121,6 +122,48 @@ class ExamsListController extends BaseController
         }
 
         return redirect()->to('/examsList')->with('error', 'Erreur lors de la suppression');
+    }
+
+    public function noter($exam_id)
+    {
+        // Vérifier si l'utilisateur est connecté
+        if (!session()->has('user_id')) {
+            return redirect()->to('/login');
+        }
+
+        // Charger les modèles nécessaires
+        $examModel = new ExamModel();
+        $noteModel = new NoteModel();
+        $compteModel = new \App\Models\CompteModel(); // Modèle pour les étudiants
+
+        // Récupérer les informations de l'examen
+        $exam = $examModel->find($exam_id);
+        if (!$exam) {
+            return redirect()->to('/examsList')->with('error', 'Examen introuvable.');
+        }
+
+        // Récupérer les étudiants de la filière associée à cet examen
+        $students = $compteModel->select('comptes.compte_id, comptes.first_name AS first_name, comptes.last_name AS last_name, filieres.filiere_name AS filiere, departements.departement_name AS departement')
+        ->join('filieres', 'comptes.filiere_id = filieres.filiere_id')
+        ->join('departements', 'filieres.departement_id = departements.departement_id')
+        ->where('comptes.filiere_id', $exam['filiere_id'])
+        ->findAll();
+
+        // Récupérer les notes existantes pour cet examen
+        $notes = $noteModel->select('notes.*, comptes.first_name AS first_name, comptes.last_name AS last_name, filieres.filiere_name AS filiere, departements.departement_name AS departement')
+        ->join('comptes', 'notes.student_id = comptes.compte_id')
+        ->join('filieres', 'comptes.filiere_id = filieres.filiere_id')
+        ->join('departements', 'filieres.departement_id = departements.departement_id')
+        ->where('notes.exam_id', $exam_id)
+            ->findAll();
+
+        // Passer les données à la vue
+        return view('notesList', [
+            'exam' => $exam,
+            'students' => $students,
+            'notes' => $notes, // Ajouter les notes à la vue
+            'currentPage' => 'notesList',
+        ]);
     }
 
     public function logout()

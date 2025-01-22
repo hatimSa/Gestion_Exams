@@ -70,4 +70,15 @@ class CompteModel extends Model
             ->limit(3)
             ->findAll();
     }
+
+    public function getStudentByFiliere($filiere_id)
+    {
+        return $this->select('comptes.*, roles.role_type, departements.departement_name, filieres.filiere_name')
+            ->join('roles', 'roles.role_id = comptes.role_id', 'left')
+            ->join('departements', 'departements.departement_id = comptes.departement_id', 'left') // Correction pour departements
+            ->join('filieres', 'filieres.filiere_id = comptes.filiere_id', 'left') // Correction pour filieres
+            ->where('roles.role_type', 'etd')
+            ->where('filieres.filiere_id', $filiere_id)
+            ->findAll();
+    }
 }
