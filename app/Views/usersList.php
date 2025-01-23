@@ -271,8 +271,13 @@
                 $('.alert-success').fadeOut('slow');
             }, 5000);
         });
+<<<<<<< HEAD
     </script>
 
 </body>
 
 </html>
+=======
+    });
+</script>
+>>>>>>> d355fe59093fa2b59fa89df1e7025251d174461b

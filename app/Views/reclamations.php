@@ -149,7 +149,9 @@
                                     Répondre
                                 </button>
 
-                                
+                                <a href="#" 
+                                   class="btn btn-danger" 
+                                   onclick="deleteWithAlert(<?= $reclamation['reclamation_id'] ?>)">Supprimer</a>
                             </td>
                         </tr>
 

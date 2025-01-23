@@ -35,6 +35,7 @@ $routes->get('comptes/edit/(:num)', 'UsersListController::edit/$1');
 $routes->post('/comptes/update/(:num)', 'UsersListController::update/$1');
 $routes->get('details/(:num)', 'UsersListController::details/$1');
 $routes->get('/comptes/delete/(:num)', 'UsersListController::delete/$1');
+<<<<<<< HEAD
 
 // Routes spécifiques aux rôles
 $routes->get('/etudDashboard', 'EtudController::index');
@@ -82,3 +83,8 @@ $routes->get('studentResults/listeResult', 'listeResultController::index');
 
 //routes pour gestion notes
 $routes->get('/student-results', 'resultController::index');
+=======
+$routes->get('/logout', 'LoginController::logout');
+$routes->get('/reclamations', 'ReclamationController::index');
+
+>>>>>>> d355fe59093fa2b59fa89df1e7025251d174461b
