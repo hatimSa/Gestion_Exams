@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Réclamations</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
+        /* Style personnalisé */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f7fa;
@@ -125,7 +127,6 @@
             background-color: #c82333;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
 
             th,
@@ -137,9 +138,8 @@
     </style>
 </head>
 
-<?= view('sidebar'); ?>
-
 <body>
+    <?= view('sidebar'); ?>
 
     <div class="main-content">
         <div class="header">
@@ -153,26 +153,82 @@
                 <table>
                     <tr>
                         <th>Utilisateur</th>
-                        <th>Objet</th>
-                        <th>Message</th>
+                        <th>Titre</th>
+                        <th>Description</th>
                         <th>Actions</th>
                     </tr>
                     <?php foreach ($reclamations as $reclamation) : ?>
                         <tr>
-                            <td><?= htmlspecialchars($reclamation['first_name']) . ' ' . htmlspecialchars($reclamation['last_name']) ?></td>
-                            <td><?= htmlspecialchars($reclamation['objet']) ?></td>
-                            <td><?= htmlspecialchars($reclamation['message']) ?></td>
+                            <td>
+                                <?= htmlspecialchars($reclamation['first_name'] ?? 'Inconnu') . ' ' . htmlspecialchars($reclamation['last_name'] ?? '') ?>
+                            </td>
+                            <td><?= htmlspecialchars($reclamation['titre']) ?></td>
+                            <td><?= htmlspecialchars($reclamation['description']) ?></td>
                             <td class="actions">
-                                <a href="/reclamation/response/<?= $reclamation['id'] ?>" class="btn btn-info">Répondre</a>
-                                <a href="/reclamation/delete/<?= $reclamation['id'] ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette réclamation ?');">Supprimer</a>
+                                <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#responseModal-<?= $reclamation['reclamation_id'] ?>">
+                                    Répondre
+                                </button>
+
+                                <a href="#"
+                                    class="btn btn-danger"
+                                    onclick="deleteWithAlert(<?= $reclamation['reclamation_id'] ?>)">Supprimer</a>
                             </td>
                         </tr>
+
+                        <div class="modal fade" id="responseModal-<?= $reclamation['reclamation_id'] ?>" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">Répondre à la réclamation</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <form action="/reclamations/response/<?= $reclamation['reclamation_id'] ?>" method="POST">
+                                        <?= csrf_field() ?>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="status" class="form-label">Statut de la réclamation</label>
+                                                <select class="form-select" id="status" name="status" required>
+                                                    <option value="pasEnCours">Pas en cours</option>
+                                                    <option value="modifiee">La note est modifiée</option>
+                                                    <option value="meme">La même note</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     <?php endforeach ?>
                 </table>
             <?php endif ?>
         </div>
     </div>
 
+    <script>
+        function deleteWithAlert(id) {
+            Swal.fire({
+                title: 'Êtes-vous sûr ?',
+                text: "Cette action est irréversible !",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Oui, supprimer !',
+                cancelButtonText: 'Annuler'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/reclamations/delete/' + id;
+                }
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

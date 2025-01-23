@@ -4,55 +4,28 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\CompteModel;
+use App\Models\ExamModel;
+use App\Models\NoteModel;
 
 class EtudController extends BaseController
 {
     public function index()
     {
-        // Vérifier si l'utilisateur est connecté
-        if (!session()->has('user_id')) {
-            // Si non connecté, rediriger vers la page de connexion
-            return redirect()->to('/login');
-        }
+        // Crée une instance des modèles nécessaires
+        $examModel = new ExamModel();
+        $resultModel = new NoteModel();
 
-        // Récupérer les informations de l'utilisateur depuis la session
-        $user_id = session()->get('user_id');
+        // Récupère les examens à venir
+        $upcomingExams = $examModel->getUpcomingExams(session()->get('user_id'));
 
-        // Charger les modèles
-        $userModel = new UserModel();
-        $compteModel = new CompteModel();
+        // Récupère les résultats récents
+        $recentResults = $resultModel->getRecentResults(session()->get('user_id'));
 
-        // Récupérer les données de l'utilisateur
-        $user = $userModel->find($user_id);
-
-        // Récupérer les données du compte associé
-        $compte = $compteModel->where('compte_id', $user['compte_id'])->first();
-
-        // Vérifier si le role_id est égal à 1 (etudiant)
-        if ($compte['role_id'] != 1) {
-            // Si le role_id n'est pas 1, rediriger vers une autre page (par exemple, page d'accueil)
-            return redirect()->to('/home');
-        }
-
-        // Données fictives pour les examens et résultats
-        $upcomingExams = [
-            ['exam_name' => 'Math Exam', 'exam_date' => '2025-01-10'],
-            ['exam_name' => 'History Exam', 'exam_date' => '2025-01-15']
-        ];
-
-        $recentResults = [
-            ['exam_name' => 'Math Exam', 'score' => 85],
-            ['exam_name' => 'History Exam', 'score' => 92]
-        ];
-
-        $currentPage = 'etudDashboard';
-
-        // Passer les données à la vue
+        // Passe les données à la vue
         return view('etudDashboard', [
-            'compte' => $compte,
             'upcomingExams' => $upcomingExams,
             'recentResults' => $recentResults,
-            'currentPage' => $currentPage
+            'compte' => session()->get('user_data') // Assurez-vous que les données de l'utilisateur sont stockées dans la session
         ]);
     }
 

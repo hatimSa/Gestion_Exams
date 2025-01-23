@@ -29,4 +29,5 @@ class DepartementModel extends Model
             ->get()
             ->getResultArray();
     }
+
 }

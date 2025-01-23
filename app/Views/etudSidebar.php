@@ -46,14 +46,17 @@
 <body>
 
     <!-- Sidebar pour l'étudiant -->
+    <!-- etudSidebar.php -->
     <div class="sidebar">
         <h2><i class="fas fa-user-circle"></i> Student</h2>
-        <a href="/gestion_Exams/public/etudDashboard" class="<?= ($currentPage === 'etudDashboard') ? 'active' : '' ?>"><i class="fas fa-home"></i> Home</a>
-        <a href="/exam-results"><i class="fas fa-list"></i> My Exams</a>
-        <a href="/gestion_Exams/public/etudReclamations" class="<?= ($currentPage === 'etudReclamations') ? 'active' : '' ?>"><i class="fas fa-exclamation-circle"></i> Mes Réclamations</a>
-        <a href="/gestion_Exams/public/profil" class="<?= ($currentPage === 'etudProfil') ? 'active' : '' ?>"><i class="fas fa-user"></i> Profil</a>
+        <a href="/gestion_Exams/public/etudDashboard"><i class="fas fa-home"></i> Home</a>
+        <a href="<?php echo site_url('/exams'); ?>"><i class="fas fa-list"></i> My Exams</a>
+        <a href="/gestion_Exams/public/etudReclamations"><i class="fas fa-exclamation-circle"></i> Mes Réclamations</a>
+        <a href="/gestion_Exams/public/profil"></i> Profil</a>
         <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
+
+
 
 </body>
 

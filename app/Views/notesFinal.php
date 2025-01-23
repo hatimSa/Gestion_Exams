@@ -93,30 +93,30 @@
         <h2 class="mb-4 text-center">Liste des Notes Finales</h2>
 
         <form action="<?= base_url('/notesFinal'); ?>" method="post">
-            <table class="table table-bordered table-hover table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Nom Complet</th>
-                        <th>Filière</th>
-                        <th>Département</th>
-                        <th>Note</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($notes as $note): ?>
+            <?php foreach ($notesGrouped as $moduleName => $notes): ?>
+                <h3 class="mb-3 text-center"><?= esc($moduleName); ?></h3>
+                <table class="table table-bordered table-hover table-striped">
+                    <thead class="table-dark">
                         <tr>
-                            <td><?= esc($note['first_name']) . ' ' . esc($note['last_name']); ?></td>
-                            <td><?= esc($note['filiere']); ?></td>
-                            <td><?= esc($note['departement']); ?></td>
-                            <td>
-                                <input type="number" name="notes[<?= esc($note['note_id']); ?>]" class="form-control"
-                                    step="0.01" min="0" max="20" value="<?= esc($note['note']); ?>" readonly>
-                            </td>
+                            <th>Nom Complet</th>
+                            <th>Note</th>
                         </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-            <div class="text-center">
+                    </thead>
+                    <tbody>
+                        <?php foreach ($notes as $note): ?>
+                            <tr>
+                                <td><?= esc($note['first_name']) . ' ' . esc($note['last_name']); ?></td>
+                                <td>
+                                    <input type="number" name="notes[<?= esc($note['note_id']); ?>]" class="form-control"
+                                        step="0.01" min="0" max="20" value="<?= esc($note['note']); ?>" readonly>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php endforeach; ?>
+
+            <div class="text-center mt-4">
                 <button type="button" class="btn btn-secondary" onclick="window.history.back();">Retour</button>
             </div>
         </form>

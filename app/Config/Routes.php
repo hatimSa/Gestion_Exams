@@ -44,6 +44,10 @@ $routes->get('/profDashboard/logout', 'ProfController::logout');
 // Routes pour les réclamations
 $routes->get('/reclamations', 'ReclamationsController::index');
 $routes->get('/reclamations/logout', 'ReclamationsController::logout');
+$routes->get('/etudReclamations', 'EtudReclamationsController::index'); // 'reclamations'
+$routes->post('/etudReclamations/store', 'EtudReclamationsController::store');
+$routes->post('etudReclamations/delete', 'EtudReclamationsController::delete');
+$routes->get('reclamations/delete/(:num)', 'ReclamationsController::delete/$1');
 
 // Routes pour les examens
 $routes->get('/examsList', 'ExamsListController::index');
@@ -58,8 +62,10 @@ $routes->get('/examsAdd/logout', 'ExamsAddController::logout');
 // Routes pour les résultats
 $routes->get('/notesList', 'NotesListController::index');
 $routes->get('exams/notesList/(:num)', 'ExamsListController::noter/$1');
-$routes->post('/notesList/store', 'NotesListController::store');
-$routes->get('/notesFinal', 'NotesFinalController::index');
+$routes->get('notesList/(:num)', 'NotesListController::notesList/$1');
+$routes->post('notesList/(:num)/store', 'NotesListController::store/$1');
+$routes->get('notesFinal', 'NotesFinalController::index'); // Sans $exam_id
+$routes->get('notesFinal/(:num)', 'NotesFinalController::index/$1'); // Avec $exam_id
 
 
 // Routes pour le profil
@@ -68,3 +74,15 @@ $routes->get('/profil/logout', 'ProfilController::logout');
 
 // Routes pour les tests
 $routes->get('/test-db', 'TestDBController::index');
+
+// Route pour la gestion des examens (utilisez celle-ci)
+$routes->get('/manage-exams', 'ManageExams::index');
+//routes pour gestion notes
+$routes->get('/student-results', 'resultController::index');
+
+// Routes pour l'étudiant
+$routes->get('/exams', 'ExamController::index');
+
+
+$routes->get('/studentResults', 'resultController::index');
+$routes->get('/listeResult', 'listeResultController::index');

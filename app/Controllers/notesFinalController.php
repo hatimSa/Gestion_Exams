@@ -7,26 +7,21 @@ use App\Models\ExamModel;
 
 class NotesFinalController extends BaseController
 {
-    public function index()
+    public function index($exam_id = null)
     {
         $noteModel = new NoteModel();
-        $examModel = new ExamModel();
+        $prof_id = session()->get('user_id'); // ID du professeur connecté
 
-        // Supposons que tu récupères l'ID de l'examen d'une manière ou d'une autre
-        $exam_id = 1; // Remplace par la logique appropriée pour récupérer l'examen
-
-        // Récupérer les détails de l'examen
-        $exam = $examModel->find($exam_id);
-
-        // Si l'examen n'existe pas, tu peux rediriger ou gérer l'erreur
-        if (!$exam) {
-            return redirect()->to('/examsList')->with('error', 'Examen non trouvé.');
+        if ($exam_id) {
+            // Cas où un $exam_id est fourni : afficher les notes pour un examen spécifique
+            $data['notes'] = $noteModel->getNotesForExam($exam_id);
+        } else {
+            // Cas où aucun $exam_id n'est fourni : afficher les notes de tous les examens du professeur
+            $data['notes'] = $noteModel->getNotesForProfessor($prof_id);
         }
 
-        // Récupérer les notes avec les détails des étudiants
-        $data['notes'] = $noteModel->getNotesForExam($exam_id);
-        $data['exam'] = $exam; // Passer les détails de l'examen à la vue
+        $notes = $noteModel->getNotesGroupedByModule($prof_id);
 
-        return view('notesFinal', $data);
+        return view('notesFinal', ['notesGrouped' => $notes]);
     }
 }

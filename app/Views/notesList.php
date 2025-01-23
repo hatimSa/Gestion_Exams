@@ -24,7 +24,6 @@
             color: #fff;
             padding-top: 20px;
             overflow-y: auto;
-            /* Permet le défilement si nécessaire */
         }
 
         .sidebar h1 {
@@ -87,22 +86,20 @@
         <h1><i class="fas fa-user-circle"></i> Professor</h1>
         <a href="/gestion_Exams/public/profDashboard"><i class="fas fa-home"></i> Home</a>
         <a href="/gestion_Exams/public/examsList"><i class="fas fa-cogs"></i> Gestion des Exams</a>
-        <a href="/gestion_Exams/public/notesFinal"><i class="fas fa-list"></i>Resultats des Etudiants</a>
-        <a href="/gestion_Exams/public/profReclamations"><i class="fas fa-exclamation-circle"></i>Réclamations</a>
-        <a href="/gestion_Exams/public/profil"></i> Profil</a>
+        <a href="/gestion_Exams/public/notesFinal"><i class="fas fa-list"></i> Resultats des Etudiants</a>
+        <a href="/gestion_Exams/public/profReclamations"><i class="fas fa-exclamation-circle"></i> Réclamations</a>
+        <a href="/gestion_Exams/public/profil"><i class="fas fa-user"></i> Profil</a>
         <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
 
     <div class="content">
-        <h2 class="mb-4 text-center">Liste des Notes</h2>
+        <h2 class="mb-4 text-center">Liste des Notes pour <?= esc($exam['module']); ?></h2>
 
-        <form action="<?= base_url('/notesList/store'); ?>" method="post">
+        <form action="<?= base_url('/notesList/' . $exam['exam_id'] . '/store'); ?>" method="post">
             <table class="table table-bordered table-hover table-striped">
                 <thead class="table-dark">
                     <tr>
                         <th>Nom Complet</th>
-                        <th>Filière</th>
-                        <th>Département</th>
                         <th>Note</th>
                     </tr>
                 </thead>
@@ -110,8 +107,6 @@
                     <?php foreach ($notes as $note): ?>
                         <tr>
                             <td><?= esc($note['first_name']) . ' ' . esc($note['last_name']); ?></td>
-                            <td><?= esc($note['filiere']); ?></td>
-                            <td><?= esc($note['departement']); ?></td>
                             <td>
                                 <!-- Input pour la note -->
                                 <input type="number" name="notes[<?= esc($note['note_id']); ?>]" class="form-control" step="0.01" min="0" max="20" value="<?= esc($note['note']) === 'abs' ? '' : esc($note['note']) ?>" placeholder="Saisir une note">

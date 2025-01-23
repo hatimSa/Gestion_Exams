@@ -5,6 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 use App\Models\CompteModel;
+use App\Models\NoteModel;
 
 class ProfController extends Controller
 {
@@ -22,6 +23,7 @@ class ProfController extends Controller
         // Charger les modèles
         $userModel = new UserModel();
         $compteModel = new CompteModel();
+        $noteModel = new NoteModel(); // Charger le modèle des notes
 
         // Récupérer les données de l'utilisateur
         $user = $userModel->find($user_id);
@@ -29,26 +31,20 @@ class ProfController extends Controller
         // Récupérer les données du compte associé
         $compte = $compteModel->where('compte_id', $user['compte_id'])->first();
 
-        // Vérifier si le role_id est égal à 1 (etudiant)
+        // Vérifier si le role_id est égal à 2 (professeur)
         if ($compte['role_id'] != 2) {
-            // Si le role_id n'est pas 1, rediriger vers une autre page (par exemple, page d'accueil)
+            // Si le role_id n'est pas 2, rediriger vers une autre page (par exemple, page d'accueil)
             return redirect()->to('/home');
         }
 
-        // Données fictives pour les résultats des étudiants
-        $studentResults = [
-            ['student_name' => 'Alice', 'exam_name' => 'Math Exam', 'score' => 85],
-            ['student_name' => 'Bob', 'exam_name' => 'History Exam', 'score' => 90],
-            ['student_name' => 'Charlie', 'exam_name' => 'Physics Exam', 'score' => 78]
-        ];
-
-        $currentPage = 'profDashboard';
+        // Récupérer les 3 meilleurs résultats pour le professeur
+        $studentResults = $noteModel->getStudentResultsForProfessor($user_id);
 
         // Passer les données à la vue
         return view('profDashboard', [
             'compte' => $compte,
             'studentResults' => $studentResults,
-            'currentPage' => $currentPage
+            'currentPage' => 'profDashboard'
         ]);
     }
 
