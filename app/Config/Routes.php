@@ -45,6 +45,17 @@ $routes->get('/profDashboard/logout', 'ProfController::logout');
 // Routes pour les réclamations
 $routes->get('/reclamations', 'ReclamationsController::index');
 $routes->get('/reclamations/logout', 'ReclamationsController::logout');
+$routes->get('/etudReclamations', 'EtudReclamationsController::index'); // 'reclamations'
+$routes->post('/etudReclamations/store', 'EtudReclamationsController::store');
+$routes->post('etudReclamations/delete', 'EtudReclamationsController::delete');
+$routes->get('reclamations/delete/(:num)', 'ReclamationsController::delete/$1');
+
+
+
+
+
+
+
 
 // Routes pour les examens
 $routes->get('/examsList', 'ExamsListController::index');
