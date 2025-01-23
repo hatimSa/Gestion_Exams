@@ -95,6 +95,19 @@
     <div class="content">
         <h2 class="mb-4 text-center">Liste des Notes pour <?= esc($exam['module']); ?></h2>
 
+        <!-- Messages flash -->
+        <?php if (session()->getFlashdata('success')): ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <?= session()->getFlashdata('success'); ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php elseif (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <?= session()->getFlashdata('error'); ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php endif; ?>
+
         <form action="<?= base_url('/notesList/' . $exam['exam_id'] . '/store'); ?>" method="post">
             <table class="table table-bordered table-hover table-striped">
                 <thead class="table-dark">
@@ -123,6 +136,13 @@
             </div>
         </form>
     </div>
+    <script>
+        // Auto-close alerts after 5 seconds
+        setTimeout(() => {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => alert.classList.add('d-none'));
+        }, 5000);
+    </script>
 
 </body>
 

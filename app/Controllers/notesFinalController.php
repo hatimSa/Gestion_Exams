@@ -24,4 +24,25 @@ class NotesFinalController extends BaseController
 
         return view('notesFinal', ['notesGrouped' => $notes]);
     }
+
+    public function update()
+    {
+        $noteModel = new NoteModel();
+    
+        // Récupérer l'ID de la note à modifier
+        $note_id = $this->request->getPost('save_note');
+        $newNote = $this->request->getPost('notes')[$note_id] ?? null;
+    
+        // Vérifier si la note est valide
+        if ($newNote !== null && is_numeric($newNote) && $newNote >= 0 && $newNote <= 20) {
+            $noteModel->update($note_id, ['note' => $newNote]);
+    
+            // Message flash de succès
+            return redirect()->to('/notesFinal')->with('success', 'La note a été mise à jour avec succès.');
+        }
+    
+        // Message flash d'erreur
+        return redirect()->to('/notesFinal')->with('error', 'Échec de la mise à jour de la note.');
+    }
+
 }

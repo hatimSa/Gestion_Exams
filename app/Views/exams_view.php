@@ -147,7 +147,7 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="header">
-            <h1>Welcome to Your Dashboard</h1>
+            <h1>Bonne Courage!</h1>
         </div>
 
         <!-- Affichage des examens -->

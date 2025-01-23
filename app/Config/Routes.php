@@ -66,6 +66,8 @@ $routes->get('notesList/(:num)', 'NotesListController::notesList/$1');
 $routes->post('notesList/(:num)/store', 'NotesListController::store/$1');
 $routes->get('notesFinal', 'NotesFinalController::index'); // Sans $exam_id
 $routes->get('notesFinal/(:num)', 'NotesFinalController::index/$1'); // Avec $exam_id
+$routes->post('/notesFinal/update', 'NotesFinalController::update');
+$routes->get('/etudNotes/(:num)', 'EtudNotesController::index/$1');
 
 
 // Routes pour le profil

@@ -28,10 +28,12 @@ class NoteModel extends Model
     public function getNotesForExam($exam_id)
     {
         return $this->db->table('comptes')
-            ->select('comptes.first_name AS student_name, comptes.last_name, exams.module, notes.note')
-            ->join('filieres', 'comptes.filiere_id = filieres.filiere_id')
-            ->join('departements', 'filieres.departement_id = departements.departement_id')
-            ->join('notes', 'comptes.compte_id = notes.student_id AND notes.exam_id = ' . $this->db->escape($exam_id), 'left')
+        ->select('comptes.first_name AS student_name, comptes.last_name, exams.module, notes.note')
+        ->join('filieres', 'comptes.filiere_id = filieres.filiere_id')
+        ->join('departements', 'filieres.departement_id = departements.departement_id')
+        ->join('notes', 'comptes.compte_id = notes.student_id', 'left')
+        ->join('exams', 'notes.exam_id = exams.exam_id', 'left') // Ajout de la jointure avec la table exams
+        ->where('notes.exam_id', $exam_id) // Filtrer par l'examen spécifié
             ->where('comptes.role_id', 1) // Filtrer par role_id == 1 pour les étudiants
             ->get()
             ->getResultArray();
@@ -117,5 +119,14 @@ class NoteModel extends Model
             ->limit(3) // Limite à 3 meilleurs résultats
             ->get()
             ->getResult();
+    }
+
+    public function getNotesForStudent($student_id) {
+        return $this->db->table('notes')
+            ->select('notes.note, exams.module, exams.exam_date')
+            ->join('exams', 'notes.exam_id = exams.exam_id')
+            ->where('notes.student_id', $student_id)
+            ->get()
+            ->getResultArray();
     }
 }

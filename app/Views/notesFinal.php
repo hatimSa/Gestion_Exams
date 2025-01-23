@@ -48,10 +48,6 @@
             font-weight: bold;
         }
 
-        .sidebar a.active i {
-            color: #fff;
-        }
-
         .content {
             margin-left: 250px;
             padding: 20px;
@@ -72,7 +68,6 @@
         input[type="number"] {
             max-width: 80px;
             text-align: center;
-            pointer-events: none;
         }
     </style>
 </head>
@@ -92,7 +87,20 @@
     <div class="content">
         <h2 class="mb-4 text-center">Liste des Notes Finales</h2>
 
-        <form action="<?= base_url('/notesFinal'); ?>" method="post">
+        <!-- Affichage des messages flash -->
+        <?php if (session()->getFlashdata('success')): ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <?= session()->getFlashdata('success'); ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php elseif (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <?= session()->getFlashdata('error'); ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php endif; ?>
+
+        <form action="<?= base_url('/notesFinal/update'); ?>" method="post">
             <?php foreach ($notesGrouped as $moduleName => $notes): ?>
                 <h3 class="mb-3 text-center"><?= esc($moduleName); ?></h3>
                 <table class="table table-bordered table-hover table-striped">
@@ -100,6 +108,7 @@
                         <tr>
                             <th>Nom Complet</th>
                             <th>Note</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -108,7 +117,10 @@
                                 <td><?= esc($note['first_name']) . ' ' . esc($note['last_name']); ?></td>
                                 <td>
                                     <input type="number" name="notes[<?= esc($note['note_id']); ?>]" class="form-control"
-                                        step="0.01" min="0" max="20" value="<?= esc($note['note']); ?>" readonly>
+                                        step="0.01" min="0" max="20" value="<?= esc($note['note']); ?>">
+                                </td>
+                                <td>
+                                    <button type="submit" name="save_note" value="<?= esc($note['note_id']); ?>" class="btn btn-primary btn-sm">Enregistrer</button>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -121,6 +133,14 @@
             </div>
         </form>
     </div>
+    <script>
+        // Auto-close alerts after 5 seconds
+        setTimeout(() => {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => alert.classList.add('d-none'));
+        }, 5000);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
