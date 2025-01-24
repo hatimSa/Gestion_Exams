@@ -87,7 +87,7 @@
         <a href="/gestion_Exams/public/profDashboard"><i class="fas fa-home"></i> Home</a>
         <a href="/gestion_Exams/public/examsList"><i class="fas fa-cogs"></i> Gestion des Exams</a>
         <a href="/gestion_Exams/public/notesFinal"><i class="fas fa-list"></i> Resultats des Etudiants</a>
-        <a href="/gestion_Exams/public/profReclamations"><i class="fas fa-exclamation-circle"></i> Réclamations</a>
+        <a href="/gestion_Exams/public/reclamations"><i class="fas fa-exclamation-circle"></i> Réclamations</a>
         <a href="/gestion_Exams/public/profil"><i class="fas fa-user"></i> Profil</a>
         <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>

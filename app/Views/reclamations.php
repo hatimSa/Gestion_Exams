@@ -139,7 +139,12 @@
 </head>
 
 <body>
-    <?= view('sidebar'); ?>
+    
+    <?php if (session()->get('role_id') == 3) : ?>
+        <?php echo view('sidebar'); ?>
+    <?php else : ?>
+        <?php echo view('profSidebar'); ?>
+    <?php endif ?>
 
     <div class="main-content">
         <div class="header">
@@ -155,6 +160,7 @@
                         <th>Utilisateur</th>
                         <th>Titre</th>
                         <th>Description</th>
+                        <th>Etat</th>
                         <th>Actions</th>
                     </tr>
                     <?php foreach ($reclamations as $reclamation) : ?>
@@ -164,6 +170,7 @@
                             </td>
                             <td><?= htmlspecialchars($reclamation['titre']) ?></td>
                             <td><?= htmlspecialchars($reclamation['description']) ?></td>
+                            <td><?= htmlspecialchars($reclamation['etat']) ?></td>
                             <td class="actions">
                                 <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#responseModal-<?= $reclamation['reclamation_id'] ?>">
                                     Répondre
@@ -182,23 +189,24 @@
                                         <h5 class="modal-title" id="modalLabel">Répondre à la réclamation</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <form action="/reclamations/response/<?= $reclamation['reclamation_id'] ?>" method="POST">
-                                        <?= csrf_field() ?>
-                                        <div class="modal-body">
+                                    <div class="modal-body">
+                                        <form action="<?= base_url('/reclamations/response/' . $reclamation['reclamation_id']) ?>" method="POST">
+                                            <?= csrf_field() ?>
                                             <div class="mb-3">
-                                                <label for="status" class="form-label">Statut de la réclamation</label>
-                                                <select class="form-select" id="status" name="status" required>
-                                                    <option value="pasEnCours">Pas en cours</option>
-                                                    <option value="modifiee">La note est modifiée</option>
-                                                    <option value="meme">La même note</option>
+                                                <label for="etat" class="form-label">Statut de la réclamation</label>
+                                                <select class="form-select" id="etat" name="etat" required>
+                                                    <option value="En cours">En cours</option>
+                                                    <option value="Bien Traité">Bien Traité</option>
+                                                    <option value="Rien à changer">Rien à changer</option>
                                                 </select>
                                             </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                            <button type="submit" class="btn btn-primary">Envoyer</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                                    </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>

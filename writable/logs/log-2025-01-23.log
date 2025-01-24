@@ -3225,3 +3225,908 @@ INFO - 2025-01-23 21:32:02 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-23 21:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-23 21:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-23 21:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 21:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 21:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 21:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 21:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 21:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 21:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 21:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 21:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 21:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-23 22:26:53 --> ErrorException: Undefined variable $exam
+[Method: GET, Route: etudNotes]
+in APPPATH\Views\etudNotes.php on line 151.
+ 1 APPPATH\Views\etudNotes.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $exam', 'C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\etudNotes.php', 151)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Gestion_Exams\\app\\Views\\etudNotes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('etudNotes', [], true)
+ 5 APPPATH\Controllers\etudNotesController.php(17): view('etudNotes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EtudNotesController->index('$1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EtudNotesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-23 22:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:55:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:55:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 22:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 23:09:18 --> mysqli_sql_exception: Table 'gestion_exams.students' doesn't exist in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclama...', 0)
+#1 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclama...')
+#2 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclama...')
+#3 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclama...', Array, false)
+#4 C:\xampp\htdocs\Gestion_Exams\app\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion_Exams\app\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+#6 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+#7 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+#8 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Gestion_Exams\public\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-01-23 23:09:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'gestion_exams.students' doesn't exist
+[Method: GET, Route: reclamations]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = :students.professor_id:', [...], false)
+ 2 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:09:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'gestion_exams.students' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = :students.professor_id:', [...], false)
+ 4 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:09:18 --> [Caused by] mysqli_sql_exception: Table 'gestion_exams.students' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = :students.professor_id:', [...], false)
+ 5 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-23 23:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 23:10:11 --> mysqli_sql_exception: Unknown column 'students.professor_id' in 'where clause' in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclama...', 0)
+#1 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclama...')
+#2 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclama...')
+#3 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclama...', Array, false)
+#4 C:\xampp\htdocs\Gestion_Exams\app\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion_Exams\app\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+#6 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+#7 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+#8 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Gestion_Exams\public\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-01-23 23:10:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.professor_id' in 'where clause'
+[Method: GET, Route: reclamations]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = :students.professor_id:', [...], false)
+ 2 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:10:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.professor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = :students.professor_id:', [...], false)
+ 4 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:10:11 --> [Caused by] mysqli_sql_exception: Unknown column 'students.professor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`professor_id` = :students.professor_id:', [...], false)
+ 5 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-23 23:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 23:10:28 --> mysqli_sql_exception: Unknown column 'students.student_id' in 'on clause' in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclama...', 0)
+#1 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclama...')
+#2 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclama...')
+#3 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclama...', Array, false)
+#4 C:\xampp\htdocs\Gestion_Exams\app\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion_Exams\app\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+#6 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+#7 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+#8 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Gestion_Exams\public\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-01-23 23:10:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.student_id' in 'on clause'
+[Method: GET, Route: reclamations]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = :students.compte_id:', [...], false)
+ 2 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:10:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.student_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = :students.compte_id:', [...], false)
+ 4 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:10:28 --> [Caused by] mysqli_sql_exception: Unknown column 'students.student_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = :students.compte_id:', [...], false)
+ 5 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-23 23:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 23:10:30 --> mysqli_sql_exception: Unknown column 'students.student_id' in 'on clause' in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclama...', 0)
+#1 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclama...')
+#2 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclama...')
+#3 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclama...', Array, false)
+#4 C:\xampp\htdocs\Gestion_Exams\app\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion_Exams\app\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+#6 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+#7 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+#8 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Gestion_Exams\public\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-01-23 23:10:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.student_id' in 'on clause'
+[Method: GET, Route: reclamations]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = :students.compte_id:', [...], false)
+ 2 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:10:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.student_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = :students.compte_id:', [...], false)
+ 4 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:10:30 --> [Caused by] mysqli_sql_exception: Unknown column 'students.student_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = :students.compte_id:', [...], false)
+ 5 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-23 23:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 23:10:31 --> mysqli_sql_exception: Unknown column 'students.student_id' in 'on clause' in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclama...', 0)
+#1 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclama...')
+#2 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclama...')
+#3 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclama...', Array, false)
+#4 C:\xampp\htdocs\Gestion_Exams\app\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion_Exams\app\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+#6 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+#7 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+#8 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Gestion_Exams\public\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-01-23 23:10:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.student_id' in 'on clause'
+[Method: GET, Route: reclamations]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = :students.compte_id:', [...], false)
+ 2 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:10:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.student_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = :students.compte_id:', [...], false)
+ 4 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:10:31 --> [Caused by] mysqli_sql_exception: Unknown column 'students.student_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+JOIN `comptes` as `students` ON `students`.`student_id` = `reclamations`.`student_id`
+WHERE `students`.`compte_id` = :students.compte_id:', [...], false)
+ 5 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-23 23:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 23:12:43 --> mysqli_sql_exception: Unknown column 'comptes.professor_id' in 'where clause' in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclama...', 0)
+#1 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclama...')
+#2 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclama...')
+#3 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclama...', Array, false)
+#4 C:\xampp\htdocs\Gestion_Exams\app\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion_Exams\app\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+#6 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+#7 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+#8 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Gestion_Exams\public\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-01-23 23:12:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'comptes.professor_id' in 'where clause'
+[Method: GET, Route: reclamations]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = :comptes.role_id:
+AND `comptes`.`professor_id` = :comptes.professor_id:', [...], false)
+ 2 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:12:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'comptes.professor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = :comptes.role_id:
+AND `comptes`.`professor_id` = :comptes.professor_id:', [...], false)
+ 4 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:12:43 --> [Caused by] mysqli_sql_exception: Unknown column 'comptes.professor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = :comptes.role_id:
+AND `comptes`.`professor_id` = :comptes.professor_id:', [...], false)
+ 5 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-23 23:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 23:12:45 --> mysqli_sql_exception: Unknown column 'comptes.professor_id' in 'where clause' in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclama...', 0)
+#1 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclama...')
+#2 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclama...')
+#3 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclama...', Array, false)
+#4 C:\xampp\htdocs\Gestion_Exams\app\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion_Exams\app\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+#6 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+#7 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+#8 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Gestion_Exams\public\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-01-23 23:12:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'comptes.professor_id' in 'where clause'
+[Method: GET, Route: reclamations]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = :comptes.role_id:
+AND `comptes`.`professor_id` = :comptes.professor_id:', [...], false)
+ 2 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:12:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'comptes.professor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = :comptes.role_id:
+AND `comptes`.`professor_id` = :comptes.professor_id:', [...], false)
+ 4 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:12:45 --> [Caused by] mysqli_sql_exception: Unknown column 'comptes.professor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = :comptes.role_id:
+AND `comptes`.`professor_id` = :comptes.professor_id:', [...], false)
+ 5 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-23 23:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 23:16:03 --> mysqli_sql_exception: Unknown column 'comptes.professor_id' in 'where clause' in C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Exams\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclama...', 0)
+#1 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclama...')
+#2 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclama...')
+#3 C:\xampp\htdocs\Gestion_Exams\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclama...', Array, false)
+#4 C:\xampp\htdocs\Gestion_Exams\app\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Gestion_Exams\app\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+#6 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+#7 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+#8 C:\xampp\htdocs\Gestion_Exams\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Gestion_Exams\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Gestion_Exams\public\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-01-23 23:16:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'comptes.professor_id' in 'where clause'
+[Method: GET, Route: reclamations]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = :comptes.role_id:
+AND `comptes`.`professor_id` = :comptes.professor_id:', [...], false)
+ 2 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:16:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'comptes.professor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = :comptes.role_id:
+AND `comptes`.`professor_id` = :comptes.professor_id:', [...], false)
+ 4 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:16:03 --> [Caused by] mysqli_sql_exception: Unknown column 'comptes.professor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = 1
+AND `comptes`.`professor_id` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `reclamations`.*, `comptes`.`first_name`, `comptes`.`last_name`
+FROM `reclamations`
+JOIN `comptes` ON `comptes`.`compte_id` = `reclamations`.`student_id`
+WHERE `comptes`.`role_id` = :comptes.role_id:
+AND `comptes`.`professor_id` = :comptes.professor_id:', [...], false)
+ 5 APPPATH\Models\reclamationModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\reclamationsController.php(34): App\Models\ReclamationModel->getReclamationsByProfessor('68')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReclamationsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReclamationsController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-23 23:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 23:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

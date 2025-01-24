@@ -48,6 +48,8 @@ $routes->get('/etudReclamations', 'EtudReclamationsController::index'); // 'recl
 $routes->post('/etudReclamations/store', 'EtudReclamationsController::store');
 $routes->post('etudReclamations/delete', 'EtudReclamationsController::delete');
 $routes->get('reclamations/delete/(:num)', 'ReclamationsController::delete/$1');
+$routes->post('reclamations/delete/(:num)', 'ReclamationsController::delete');
+$routes->post('/reclamations/response/(:num)', 'ReclamationsController::response/$1');
 
 // Routes pour les examens
 $routes->get('/examsList', 'ExamsListController::index');
@@ -67,7 +69,7 @@ $routes->post('notesList/(:num)/store', 'NotesListController::store/$1');
 $routes->get('notesFinal', 'NotesFinalController::index'); // Sans $exam_id
 $routes->get('notesFinal/(:num)', 'NotesFinalController::index/$1'); // Avec $exam_id
 $routes->post('/notesFinal/update', 'NotesFinalController::update');
-$routes->get('/etudNotes/(:num)', 'EtudNotesController::index/$1');
+$routes->get('/etudNotes', 'EtudNotesController::index/$1');
 
 
 // Routes pour le profil

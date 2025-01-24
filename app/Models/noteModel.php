@@ -123,7 +123,7 @@ class NoteModel extends Model
 
     public function getNotesForStudent($student_id) {
         return $this->db->table('notes')
-            ->select('notes.note, exams.module, exams.exam_date')
+            ->select('notes.note, exams.module')
             ->join('exams', 'notes.exam_id = exams.exam_id')
             ->where('notes.student_id', $student_id)
             ->get()

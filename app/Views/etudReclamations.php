@@ -180,6 +180,7 @@
                 <tr>
                     <th>Titre</th>
                     <th>Description</th>
+                    <th>Etat</th>
                     <th>Actions</th>
                 </tr>
                 <?php if (!empty($reclamations)): ?>
@@ -187,6 +188,7 @@
                         <tr>
                             <td><?= esc($reclamation['titre']) ?></td>
                             <td><?= esc($reclamation['description']) ?></td>
+                            <td><?= esc($reclamation['etat']) ?></td>
                             <td>
                                 <!-- Bouton pour afficher la confirmation avant suppression -->
                                 <button class="btn" onclick="confirmDelete(<?= esc($reclamation['reclamation_id']) ?>)">Supprimer</button>

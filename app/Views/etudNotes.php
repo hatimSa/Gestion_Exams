@@ -15,6 +15,44 @@
             color: #333;
         }
 
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #4c4c9d;
+            color: #fff;
+            padding-top: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            padding-left: 22px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #6e7cb2;
+        }
+
+        .sidebar a.active {
+            background-color: #6e7cb2;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .sidebar a.active i {
+            color: #fff;
+        }
+
         .container {
             max-width: 900px;
             margin: 50px auto;
@@ -93,6 +131,8 @@
     </style>
 </head>
 
+<?= view('etudSidebar'); ?>
+
 <body>
     <div class="container">
         <h1>Notes des Modules</h1>
@@ -100,27 +140,23 @@
             <thead>
                 <tr>
                     <th>Module</th>
-                    <th>Date de l'examen</th>
                     <th>Note</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Exemple de données -->
-                <tr>
-                    <td data-label="Module">Mathématiques</td>
-                    <td data-label="Date de l'examen">2025-01-10</td>
-                    <td data-label="Note">16.5</td>
-                </tr>
-                <tr>
-                    <td data-label="Module">Informatique</td>
-                    <td data-label="Date de l'examen">2025-01-15</td>
-                    <td data-label="Note">14.0</td>
-                </tr>
-                <tr>
-                    <td data-label="Module">Physique</td>
-                    <td data-label="Date de l'examen">2025-01-20</td>
-                    <td data-label="Note">12.5</td>
-                </tr>
+                <!-- Affichage dynamique des notes -->
+                <?php if (!empty($notes)): ?>
+                    <?php foreach ($notes as $note): ?>
+                        <tr>
+                            <td data-label="Module"><?= esc($exam['module']); ?></td>
+                            <td data-label="Note"><?= esc($note['note']); ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="3" style="text-align: center;">Aucune note disponible</td>
+                    </tr>
+                <?php endif; ?>
             </tbody>
         </table>
     </div>
