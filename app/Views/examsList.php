@@ -9,7 +9,8 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
         }
 
         .sidebar {
@@ -22,7 +23,6 @@
             color: #fff;
             padding-top: 20px;
             overflow-y: auto;
-            /* Permet le défilement si nécessaire */
         }
 
         .sidebar h1 {
@@ -53,28 +53,59 @@
 
         main {
             margin-left: 250px;
-            /* Décale le contenu principal pour ne pas être sous le sidebar */
-            padding: 20px;
-            background-color: #f9f9f9;
+            padding: 30px;
+            background-color: #fff;
             min-height: 100vh;
-            /* Assure que le contenu occupe toute la hauteur de la fenêtre */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #4c4c9d;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
         }
 
         table {
-            border-collapse: collapse;
             width: 100%;
             margin-top: 41px;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            
         }
 
         th,
         td {
-            text-align: left;
-            padding: 8px;
+            padding: 15px;
+            text-align: center;
+            font-size: 1rem;
+            vertical-align: middle;
         }
 
         th {
             background-color: #6e7cb2;
             color: white;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #f9f9f9;
         }
 
         tr:nth-child(even) {
@@ -95,6 +126,8 @@
 
         .btn:hover {
             background-color: #4c4c9d;
+        .actions a {
+            margin: 0 8px;
         }
     </style>
 </head>
@@ -106,7 +139,7 @@
         <a href="/gestion_Exams/public/profDashboard" class="<?= ($currentPage === 'profDashboard') ? 'active' : '' ?>"><i class="fas fa-home"></i> Home</a>
         <a href="/gestion_Exams/public/examsList" class="<?= ($currentPage === 'examsList') ? 'active' : '' ?>"><i class="fas fa-cogs"></i> Gestion des Exams</a>
         <a href="/gestion_Exams/public/notesFinal"><i class="fas fa-list"></i> Resultats des Etudiants</a>
-        <a href="/gestion_Exams/public/profReclamations" class="<?= ($currentPage === 'profReclamations') ? 'active' : '' ?>"><i class="fas fa-exclamation-circle"></i>Réclamations</a>
+        <a href="/gestion_Exams/public/reclamations" class="<?= ($currentPage === 'reclamations') ? 'active' : '' ?>"><i class="fas fa-exclamation-circle"></i> Réclamations</a>
         <a href="/gestion_Exams/public/profil" class="<?= ($currentPage === 'profil') ? 'active' : '' ?>"><i class="fas fa-user"></i> Profil</a>
         <a href="/gestion_Exams/public/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
@@ -118,30 +151,34 @@
             <a href="/gestion_Exams/public/examsAdd" class="btn">Ajouter un exam</a><br>
         </div>
         <table>
-            <tr>
-                <th>Département</th>
-                <th>Filière</th>
-                <th>Module</th>
-                <th>Date</th>
-                <th>heure de début</th>
-                <th>heure de fin</th>
-                <th>Actions</th>
-            </tr>
-            <?php foreach ($exams as $exam): ?>
+            <thead>
                 <tr>
-                    <td><?= $exam['departement_name'] ?></td>
-                    <td><?= $exam['filiere_name'] ?></td>
-                    <td><?= $exam['module'] ?></td>
-                    <td><?= $exam['exam_date'] ?></td>
-                    <td><?= $exam['start_time'] ?></td>
-                    <td><?= $exam['end_time'] ?></td>
-                    <td>
-                        <a href="<?= base_url('exams/edit/' . $exam['exam_id']) ?>" class="btn">Modifier</a>
-                        <a href="<?= base_url('exams/delete/' . $exam['exam_id']) ?>" class="btn" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet exam?')">Supprimer</a>
-                        <a href="<?= base_url('exams/notesList/' . $exam['exam_id']) ?>" class="btn">Noter</a>
-                    </td>
+                    <th>Département</th>
+                    <th>Filière</th>
+                    <th>Module</th>
+                    <th>Date</th>
+                    <th>Heure de début</th>
+                    <th>Heure de fin</th>
+                    <th>Actions</th>
                 </tr>
-            <?php endforeach; ?>
+            </thead>
+            <tbody>
+                <?php foreach ($exams as $exam): ?>
+                    <tr>
+                        <td><?= $exam['departement_name'] ?></td>
+                        <td><?= $exam['filiere_name'] ?></td>
+                        <td><?= $exam['module'] ?></td>
+                        <td><?= $exam['exam_date'] ?></td>
+                        <td><?= $exam['start_time'] ?></td>
+                        <td><?= $exam['end_time'] ?></td>
+                        <td class="actions">
+                            <a href="<?= base_url('exams/edit/' . $exam['exam_id']) ?>" class="btn">Modifier</a>
+                            <a href="<?= base_url('exams/delete/' . $exam['exam_id']) ?>" class="btn" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet exam?')">Supprimer</a>
+                            <a href="<?= base_url('exams/notesList/' . $exam['exam_id']) ?>" class="btn">Noter</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
     </main>
 </body>

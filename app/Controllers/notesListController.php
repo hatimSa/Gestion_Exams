@@ -16,38 +16,32 @@ class NotesListController extends BaseController
         return view('notesList', $data);
     }
 
-    public function store()
+    public function store($exam_id)
     {
-        if ($this->request->getMethod() === 'post') {
-            $notes = $this->request->getPost('notes');
-            $absences = $this->request->getPost('abs');  // Récupérer les absences
+        // Charger le modèle des notes
+        $noteModel = new NoteModel();
 
-            if (!$notes) {
-                return redirect()->to('/notesList')->with('error', 'Aucune donnée soumise.');
+        // Récupérer les données soumises depuis le formulaire
+        $notes = $this->request->getPost('notes');
+        $absences = $this->request->getPost('abs');
+
+        // Parcourir les notes pour chaque étudiant
+        foreach ($notes as $note_id => $note_value) {
+            // Préparer les données à insérer
+            $noteData = [
+                'note_id' => $note_id, // Identifiant unique de la note
+                'note' => isset($absences[$note_id]) ? 'abs' : $note_value, // Si l'étudiant est absent, on stocke 'abs'
+            ];
+
+            // Mettre à jour la colonne "note" uniquement
+            if (!$noteModel->update($note_id, $noteData)) {
+                // En cas d'erreur, rediriger avec les erreurs
+                return redirect()->back()->withInput()->with('errors', $noteModel->errors());
             }
-
-            $noteModel = new NoteModel();
-
-            foreach ($notes as $noteId => $noteValue) {
-                // Si l'étudiant est absent (case cochée), on marque "abs"
-                if (isset($absences[$noteId])) {
-                    $data['note'] = 'abs';
-                } else {
-                    // Validation de la note : soit une valeur numérique, soit "abs"
-                    if ($noteValue !== 'abs' && (!is_numeric($noteValue) || $noteValue < 0 || $noteValue > 20)) {
-                        return redirect()->to('/notesList')->with('error', 'Toutes les notes doivent être comprises entre 0 et 20 ou marquées comme "abs".');
-                    }
-                    $data['note'] = $noteValue;
-                }
-
-                // Mise à jour ou insertion
-                $noteModel->update($noteId, $data);
-            }
-
-            return redirect()->to('/notesFinal')->with('success', 'Les notes ont été enregistrées avec succès.');
         }
 
-        return redirect()->to('/notesList')->with('error', 'Aucune donnée soumise.');
+        // Rediriger avec un message de succès
+        return redirect()->to('/notesFinal/' . $exam_id)->with('success', 'Notes enregistrées avec succès');
     }
 
     public function notesList($exam_id)

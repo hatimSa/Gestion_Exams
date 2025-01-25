@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- FullCalendar CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
             margin: 0;
             padding: 0;
         }
@@ -22,30 +20,99 @@
         }
 
         .header {
-            background-color: #6e7cb2;
+            background: linear-gradient(90deg, #6e7cb2, #5b67a1);
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
         }
 
         .card {
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        .card h3 {
-            margin-bottom: 10px;
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        #calendar {
-            max-width: 100%;
-            margin: 20px auto;
+        .card-header {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #5b67a1;
+            border-bottom: 2px solid #ececec;
+            padding-bottom: 5px;
+        }
+
+        /* Style du calendrier */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 10px;
+            text-align: center;
+        }
+
+        .calendar .day-header {
+            font-weight: bold;
+            background-color: #5b67a1;
+            color: white;
             padding: 10px;
-            background: #fff;
+            border-radius: 10px;
+        }
+
+        .calendar .day {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .calendar .day:hover {
+            background-color: #d6dfff;
+        }
+
+        .calendar .day-today {
+            background-color: #ffecb3;
+            font-weight: bold;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: #eaf2ff;
+        }
+
+        .event {
+            background-color: #ff6f61;
+            color: white;
+            padding: 5px 10px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 5px;
+            font-size: 0.8em;
         }
     </style>
 </head>
@@ -61,60 +128,89 @@
             <h1>Student Dashboard</h1>
         </div>
 
-        <div class="card">
-            <h3>Welcome, <?php echo strtoupper($compte['first_name']) . ' ' . strtoupper($compte['last_name']); ?></h3>
-            <p>Here are your upcoming exams and recent results.</p>
-        </div>
-
         <!-- Calendar Section -->
         <div class="card">
-            <h3>Event Schedule</h3>
-            <div id="calendar"></div>
+            <div class="card-header">Calendrier des événements</div>
+            <div class="calendar" id="calendar">
+                <!-- Les jours du mois seront générés ici par JavaScript -->
+            </div>
         </div>
 
+        <!-- Upcoming Exams Section -->
         <div class="card">
-            <h3>Upcoming Exams</h3>
-            <ul>
-                <!-- Loop through upcoming exams from the database -->
-                <?php foreach ($upcomingExams as $exam): ?>
-                    <li><?php echo $exam['exam_name']; ?> on <?php echo $exam['exam_date']; ?></li>
-                <?php endforeach; ?>
-            </ul>
+            <div class="card-header">Les Prochains Exams</div>
+            <div class="card-content">
+                <ul>
+                    <!-- Loop through upcoming exams from the database -->
+                    <?php foreach ($upcomingExams as $exam): ?>
+                        <li>
+                            <?php echo isset($exam['module']) ? $exam['module'] : 'Module not available'; ?> le <?php echo isset($exam['exam_date']) ? $exam['exam_date'] : 'Date not available'; ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
         </div>
 
+        <!-- Recent Results Section -->
         <div class="card">
-            <h3>Recent Results</h3>
-            <ul>
-                <!-- Loop through recent results -->
-                <?php foreach ($recentResults as $result): ?>
-                    <li><?php echo $result['exam_name']; ?> - <?php echo $result['score']; ?>%</li>
-                <?php endforeach; ?>
-            </ul>
+            <div class="card-header">Mes Résultats Récents</div>
+            <div class="card-content">
+                <ul>
+                    <!-- Loop through recent results -->
+                    <?php foreach ($recentResults as $result): ?>
+                        <li><?php echo $result->module; ?> - <?php echo $result->note; ?>/20</li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <!-- FullCalendar JS -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
-                },
-                events: [
-                    // Loop through the upcoming exams and pass them as events to FullCalendar
-                    <?php foreach ($upcomingExams as $exam): ?> {
-                            title: '<?php echo addslashes($exam["exam_name"]); ?>',
-                            start: '<?php echo date('Y-m-d', strtotime($exam["exam_date"])); ?>',
-                        },
-                    <?php endforeach; ?>
-                ]
-            });
-            calendar.render();
+            const calendarEl = document.getElementById('calendar');
+            const currentDate = new Date();
+            const currentMonth = currentDate.getMonth();
+            const currentYear = currentDate.getFullYear();
+
+            // Fonction pour obtenir le premier jour du mois
+            function getFirstDayOfMonth(year, month) {
+                return new Date(year, month, 1).getDay();
+            }
+
+            // Fonction pour obtenir le nombre de jours dans un mois
+            function getDaysInMonth(year, month) {
+                return new Date(year, month + 1, 0).getDate();
+            }
+
+            // Fonction pour générer le calendrier
+            function generateCalendar(year, month) {
+                const firstDay = getFirstDayOfMonth(year, month);
+                const daysInMonth = getDaysInMonth(year, month);
+                let calendarHTML = '';
+
+                // En-têtes des jours
+                const daysOfWeek = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
+                daysOfWeek.forEach(day => {
+                    calendarHTML += `<div class="day-header">${day}</div>`;
+                });
+
+                // Cellules vides avant le premier jour du mois
+                for (let i = 0; i < firstDay; i++) {
+                    calendarHTML += `<div class="day"></div>`;
+                }
+
+                // Jours du mois
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const todayClass = (day === currentDate.getDate() && year === currentDate.getFullYear() && month === currentDate.getMonth()) ? 'day-today' : '';
+                    calendarHTML += `<div class="day ${todayClass}">${day}</div>`;
+                }
+
+                // Insérer le calendrier dans la page
+                calendarEl.innerHTML = calendarHTML;
+            }
+
+            // Générer le calendrier pour le mois actuel
+            generateCalendar(currentYear, currentMonth);
         });
     </script>
 </body>
