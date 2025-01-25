@@ -63,6 +63,7 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            margin-top: 41px;
         }
 
         th,
@@ -72,7 +73,7 @@
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: #6e7cb2;
             color: white;
         }
 
@@ -81,17 +82,19 @@
         }
 
         .btn {
-            background-color: #4CAF50;
+            background-color: #6e7cb2;
             color: white;
-            padding: 10px 15px;
+            padding: 8px 12px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
+            
+
         }
 
         .btn:hover {
-            background-color: #45a049;
+            background-color: #4c4c9d;
         }
     </style>
 </head>
@@ -110,9 +113,10 @@
 
     <!-- Contenu principal -->
     <main>
-        <h2>Liste des exams</h2>
-
-        <a href="/gestion_Exams/public/examsAdd" class="btn">Ajouter un exam</a>
+        <div>
+            <h2>Liste des exams</h2>
+            <a href="/gestion_Exams/public/examsAdd" class="btn">Ajouter un exam</a><br>
+        </div>
         <table>
             <tr>
                 <th>Département</th>
